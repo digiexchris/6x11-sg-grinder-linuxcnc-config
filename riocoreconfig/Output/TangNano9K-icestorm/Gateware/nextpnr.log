@@ -1,0 +1,230 @@
+Info: Using uarch 'gowin' for device 'GW1NR-LV9QN88PC6/I5'
+
+Info: Reading constraints...
+Info: Create constant nets...
+Info: Modify LUTs...
+Info: Pack IOBs...
+Info: Pack diff IOBs...
+Info: Pack IO logic...
+Info: Pack DESER16 logic...
+Info: Pack GSR...
+Info: Pack HCLK cells...
+Info: Pack wide LUTs...
+Info: Packed MUX2_LUT8:0, MUX2_LU7:0, MUX2_LUT6:0, MUX2_LUT5:0
+Info: Pack ALUs...
+Info: Pack PLL...
+Info: Pack RAMs...
+Info: Pack BSRAMs...
+Info: Pack DSP...
+Info: Pack INV...
+Info: Pack buffered nets...
+Info: Checksum: 0xc3d8ce18
+
+Info: Device utilisation:
+Info: 	                 VCC:       1/      1   100%
+Info: 	                 IOB:       5/    274     1%
+Info: 	                LUT4:      41/   8640     0%
+Info: 	              OSER16:       0/     80     0%
+Info: 	              IDES16:       0/     80     0%
+Info: 	            IOLOGICI:       0/    276     0%
+Info: 	            IOLOGICO:       0/    276     0%
+Info: 	           MUX2_LUT5:       0/   4320     0%
+Info: 	           MUX2_LUT6:       0/   2160     0%
+Info: 	           MUX2_LUT7:       0/   1080     0%
+Info: 	           MUX2_LUT8:       0/   1080     0%
+Info: 	                 ALU:       0/   6480     0%
+Info: 	                 GND:       1/      1   100%
+Info: 	                 DFF:      52/   6480     0%
+Info: 	           RAM16SDP4:       0/    270     0%
+Info: 	               BSRAM:       0/     26     0%
+Info: 	              ALU54D:       0/     10     0%
+Info: 	     MULTADDALU18X18:       0/     10     0%
+Info: 	        MULTALU18X18:       0/     10     0%
+Info: 	        MULTALU36X18:       0/     10     0%
+Info: 	           MULT36X36:       0/      5     0%
+Info: 	           MULT18X18:       0/     20     0%
+Info: 	             MULT9X9:       0/     40     0%
+Info: 	              PADD18:       0/     20     0%
+Info: 	               PADD9:       0/     40     0%
+Info: 	                 GSR:       1/      1   100%
+Info: 	                 OSC:       0/      1     0%
+Info: 	                rPLL:       0/      2     0%
+Info: 	                BUFG:       0/     22     0%
+Info: 	                DQCE:       0/     24     0%
+Info: 	                 DCS:       0/      8     0%
+Info: 	              CLKDIV:       0/      8     0%
+Info: 	             CLKDIV2:       0/     16     0%
+
+Info: Running custom HCLK placer...
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 96 cells, random placement wirelen = 3275.
+Info:     at initial placer iter 0, wirelen = 93
+Info:     at initial placer iter 1, wirelen = 89
+Info:     at initial placer iter 2, wirelen = 92
+Info:     at initial placer iter 3, wirelen = 85
+Info: Running main analytical placer, max placement attempts per cell = 10000.
+Info:     at iteration #1, type GSR: wirelen solved = 85, spread = 85, legal = 85; time = 0.00s
+Info:     at iteration #1, type VCC: wirelen solved = 85, spread = 85, legal = 85; time = 0.00s
+Info:     at iteration #1, type LUT4: wirelen solved = 134, spread = 311, legal = 311; time = 0.00s
+Info:     at iteration #1, type DFF: wirelen solved = 226, spread = 261, legal = 273; time = 0.00s
+Info:     at iteration #1, type GND: wirelen solved = 272, spread = 272, legal = 285; time = 0.00s
+Info:     at iteration #1, type ALL: wirelen solved = 89, spread = 324, legal = 349; time = 0.00s
+Info:     at iteration #2, type GSR: wirelen solved = 349, spread = 349, legal = 349; time = 0.00s
+Info:     at iteration #2, type VCC: wirelen solved = 349, spread = 349, legal = 349; time = 0.00s
+Info:     at iteration #2, type LUT4: wirelen solved = 238, spread = 258, legal = 269; time = 0.00s
+Info:     at iteration #2, type DFF: wirelen solved = 196, spread = 305, legal = 312; time = 0.00s
+Info:     at iteration #2, type GND: wirelen solved = 305, spread = 305, legal = 312; time = 0.00s
+Info:     at iteration #2, type ALL: wirelen solved = 98, spread = 219, legal = 303; time = 0.00s
+Info:     at iteration #3, type GSR: wirelen solved = 303, spread = 303, legal = 303; time = 0.00s
+Info:     at iteration #3, type VCC: wirelen solved = 303, spread = 303, legal = 303; time = 0.00s
+Info:     at iteration #3, type LUT4: wirelen solved = 214, spread = 240, legal = 261; time = 0.00s
+Info:     at iteration #3, type DFF: wirelen solved = 200, spread = 236, legal = 262; time = 0.00s
+Info:     at iteration #3, type GND: wirelen solved = 256, spread = 256, legal = 262; time = 0.00s
+Info:     at iteration #3, type ALL: wirelen solved = 96, spread = 158, legal = 239; time = 0.00s
+Info:     at iteration #4, type GSR: wirelen solved = 239, spread = 239, legal = 239; time = 0.00s
+Info:     at iteration #4, type VCC: wirelen solved = 239, spread = 239, legal = 239; time = 0.00s
+Info:     at iteration #4, type LUT4: wirelen solved = 240, spread = 265, legal = 276; time = 0.00s
+Info:     at iteration #4, type DFF: wirelen solved = 206, spread = 229, legal = 254; time = 0.00s
+Info:     at iteration #4, type GND: wirelen solved = 247, spread = 247, legal = 254; time = 0.00s
+Info:     at iteration #4, type ALL: wirelen solved = 109, spread = 184, legal = 209; time = 0.00s
+Info:     at iteration #5, type GSR: wirelen solved = 209, spread = 209, legal = 209; time = 0.00s
+Info:     at iteration #5, type VCC: wirelen solved = 209, spread = 209, legal = 209; time = 0.00s
+Info:     at iteration #5, type LUT4: wirelen solved = 203, spread = 219, legal = 236; time = 0.00s
+Info:     at iteration #5, type DFF: wirelen solved = 202, spread = 240, legal = 265; time = 0.00s
+Info:     at iteration #5, type GND: wirelen solved = 260, spread = 260, legal = 265; time = 0.00s
+Info:     at iteration #5, type ALL: wirelen solved = 123, spread = 202, legal = 239; time = 0.00s
+Info:     at iteration #6, type GSR: wirelen solved = 239, spread = 239, legal = 239; time = 0.00s
+Info:     at iteration #6, type VCC: wirelen solved = 239, spread = 239, legal = 239; time = 0.00s
+Info:     at iteration #6, type LUT4: wirelen solved = 217, spread = 220, legal = 220; time = 0.00s
+Info:     at iteration #6, type DFF: wirelen solved = 202, spread = 240, legal = 256; time = 0.00s
+Info:     at iteration #6, type GND: wirelen solved = 252, spread = 252, legal = 256; time = 0.00s
+Info:     at iteration #6, type ALL: wirelen solved = 117, spread = 217, legal = 248; time = 0.00s
+Info:     at iteration #7, type GSR: wirelen solved = 248, spread = 248, legal = 248; time = 0.00s
+Info:     at iteration #7, type VCC: wirelen solved = 248, spread = 248, legal = 248; time = 0.00s
+Info:     at iteration #7, type LUT4: wirelen solved = 218, spread = 236, legal = 244; time = 0.00s
+Info:     at iteration #7, type DFF: wirelen solved = 183, spread = 218, legal = 228; time = 0.00s
+Info:     at iteration #7, type GND: wirelen solved = 223, spread = 223, legal = 228; time = 0.00s
+Info:     at iteration #7, type ALL: wirelen solved = 121, spread = 223, legal = 238; time = 0.00s
+Info:     at iteration #8, type GSR: wirelen solved = 238, spread = 238, legal = 238; time = 0.00s
+Info:     at iteration #8, type VCC: wirelen solved = 238, spread = 238, legal = 238; time = 0.00s
+Info:     at iteration #8, type LUT4: wirelen solved = 206, spread = 237, legal = 248; time = 0.00s
+Info:     at iteration #8, type DFF: wirelen solved = 192, spread = 217, legal = 240; time = 0.00s
+Info:     at iteration #8, type GND: wirelen solved = 236, spread = 236, legal = 240; time = 0.00s
+Info:     at iteration #8, type ALL: wirelen solved = 132, spread = 201, legal = 231; time = 0.00s
+Info:     at iteration #9, type GSR: wirelen solved = 231, spread = 231, legal = 231; time = 0.00s
+Info:     at iteration #9, type VCC: wirelen solved = 231, spread = 231, legal = 231; time = 0.00s
+Info:     at iteration #9, type LUT4: wirelen solved = 220, spread = 236, legal = 247; time = 0.00s
+Info:     at iteration #9, type DFF: wirelen solved = 193, spread = 215, legal = 240; time = 0.00s
+Info:     at iteration #9, type GND: wirelen solved = 239, spread = 239, legal = 240; time = 0.00s
+Info:     at iteration #9, type ALL: wirelen solved = 132, spread = 196, legal = 223; time = 0.00s
+Info: HeAP Placer Time: 0.14s
+Info:   of which solving equations: 0.07s
+Info:   of which spreading cells: 0.01s
+Info:   of which strict legalisation: 0.01s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 1, wirelen = 209
+Info:   at iteration #5: temp = 0.000000, timing cost = 1, wirelen = 176
+Info:   at iteration #10: temp = 0.000000, timing cost = 0, wirelen = 161
+Info:   at iteration #12: temp = 0.000000, timing cost = 0, wirelen = 157 
+Info: SA placement time 0.04s
+
+Info: Max frequency for clock 'sysclk': 205.97 MHz (PASS at 27.00 MHz)
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ 32182,  32400) |* 
+Info: [ 32400,  32618) | 
+Info: [ 32618,  32836) | 
+Info: [ 32836,  33054) |* 
+Info: [ 33054,  33272) | 
+Info: [ 33272,  33490) | 
+Info: [ 33490,  33708) |* 
+Info: [ 33708,  33926) | 
+Info: [ 33926,  34144) | 
+Info: [ 34144,  34362) |* 
+Info: [ 34362,  34580) | 
+Info: [ 34580,  34798) | 
+Info: [ 34798,  35016) |* 
+Info: [ 35016,  35234) |***************** 
+Info: [ 35234,  35452) |************* 
+Info: [ 35452,  35670) | 
+Info: [ 35670,  35888) | 
+Info: [ 35888,  36106) |***** 
+Info: [ 36106,  36324) |********************** 
+Info: [ 36324,  36542) |********** 
+Info: Checksum: 0xeac59844
+Info: Routing globals...
+Info:     'sysclk' net was routed  using global resources only.
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 233 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:        310 |       50        260 |   50   260 |         0|       0.28       0.28|
+Info: Routing complete.
+Info: Router1 time 0.28s
+Info: Checksum: 0x28009082
+
+Info: Critical path report for clock 'sysclk' (posedge -> posedge):
+Info: curr total
+Info:  0.5  0.5  Source spi0.bitcnt_DFFRE_Q_13.Q
+Info:  0.4  0.9    Net spi0.bitcnt[2] (7,1) -> (7,1)
+Info:                Sink spi0.bitcnt_DFFRE_Q_9_D_LUT4_F_I3_LUT4_F.I1
+Info:                Defined in:
+Info:                  spi.v:23.15-23.21
+Info:  1.1  2.0  Source spi0.bitcnt_DFFRE_Q_9_D_LUT4_F_I3_LUT4_F.F
+Info:  0.9  2.9    Net spi0.bitcnt_DFFRE_Q_9_D_LUT4_F_I3[1] (7,1) -> (8,2)
+Info:                Sink spi0.bitcnt_DFFRE_Q_6_D_LUT4_F_I3_LUT4_F.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:  0.6  3.5  Source spi0.bitcnt_DFFRE_Q_6_D_LUT4_F_I3_LUT4_F.F
+Info:  0.4  3.9    Net spi0.bitcnt_DFFRE_Q_6_D_LUT4_F_I3[3] (8,2) -> (8,3)
+Info:                Sink spi0.bitcnt_DFFRE_Q_3_D_LUT4_F_I3_LUT4_F.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:  0.6  4.5  Source spi0.bitcnt_DFFRE_Q_3_D_LUT4_F_I3_LUT4_F.F
+Info:  0.4  4.9    Net spi0.bitcnt_DFFRE_Q_3_D_LUT4_F_I3[3] (8,3) -> (8,3)
+Info:                Sink spi0.bitcnt_DFFRE_Q_D_LUT4_F_I3_LUT4_F.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:  0.6  5.6  Source spi0.bitcnt_DFFRE_Q_D_LUT4_F_I3_LUT4_F.F
+Info:  0.4  6.0    Net spi0.bitcnt_DFFRE_Q_D_LUT4_F_I3[3] (8,3) -> (9,3)
+Info:                Sink spi0.bitcnt_DFFRE_Q_D_LUT4_F.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:  0.6  6.6  Source spi0.bitcnt_DFFRE_Q_D_LUT4_F.F
+Info:  0.0  6.6    Net spi0.bitcnt_DFFRE_Q_D (9,3) -> (9,3)
+Info:                Sink spi0.bitcnt_DFFRE_Q.D
+Info:  0.4  7.0  Setup spi0.bitcnt_DFFRE_Q.D
+Info: 4.5 ns logic, 2.5 ns routing
+
+Info: Max frequency for clock 'sysclk': 142.98 MHz (PASS at 27.00 MHz)
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ 30043,  30352) |* 
+Info: [ 30352,  30661) | 
+Info: [ 30661,  30970) | 
+Info: [ 30970,  31279) |* 
+Info: [ 31279,  31588) | 
+Info: [ 31588,  31897) | 
+Info: [ 31897,  32206) |* 
+Info: [ 32206,  32515) | 
+Info: [ 32515,  32824) | 
+Info: [ 32824,  33133) | 
+Info: [ 33133,  33442) |* 
+Info: [ 33442,  33751) |* 
+Info: [ 33751,  34060) | 
+Info: [ 34060,  34369) |************************* 
+Info: [ 34369,  34678) |* 
+Info: [ 34678,  34987) |**** 
+Info: [ 34987,  35296) |*** 
+Info: [ 35296,  35605) |*** 
+Info: [ 35605,  35914) |*************************** 
+Info: [ 35914,  36223) |**** 
+
+Info: Program finished normally.

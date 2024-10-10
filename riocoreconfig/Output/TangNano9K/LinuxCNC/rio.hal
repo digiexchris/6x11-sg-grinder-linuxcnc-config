@@ -1,0 +1,163 @@
+# load the realtime components
+loadrt [KINS]KINEMATICS
+loadrt [EMCMOT]EMCMOT base_period_nsec=[EMCMOT]BASE_PERIOD servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[KINS]JOINTS num_dio=[EMCMOT]NUM_DIO num_aio=[EMCMOT]NUM_AIO
+loadusr -W ./rio_precompile
+loadrt rio
+
+loadrt pid num_chan=3
+addf pid.0.do-pid-calcs servo-thread
+addf pid.1.do-pid-calcs servo-thread
+addf pid.2.do-pid-calcs servo-thread
+
+# add the rio and motion functions to threads
+addf motion-command-handler servo-thread
+addf motion-controller servo-thread
+addf rio.readwrite servo-thread
+
+loadusr -W hal_manualtoolchange
+
+
+# user-enable-out
+net user-enable-out <= iocontrol.0.user-enable-out
+net user-enable-out => rio.sys-enable
+
+# user-request-enable
+net user-request-enable <= iocontrol.0.user-request-enable
+net user-request-enable => rio.sys-enable-request
+
+# iocontrol-0-emc-enable-in
+net iocontrol-0-emc-enable-in <= rio.sys-status
+net iocontrol-0-emc-enable-in => iocontrol.0.emc-enable-in
+
+# tool-prep-number
+net tool-prep-number <= iocontrol.0.tool-prep-number
+net tool-prep-number => hal_manualtoolchange.number
+
+# tool-change
+net tool-change <= iocontrol.0.tool-change
+net tool-change => hal_manualtoolchange.change
+
+# tool-changed
+net tool-changed <= hal_manualtoolchange.changed
+net tool-changed => iocontrol.0.tool-changed
+
+# tool-prepared
+net tool-prepared <= iocontrol.0.tool-prepare
+net tool-prepared => iocontrol.0.tool-prepared
+
+# spindle-0-revs
+net spindle-0-revs <= rio.SPINDLE_RPM_IN.frequency
+net spindle-0-revs => spindle.0.revs
+
+# spindle-0-at-speed
+net spindle-0-at-speed <= rio.SPINDLE_RPM_IN.valid
+net spindle-0-at-speed => spindle.0.at-speed
+
+# spindle-0-speed-out
+net spindle-0-speed-out <= spindle.0.speed-out
+net spindle-0-speed-out => rio.SPINDLE_SPEED_PWM_OUT.dty
+
+# spindle-0-on
+net spindle-0-on <= spindle.0.on
+net spindle-0-on => rio.SPINDLE_SPEED_PWM_OUT.enable
+
+# joint-3-home-sw-in
+net joint-3-home-sw-in <= rio.ZHOME.bit
+net joint-3-home-sw-in => joint.3.home-sw-in
+
+# joint-1-home-sw-in
+net joint-1-home-sw-in <= rio.YHOME.bit
+net joint-1-home-sw-in => joint.1.home-sw-in
+
+# joint-2-home-sw-in
+net joint-2-home-sw-in <= rio.XHOME.bit
+net joint-2-home-sw-in => joint.2.home-sw-in
+
+# pyvcp-halui-mdi-command-00
+net pyvcp-halui-mdi-command-00 => halui.mdi-command-00
+
+# pyvcp-halui-mdi-command-01
+net pyvcp-halui-mdi-command-01 => halui.mdi-command-01
+
+# pyvcp-halui-mdi-command-02
+net pyvcp-halui-mdi-command-02 => halui.mdi-command-02
+
+# pyvcp-ESTOP-bit
+net pyvcp-ESTOP-bit <= rio.ESTOP.bit
+
+# setp
+
+# Axis: Z
+
+# joint.0: relative positioning using pid.0
+setp pid.0.Pgain     [JOINT_0]P
+setp pid.0.Igain     [JOINT_0]I
+setp pid.0.Dgain     [JOINT_0]D
+setp pid.0.bias      [JOINT_0]BIAS
+setp pid.0.FF0       [JOINT_0]FF0
+setp pid.0.FF1       [JOINT_0]FF1
+setp pid.0.FF2       [JOINT_0]FF2
+setp pid.0.deadband  [JOINT_0]DEADBAND
+setp pid.0.maxoutput [JOINT_0]MAXOUTPUT
+setp rio.ZStepper.velocity-scale [JOINT_0]SCALE_OUT
+setp rio.ZStepper.position-scale [JOINT_0]SCALE_IN
+net j0vel-cmd <= pid.0.output
+net j0vel-cmd => rio.ZStepper.velocity
+net j0pos-cmd <= joint.0.motor-pos-cmd
+net j0pos-cmd => pid.0.command
+net j0pos-fb  <= rio.ZStepper.position
+net j0pos-fb  => joint.0.motor-pos-fb
+net j0pos-fb  => pid.0.feedback
+net j0enable  <= joint.0.amp-enable-out
+net j0enable  => rio.ZStepper.enable
+net j0enable  => pid.0.enable
+
+# Axis: Y
+
+# joint.1: relative positioning using pid.1
+setp pid.1.Pgain     [JOINT_1]P
+setp pid.1.Igain     [JOINT_1]I
+setp pid.1.Dgain     [JOINT_1]D
+setp pid.1.bias      [JOINT_1]BIAS
+setp pid.1.FF0       [JOINT_1]FF0
+setp pid.1.FF1       [JOINT_1]FF1
+setp pid.1.FF2       [JOINT_1]FF2
+setp pid.1.deadband  [JOINT_1]DEADBAND
+setp pid.1.maxoutput [JOINT_1]MAXOUTPUT
+setp rio.YStepper.velocity-scale [JOINT_1]SCALE_OUT
+setp rio.YStepper.position-scale [JOINT_1]SCALE_IN
+net j1vel-cmd <= pid.1.output
+net j1vel-cmd => rio.YStepper.velocity
+net j1pos-cmd <= joint.1.motor-pos-cmd
+net j1pos-cmd => pid.1.command
+net j1pos-fb  <= rio.YStepper.position
+net j1pos-fb  => joint.1.motor-pos-fb
+net j1pos-fb  => pid.1.feedback
+net j1enable  <= joint.1.amp-enable-out
+net j1enable  => rio.YStepper.enable
+net j1enable  => pid.1.enable
+
+# Axis: X
+
+# joint.2: relative positioning using pid.2
+setp pid.2.Pgain     [JOINT_2]P
+setp pid.2.Igain     [JOINT_2]I
+setp pid.2.Dgain     [JOINT_2]D
+setp pid.2.bias      [JOINT_2]BIAS
+setp pid.2.FF0       [JOINT_2]FF0
+setp pid.2.FF1       [JOINT_2]FF1
+setp pid.2.FF2       [JOINT_2]FF2
+setp pid.2.deadband  [JOINT_2]DEADBAND
+setp pid.2.maxoutput [JOINT_2]MAXOUTPUT
+setp rio.XStepper.velocity-scale [JOINT_2]SCALE_OUT
+setp rio.XStepper.position-scale [JOINT_2]SCALE_IN
+net j2vel-cmd <= pid.2.output
+net j2vel-cmd => rio.XStepper.velocity
+net j2pos-cmd <= joint.2.motor-pos-cmd
+net j2pos-cmd => pid.2.command
+net j2pos-fb  <= rio.XStepper.position
+net j2pos-fb  => joint.2.motor-pos-fb
+net j2pos-fb  => pid.2.feedback
+net j2enable  <= joint.2.amp-enable-out
+net j2enable  => rio.XStepper.enable
+net j2enable  => pid.2.enable

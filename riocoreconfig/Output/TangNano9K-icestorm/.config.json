@@ -1,0 +1,23 @@
+{
+    "name": "TangNano9K-icestorm",
+    "boardcfg": "TangNano9K-icestorm",
+    "plugins": [
+        {
+            "type": "spi",
+            "pins": {
+                "mosi": {
+                    "pin": "72"
+                },
+                "miso": {
+                    "pin": "73"
+                },
+                "sclk": {
+                    "pin": "82"
+                },
+                "sel": {
+                    "pin": "83"
+                }
+            }
+        }
+    ]
+}

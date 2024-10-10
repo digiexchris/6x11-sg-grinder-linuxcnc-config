@@ -1,0 +1,33 @@
+
+# spindle-0-revs
+net spindle-0-revs => pyvcp.SPINDLE_RPM_IN.frequency
+
+# spindle-0-at-speed
+net spindle-0-at-speed => pyvcp.SPINDLE_RPM_IN.valid
+
+# spindle-0-speed-out
+net spindle-0-speed-out => pyvcp.SPINDLE_SPEED_PWM_OUT.dty
+
+# spindle-0-on
+net spindle-0-on => pyvcp.SPINDLE_SPEED_PWM_OUT.enable
+
+# joint-3-home-sw-in
+net joint-3-home-sw-in => pyvcp.ZHOME.bit
+
+# joint-1-home-sw-in
+net joint-1-home-sw-in => pyvcp.YHOME.bit
+
+# joint-2-home-sw-in
+net joint-2-home-sw-in => pyvcp.XHOME.bit
+
+# pyvcp-halui-mdi-command-00
+net pyvcp-halui-mdi-command-00 <= pyvcp.halui.mdi-command-00
+
+# pyvcp-halui-mdi-command-01
+net pyvcp-halui-mdi-command-01 <= pyvcp.halui.mdi-command-01
+
+# pyvcp-halui-mdi-command-02
+net pyvcp-halui-mdi-command-02 <= pyvcp.halui.mdi-command-02
+
+# pyvcp-ESTOP-bit
+net pyvcp-ESTOP-bit => pyvcp.ESTOP.bit

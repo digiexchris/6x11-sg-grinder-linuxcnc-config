@@ -1,0 +1,3 @@
+[submodule "riocoreconfig/riocore"]
+	path = riocoreconfig/riocore
+	url = https://github.com/multigcs/riocore.git
