@@ -1,0 +1,2559 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.44+71 (git sha1 6b9321250, aarch64-linux-gnu-g++ 11.4.0-1ubuntu1~22.04 -fPIC -O3)
+
+-- Parsing `globals.v' using frontend ` -vlog2k' --
+
+1. Executing Verilog-2005 frontend: globals.v
+Parsing Verilog input from `globals.v' to AST representation.
+Successfully finished Verilog frontend.
+
+-- Parsing `pll.v' using frontend ` -vlog2k' --
+
+2. Executing Verilog-2005 frontend: pll.v
+Parsing Verilog input from `pll.v' to AST representation.
+Storing AST representation for module `$abstract\pll'.
+Successfully finished Verilog frontend.
+
+-- Parsing `blink.v' using frontend ` -vlog2k' --
+
+3. Executing Verilog-2005 frontend: blink.v
+Parsing Verilog input from `blink.v' to AST representation.
+Storing AST representation for module `$abstract\blink'.
+Successfully finished Verilog frontend.
+
+-- Parsing `spi.v' using frontend ` -vlog2k' --
+
+4. Executing Verilog-2005 frontend: spi.v
+Parsing Verilog input from `spi.v' to AST representation.
+Storing AST representation for module `$abstract\spi'.
+Successfully finished Verilog frontend.
+
+-- Parsing `stepdir.v' using frontend ` -vlog2k' --
+
+5. Executing Verilog-2005 frontend: stepdir.v
+Parsing Verilog input from `stepdir.v' to AST representation.
+Storing AST representation for module `$abstract\stepdir'.
+Successfully finished Verilog frontend.
+
+-- Parsing `debouncer.v' using frontend ` -vlog2k' --
+
+6. Executing Verilog-2005 frontend: debouncer.v
+Parsing Verilog input from `debouncer.v' to AST representation.
+Storing AST representation for module `$abstract\debouncer'.
+Successfully finished Verilog frontend.
+
+-- Parsing `toggle.v' using frontend ` -vlog2k' --
+
+7. Executing Verilog-2005 frontend: toggle.v
+Parsing Verilog input from `toggle.v' to AST representation.
+Storing AST representation for module `$abstract\toggle'.
+Successfully finished Verilog frontend.
+
+-- Parsing `pwmmod.v' using frontend ` -vlog2k' --
+
+8. Executing Verilog-2005 frontend: pwmmod.v
+Parsing Verilog input from `pwmmod.v' to AST representation.
+Storing AST representation for module `$abstract\pwmmod'.
+Successfully finished Verilog frontend.
+
+-- Parsing `rio.v' using frontend ` -vlog2k' --
+
+9. Executing Verilog-2005 frontend: rio.v
+Parsing Verilog input from `rio.v' to AST representation.
+Storing AST representation for module `$abstract\rio'.
+Successfully finished Verilog frontend.
+
+-- Running command `synth_ice40 -dsp -top rio -json rio.json' --
+
+10. Executing SYNTH_ICE40 pass.
+
+10.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\SB_IO'.
+Generating RTLIL representation for module `\SB_GB_IO'.
+Generating RTLIL representation for module `\SB_GB'.
+Generating RTLIL representation for module `\SB_LUT4'.
+Generating RTLIL representation for module `\SB_CARRY'.
+Generating RTLIL representation for module `\SB_DFF'.
+Generating RTLIL representation for module `\SB_DFFE'.
+Generating RTLIL representation for module `\SB_DFFSR'.
+Generating RTLIL representation for module `\SB_DFFR'.
+Generating RTLIL representation for module `\SB_DFFSS'.
+Generating RTLIL representation for module `\SB_DFFS'.
+Generating RTLIL representation for module `\SB_DFFESR'.
+Generating RTLIL representation for module `\SB_DFFER'.
+Generating RTLIL representation for module `\SB_DFFESS'.
+Generating RTLIL representation for module `\SB_DFFES'.
+Generating RTLIL representation for module `\SB_DFFN'.
+Generating RTLIL representation for module `\SB_DFFNE'.
+Generating RTLIL representation for module `\SB_DFFNSR'.
+Generating RTLIL representation for module `\SB_DFFNR'.
+Generating RTLIL representation for module `\SB_DFFNSS'.
+Generating RTLIL representation for module `\SB_DFFNS'.
+Generating RTLIL representation for module `\SB_DFFNESR'.
+Generating RTLIL representation for module `\SB_DFFNER'.
+Generating RTLIL representation for module `\SB_DFFNESS'.
+Generating RTLIL representation for module `\SB_DFFNES'.
+Generating RTLIL representation for module `\SB_RAM40_4K'.
+Generating RTLIL representation for module `\SB_RAM40_4KNR'.
+Generating RTLIL representation for module `\SB_RAM40_4KNW'.
+Generating RTLIL representation for module `\SB_RAM40_4KNRNW'.
+Generating RTLIL representation for module `\ICESTORM_LC'.
+Generating RTLIL representation for module `\SB_PLL40_CORE'.
+Generating RTLIL representation for module `\SB_PLL40_PAD'.
+Generating RTLIL representation for module `\SB_PLL40_2_PAD'.
+Generating RTLIL representation for module `\SB_PLL40_2F_CORE'.
+Generating RTLIL representation for module `\SB_PLL40_2F_PAD'.
+Generating RTLIL representation for module `\SB_WARMBOOT'.
+Generating RTLIL representation for module `\SB_SPRAM256KA'.
+Generating RTLIL representation for module `\SB_HFOSC'.
+Generating RTLIL representation for module `\SB_LFOSC'.
+Generating RTLIL representation for module `\SB_RGBA_DRV'.
+Generating RTLIL representation for module `\SB_LED_DRV_CUR'.
+Generating RTLIL representation for module `\SB_RGB_DRV'.
+Generating RTLIL representation for module `\SB_I2C'.
+Generating RTLIL representation for module `\SB_SPI'.
+Generating RTLIL representation for module `\SB_LEDDA_IP'.
+Generating RTLIL representation for module `\SB_FILTER_50NS'.
+Generating RTLIL representation for module `\SB_IO_I3C'.
+Generating RTLIL representation for module `\SB_IO_OD'.
+Generating RTLIL representation for module `\SB_MAC16'.
+Generating RTLIL representation for module `\ICESTORM_RAM'.
+Successfully finished Verilog frontend.
+
+10.2. Executing HIERARCHY pass (managing design hierarchy).
+
+10.3. Executing AST frontend in derive mode using pre-parsed AST for module `\rio'.
+Generating RTLIL representation for module `\rio'.
+
+10.3.1. Analyzing design hierarchy..
+Top module:  \rio
+
+10.3.2. Executing AST frontend in derive mode using pre-parsed AST for module `\stepdir'.
+Generating RTLIL representation for module `\stepdir'.
+Parameter \BUFFER_SIZE = 16'0000000011110000
+Parameter \MSGID = 1953067639
+
+10.3.3. Executing AST frontend in derive mode using pre-parsed AST for module `\spi'.
+Parameter \BUFFER_SIZE = 16'0000000011110000
+Parameter \MSGID = 1953067639
+Generating RTLIL representation for module `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi'.
+Parameter \DIVIDER = 14906000
+
+10.3.4. Executing AST frontend in derive mode using pre-parsed AST for module `\blink'.
+Parameter \DIVIDER = 14906000
+Generating RTLIL representation for module `$paramod\blink\DIVIDER=s32'00000000111000110111001010010000'.
+
+10.3.5. Executing AST frontend in derive mode using pre-parsed AST for module `\pll'.
+Generating RTLIL representation for module `\pll'.
+
+10.3.6. Analyzing design hierarchy..
+Top module:  \rio
+Used module:     \stepdir
+Used module:     $paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi
+Used module:     $paramod\blink\DIVIDER=s32'00000000111000110111001010010000
+Used module:     \pll
+
+10.3.7. Analyzing design hierarchy..
+Top module:  \rio
+Used module:     \stepdir
+Used module:     $paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi
+Used module:     $paramod\blink\DIVIDER=s32'00000000111000110111001010010000
+Used module:     \pll
+Removing unused module `$abstract\rio'.
+Removing unused module `$abstract\pwmmod'.
+Removing unused module `$abstract\toggle'.
+Removing unused module `$abstract\debouncer'.
+Removing unused module `$abstract\stepdir'.
+Removing unused module `$abstract\spi'.
+Removing unused module `$abstract\blink'.
+Removing unused module `$abstract\pll'.
+Removed 8 unused modules.
+Mapping positional arguments of cell rio.mypll (pll).
+
+10.4. Executing PROC pass (convert processes to netlists).
+
+10.4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+10.4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1414$242 in module SB_DFFNES.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1353$235 in module SB_DFFNESS.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1273$231 in module SB_DFFNER.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1212$224 in module SB_DFFNESR.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1138$221 in module SB_DFFNS.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1088$218 in module SB_DFFNSS.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1017$215 in module SB_DFFNR.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:967$212 in module SB_DFFNSR.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:803$204 in module SB_DFFES.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:742$197 in module SB_DFFESS.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:662$193 in module SB_DFFER.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:601$186 in module SB_DFFESR.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:527$183 in module SB_DFFS.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:477$180 in module SB_DFFSS.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:406$177 in module SB_DFFR.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:356$174 in module SB_DFFSR.
+Marked 1 switch rules as full_case in process $proc$blink.v:12$451 in module $paramod\blink\DIVIDER=s32'00000000111000110111001010010000.
+Marked 2 switch rules as full_case in process $proc$spi.v:47$447 in module $paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.
+Marked 1 switch rules as full_case in process $proc$spi.v:28$442 in module $paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.
+Marked 2 switch rules as full_case in process $proc$stepdir.v:18$421 in module stepdir.
+Marked 1 switch rules as full_case in process $proc$rio.v:115$390 in module rio.
+Marked 2 switch rules as full_case in process $proc$rio.v:98$386 in module rio.
+Removed a total of 0 dead cases.
+
+10.4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 11 redundant assignments.
+Promoted 35 assignments to connections.
+
+10.4.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\SB_DFFNES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$245'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$241'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$234'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$230'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$223'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$220'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$217'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$214'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$211'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFN.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$209'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$207'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$203'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$196'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$192'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$185'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$182'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$179'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$176'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$173'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFF.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$171'.
+  Set init value: \Q = 1'0
+Found init rule in `$paramod\blink\DIVIDER=s32'00000000111000110111001010010000.$proc$blink.v:10$456'.
+  Set init value: \counter = 25'0000000000000000000000000
+Found init rule in `$paramod\blink\DIVIDER=s32'00000000111000110111001010010000.$proc$blink.v:8$455'.
+  Set init value: \rled = 1'0
+Found init rule in `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:0$449'.
+  Set init value: \sync = 1'0
+Found init rule in `\stepdir.$proc$stepdir.v:15$434'.
+  Set init value: \positionMem = 0
+Found init rule in `\stepdir.$proc$stepdir.v:14$433'.
+  Set init value: \velocityAbs = 0
+Found init rule in `\stepdir.$proc$stepdir.v:13$432'.
+  Set init value: \jointCounter = 0
+Found init rule in `\stepdir.$proc$stepdir.v:0$431'.
+  Set init value: \step = 1'0
+Found init rule in `\rio.$proc$rio.v:96$419'.
+  Set init value: \timeout_counter = 23'00000000000000000000000
+Found init rule in `\rio.$proc$rio.v:80$417'.
+  Set init value: \INTERFACE_TIMEOUT = 1'0
+
+10.4.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \S in `\SB_DFFNES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1414$242'.
+Found async reset \R in `\SB_DFFNER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1273$231'.
+Found async reset \S in `\SB_DFFNS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1138$221'.
+Found async reset \R in `\SB_DFFNR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1017$215'.
+Found async reset \S in `\SB_DFFES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:803$204'.
+Found async reset \R in `\SB_DFFER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:662$193'.
+Found async reset \S in `\SB_DFFS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:527$183'.
+Found async reset \R in `\SB_DFFR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:406$177'.
+
+10.4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~35 debug messages>
+
+10.4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\SB_DFFNES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$245'.
+Creating decoders for process `\SB_DFFNES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1414$242'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$241'.
+Creating decoders for process `\SB_DFFNESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1353$235'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$234'.
+Creating decoders for process `\SB_DFFNER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1273$231'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$230'.
+Creating decoders for process `\SB_DFFNESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1212$224'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$223'.
+Creating decoders for process `\SB_DFFNS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1138$221'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$220'.
+Creating decoders for process `\SB_DFFNSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1088$218'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$217'.
+Creating decoders for process `\SB_DFFNR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1017$215'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$214'.
+Creating decoders for process `\SB_DFFNSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:967$212'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$211'.
+Creating decoders for process `\SB_DFFNE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:922$210'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFN.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$209'.
+Creating decoders for process `\SB_DFFN.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:882$208'.
+Creating decoders for process `\SB_DFFES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$207'.
+Creating decoders for process `\SB_DFFES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:803$204'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$203'.
+Creating decoders for process `\SB_DFFESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:742$197'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$196'.
+Creating decoders for process `\SB_DFFER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:662$193'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$192'.
+Creating decoders for process `\SB_DFFESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:601$186'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$185'.
+Creating decoders for process `\SB_DFFS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:527$183'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$182'.
+Creating decoders for process `\SB_DFFSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:477$180'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$179'.
+Creating decoders for process `\SB_DFFR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:406$177'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$176'.
+Creating decoders for process `\SB_DFFSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:356$174'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$173'.
+Creating decoders for process `\SB_DFFE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:311$172'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFF.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$171'.
+Creating decoders for process `\SB_DFF.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:271$170'.
+Creating decoders for process `$paramod\blink\DIVIDER=s32'00000000111000110111001010010000.$proc$blink.v:10$456'.
+Creating decoders for process `$paramod\blink\DIVIDER=s32'00000000111000110111001010010000.$proc$blink.v:8$455'.
+Creating decoders for process `$paramod\blink\DIVIDER=s32'00000000111000110111001010010000.$proc$blink.v:12$451'.
+     1/2: $0\counter[24:0]
+     2/2: $0\rled[0:0]
+Creating decoders for process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:0$449'.
+Creating decoders for process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:47$447'.
+     1/1: $0\byte_data_sent[239:0]
+Creating decoders for process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:38$445'.
+     1/2: $0\sync[0:0]
+     2/2: $0\byte_data_received[239:0]
+Creating decoders for process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:28$442'.
+     1/2: $0\byte_data_receive[239:0]
+     2/2: $0\bitcnt[15:0]
+Creating decoders for process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:19$438'.
+Creating decoders for process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:16$435'.
+Creating decoders for process `\stepdir.$proc$stepdir.v:15$434'.
+Creating decoders for process `\stepdir.$proc$stepdir.v:14$433'.
+Creating decoders for process `\stepdir.$proc$stepdir.v:13$432'.
+Creating decoders for process `\stepdir.$proc$stepdir.v:0$431'.
+Creating decoders for process `\stepdir.$proc$stepdir.v:18$421'.
+     1/4: $0\velocityAbs[31:0]
+     2/4: $0\jointCounter[31:0]
+     3/4: $0\positionMem[31:0]
+     4/4: $0\step[0:0]
+Creating decoders for process `\rio.$proc$rio.v:96$419'.
+Creating decoders for process `\rio.$proc$rio.v:81$418'.
+Creating decoders for process `\rio.$proc$rio.v:80$417'.
+Creating decoders for process `\rio.$proc$rio.v:115$390'.
+     1/1: $0\header_tx[31:0]
+Creating decoders for process `\rio.$proc$rio.v:98$386'.
+     1/2: $0\timeout_counter[22:0]
+     2/2: $0\INTERFACE_TIMEOUT[0:0]
+Creating decoders for process `\rio.$proc$rio.v:92$384'.
+
+10.4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\rio.\ESTOP' from process `\rio.$proc$rio.v:81$418'.
+
+10.4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\SB_DFFNES.\Q' using process `\SB_DFFNES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1414$242'.
+  created $adff cell `$procdff$572' with negative edge clock and positive level reset.
+Creating register for signal `\SB_DFFNESS.\Q' using process `\SB_DFFNESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1353$235'.
+  created $dff cell `$procdff$573' with negative edge clock.
+Creating register for signal `\SB_DFFNER.\Q' using process `\SB_DFFNER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1273$231'.
+  created $adff cell `$procdff$576' with negative edge clock and positive level reset.
+Creating register for signal `\SB_DFFNESR.\Q' using process `\SB_DFFNESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1212$224'.
+  created $dff cell `$procdff$577' with negative edge clock.
+Creating register for signal `\SB_DFFNS.\Q' using process `\SB_DFFNS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1138$221'.
+  created $adff cell `$procdff$580' with negative edge clock and positive level reset.
+Creating register for signal `\SB_DFFNSS.\Q' using process `\SB_DFFNSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1088$218'.
+  created $dff cell `$procdff$581' with negative edge clock.
+Creating register for signal `\SB_DFFNR.\Q' using process `\SB_DFFNR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1017$215'.
+  created $adff cell `$procdff$584' with negative edge clock and positive level reset.
+Creating register for signal `\SB_DFFNSR.\Q' using process `\SB_DFFNSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:967$212'.
+  created $dff cell `$procdff$585' with negative edge clock.
+Creating register for signal `\SB_DFFNE.\Q' using process `\SB_DFFNE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:922$210'.
+  created $dff cell `$procdff$586' with negative edge clock.
+Creating register for signal `\SB_DFFN.\Q' using process `\SB_DFFN.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:882$208'.
+  created $dff cell `$procdff$587' with negative edge clock.
+Creating register for signal `\SB_DFFES.\Q' using process `\SB_DFFES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:803$204'.
+  created $adff cell `$procdff$590' with positive edge clock and positive level reset.
+Creating register for signal `\SB_DFFESS.\Q' using process `\SB_DFFESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:742$197'.
+  created $dff cell `$procdff$591' with positive edge clock.
+Creating register for signal `\SB_DFFER.\Q' using process `\SB_DFFER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:662$193'.
+  created $adff cell `$procdff$594' with positive edge clock and positive level reset.
+Creating register for signal `\SB_DFFESR.\Q' using process `\SB_DFFESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:601$186'.
+  created $dff cell `$procdff$595' with positive edge clock.
+Creating register for signal `\SB_DFFS.\Q' using process `\SB_DFFS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:527$183'.
+  created $adff cell `$procdff$598' with positive edge clock and positive level reset.
+Creating register for signal `\SB_DFFSS.\Q' using process `\SB_DFFSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:477$180'.
+  created $dff cell `$procdff$599' with positive edge clock.
+Creating register for signal `\SB_DFFR.\Q' using process `\SB_DFFR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:406$177'.
+  created $adff cell `$procdff$602' with positive edge clock and positive level reset.
+Creating register for signal `\SB_DFFSR.\Q' using process `\SB_DFFSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:356$174'.
+  created $dff cell `$procdff$603' with positive edge clock.
+Creating register for signal `\SB_DFFE.\Q' using process `\SB_DFFE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:311$172'.
+  created $dff cell `$procdff$604' with positive edge clock.
+Creating register for signal `\SB_DFF.\Q' using process `\SB_DFF.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:271$170'.
+  created $dff cell `$procdff$605' with positive edge clock.
+Creating register for signal `$paramod\blink\DIVIDER=s32'00000000111000110111001010010000.\rled' using process `$paramod\blink\DIVIDER=s32'00000000111000110111001010010000.$proc$blink.v:12$451'.
+  created $dff cell `$procdff$606' with positive edge clock.
+Creating register for signal `$paramod\blink\DIVIDER=s32'00000000111000110111001010010000.\counter' using process `$paramod\blink\DIVIDER=s32'00000000111000110111001010010000.$proc$blink.v:12$451'.
+  created $dff cell `$procdff$607' with positive edge clock.
+Creating register for signal `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.\byte_data_sent' using process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:47$447'.
+  created $dff cell `$procdff$608' with positive edge clock.
+Creating register for signal `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.\sync' using process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:38$445'.
+  created $dff cell `$procdff$609' with positive edge clock.
+Creating register for signal `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.\byte_data_received' using process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:38$445'.
+  created $dff cell `$procdff$610' with positive edge clock.
+Creating register for signal `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.\bitcnt' using process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:28$442'.
+  created $dff cell `$procdff$611' with positive edge clock.
+Creating register for signal `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.\byte_data_receive' using process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:28$442'.
+  created $dff cell `$procdff$612' with positive edge clock.
+Creating register for signal `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.\SSELr' using process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:19$438'.
+  created $dff cell `$procdff$613' with positive edge clock.
+Creating register for signal `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.\SCKr' using process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:16$435'.
+  created $dff cell `$procdff$614' with positive edge clock.
+Creating register for signal `\stepdir.\step' using process `\stepdir.$proc$stepdir.v:18$421'.
+  created $dff cell `$procdff$615' with positive edge clock.
+Creating register for signal `\stepdir.\jointCounter' using process `\stepdir.$proc$stepdir.v:18$421'.
+  created $dff cell `$procdff$616' with positive edge clock.
+Creating register for signal `\stepdir.\velocityAbs' using process `\stepdir.$proc$stepdir.v:18$421'.
+  created $dff cell `$procdff$617' with positive edge clock.
+Creating register for signal `\stepdir.\positionMem' using process `\stepdir.$proc$stepdir.v:18$421'.
+  created $dff cell `$procdff$618' with positive edge clock.
+Creating register for signal `\rio.\header_tx' using process `\rio.$proc$rio.v:115$390'.
+  created $dff cell `$procdff$619' with positive edge clock.
+Creating register for signal `\rio.\INTERFACE_TIMEOUT' using process `\rio.$proc$rio.v:98$386'.
+  created $dff cell `$procdff$620' with positive edge clock.
+Creating register for signal `\rio.\timeout_counter' using process `\rio.$proc$rio.v:98$386'.
+  created $dff cell `$procdff$621' with positive edge clock.
+Creating register for signal `\rio.\INTERFACE_SYNCr' using process `\rio.$proc$rio.v:92$384'.
+  created $dff cell `$procdff$622' with positive edge clock.
+
+10.4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+10.4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `SB_DFFNES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$245'.
+Found and cleaned up 1 empty switch in `\SB_DFFNES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1414$242'.
+Removing empty process `SB_DFFNES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1414$242'.
+Removing empty process `SB_DFFNESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$241'.
+Found and cleaned up 2 empty switches in `\SB_DFFNESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1353$235'.
+Removing empty process `SB_DFFNESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1353$235'.
+Removing empty process `SB_DFFNER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$234'.
+Found and cleaned up 1 empty switch in `\SB_DFFNER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1273$231'.
+Removing empty process `SB_DFFNER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1273$231'.
+Removing empty process `SB_DFFNESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$230'.
+Found and cleaned up 2 empty switches in `\SB_DFFNESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1212$224'.
+Removing empty process `SB_DFFNESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1212$224'.
+Removing empty process `SB_DFFNS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$223'.
+Removing empty process `SB_DFFNS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1138$221'.
+Removing empty process `SB_DFFNSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$220'.
+Found and cleaned up 1 empty switch in `\SB_DFFNSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1088$218'.
+Removing empty process `SB_DFFNSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1088$218'.
+Removing empty process `SB_DFFNR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$217'.
+Removing empty process `SB_DFFNR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1017$215'.
+Removing empty process `SB_DFFNSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$214'.
+Found and cleaned up 1 empty switch in `\SB_DFFNSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:967$212'.
+Removing empty process `SB_DFFNSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:967$212'.
+Removing empty process `SB_DFFNE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$211'.
+Found and cleaned up 1 empty switch in `\SB_DFFNE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:922$210'.
+Removing empty process `SB_DFFNE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:922$210'.
+Removing empty process `SB_DFFN.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$209'.
+Removing empty process `SB_DFFN.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:882$208'.
+Removing empty process `SB_DFFES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$207'.
+Found and cleaned up 1 empty switch in `\SB_DFFES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:803$204'.
+Removing empty process `SB_DFFES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:803$204'.
+Removing empty process `SB_DFFESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$203'.
+Found and cleaned up 2 empty switches in `\SB_DFFESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:742$197'.
+Removing empty process `SB_DFFESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:742$197'.
+Removing empty process `SB_DFFER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$196'.
+Found and cleaned up 1 empty switch in `\SB_DFFER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:662$193'.
+Removing empty process `SB_DFFER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:662$193'.
+Removing empty process `SB_DFFESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$192'.
+Found and cleaned up 2 empty switches in `\SB_DFFESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:601$186'.
+Removing empty process `SB_DFFESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:601$186'.
+Removing empty process `SB_DFFS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$185'.
+Removing empty process `SB_DFFS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:527$183'.
+Removing empty process `SB_DFFSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$182'.
+Found and cleaned up 1 empty switch in `\SB_DFFSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:477$180'.
+Removing empty process `SB_DFFSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:477$180'.
+Removing empty process `SB_DFFR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$179'.
+Removing empty process `SB_DFFR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:406$177'.
+Removing empty process `SB_DFFSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$176'.
+Found and cleaned up 1 empty switch in `\SB_DFFSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:356$174'.
+Removing empty process `SB_DFFSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:356$174'.
+Removing empty process `SB_DFFE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$173'.
+Found and cleaned up 1 empty switch in `\SB_DFFE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:311$172'.
+Removing empty process `SB_DFFE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:311$172'.
+Removing empty process `SB_DFF.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$171'.
+Removing empty process `SB_DFF.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:271$170'.
+Removing empty process `$paramod\blink\DIVIDER=s32'00000000111000110111001010010000.$proc$blink.v:10$456'.
+Removing empty process `$paramod\blink\DIVIDER=s32'00000000111000110111001010010000.$proc$blink.v:8$455'.
+Found and cleaned up 1 empty switch in `$paramod\blink\DIVIDER=s32'00000000111000110111001010010000.$proc$blink.v:12$451'.
+Removing empty process `$paramod\blink\DIVIDER=s32'00000000111000110111001010010000.$proc$blink.v:12$451'.
+Removing empty process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:0$449'.
+Found and cleaned up 4 empty switches in `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:47$447'.
+Removing empty process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:47$447'.
+Found and cleaned up 2 empty switches in `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:38$445'.
+Removing empty process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:38$445'.
+Found and cleaned up 2 empty switches in `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:28$442'.
+Removing empty process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:28$442'.
+Removing empty process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:19$438'.
+Removing empty process `$paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.$proc$spi.v:16$435'.
+Removing empty process `stepdir.$proc$stepdir.v:15$434'.
+Removing empty process `stepdir.$proc$stepdir.v:14$433'.
+Removing empty process `stepdir.$proc$stepdir.v:13$432'.
+Removing empty process `stepdir.$proc$stepdir.v:0$431'.
+Found and cleaned up 5 empty switches in `\stepdir.$proc$stepdir.v:18$421'.
+Removing empty process `stepdir.$proc$stepdir.v:18$421'.
+Removing empty process `rio.$proc$rio.v:96$419'.
+Removing empty process `rio.$proc$rio.v:81$418'.
+Removing empty process `rio.$proc$rio.v:80$417'.
+Found and cleaned up 1 empty switch in `\rio.$proc$rio.v:115$390'.
+Removing empty process `rio.$proc$rio.v:115$390'.
+Found and cleaned up 2 empty switches in `\rio.$proc$rio.v:98$386'.
+Removing empty process `rio.$proc$rio.v:98$386'.
+Removing empty process `rio.$proc$rio.v:92$384'.
+Cleaned up 35 empty switches.
+
+10.4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pll.
+Optimizing module $paramod\blink\DIVIDER=s32'00000000111000110111001010010000.
+<suppressed ~1 debug messages>
+Optimizing module $paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.
+<suppressed ~3 debug messages>
+Optimizing module stepdir.
+<suppressed ~2 debug messages>
+Optimizing module rio.
+<suppressed ~3 debug messages>
+
+10.5. Executing FLATTEN pass (flatten design).
+Deleting now unused module pll.
+Deleting now unused module $paramod\blink\DIVIDER=s32'00000000111000110111001010010000.
+Deleting now unused module $paramod$242aeb8c7cb8e6eaab006a1372a671e864a1878c\spi.
+Deleting now unused module stepdir.
+<suppressed ~9 debug messages>
+
+10.6. Executing TRIBUF pass.
+
+10.7. Executing DEMINOUT pass (demote inout ports to input or output).
+
+10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+Removed 1 unused cells and 182 unused wires.
+<suppressed ~3 debug messages>
+
+10.10. Executing CHECK pass (checking for obvious problems).
+Checking module rio...
+Found and reported 0 problems.
+
+10.11. Executing OPT pass (performing simple optimizations).
+
+10.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+<suppressed ~18 debug messages>
+Removed a total of 6 cells.
+
+10.11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~33 debug messages>
+
+10.11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.11.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.11.6. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 1-bit at position 0 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 1 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 2 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 3 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 4 on $procdff$619 ($dff) from module rio.
+Setting constant 1-bit at position 5 on $procdff$619 ($dff) from module rio.
+Setting constant 1-bit at position 6 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 7 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 8 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 9 on $procdff$619 ($dff) from module rio.
+Setting constant 1-bit at position 10 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 11 on $procdff$619 ($dff) from module rio.
+Setting constant 1-bit at position 12 on $procdff$619 ($dff) from module rio.
+Setting constant 1-bit at position 13 on $procdff$619 ($dff) from module rio.
+Setting constant 1-bit at position 14 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 15 on $procdff$619 ($dff) from module rio.
+Setting constant 1-bit at position 16 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 17 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 18 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 19 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 20 on $procdff$619 ($dff) from module rio.
+Setting constant 1-bit at position 21 on $procdff$619 ($dff) from module rio.
+Setting constant 1-bit at position 22 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 23 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 24 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 25 on $procdff$619 ($dff) from module rio.
+Setting constant 1-bit at position 26 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 27 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 28 on $procdff$619 ($dff) from module rio.
+Setting constant 1-bit at position 29 on $procdff$619 ($dff) from module rio.
+Setting constant 1-bit at position 30 on $procdff$619 ($dff) from module rio.
+Setting constant 0-bit at position 31 on $procdff$619 ($dff) from module rio.
+
+10.11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~1 debug messages>
+
+10.11.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.11.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.11.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~33 debug messages>
+
+10.11.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.11.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.11.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.11.16. Finished OPT passes. (There is nothing left to do.)
+
+10.12. Executing FSM pass (extract and optimize FSM).
+
+10.12.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+10.12.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+10.12.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+10.12.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.12.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+10.12.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+10.12.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+10.12.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+10.13. Executing OPT pass (performing simple optimizations).
+
+10.13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~33 debug messages>
+
+10.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.13.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$621 ($dff) from module rio (D = $procmux$559_Y, Q = \timeout_counter, rval = 23'00000000000000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$632 ($sdff) from module rio (D = $add$rio.v:103$389_Y [22:0], Q = \timeout_counter).
+Adding EN signal on $procdff$620 ($dff) from module rio (D = $procmux$565_Y, Q = \INTERFACE_TIMEOUT).
+Adding EN signal on $flatten\stepdir8.$procdff$618 ($dff) from module rio (D = $flatten\stepdir8.$procmux$543_Y, Q = \stepdir8.positionMem).
+Adding EN signal on $flatten\stepdir8.$procdff$615 ($dff) from module rio (D = $flatten\stepdir8.$not$stepdir.v:27$428_Y, Q = \stepdir8.step).
+Adding EN signal on $flatten\stepdir7.$procdff$618 ($dff) from module rio (D = $flatten\stepdir7.$procmux$543_Y, Q = \stepdir7.positionMem).
+Adding EN signal on $flatten\stepdir7.$procdff$615 ($dff) from module rio (D = $flatten\stepdir7.$not$stepdir.v:27$428_Y, Q = \stepdir7.step).
+Adding EN signal on $flatten\stepdir6.$procdff$618 ($dff) from module rio (D = $flatten\stepdir6.$procmux$543_Y, Q = \stepdir6.positionMem).
+Adding EN signal on $flatten\stepdir6.$procdff$615 ($dff) from module rio (D = $flatten\stepdir6.$not$stepdir.v:27$428_Y, Q = \stepdir6.step).
+Adding EN signal on $flatten\stepdir5.$procdff$618 ($dff) from module rio (D = $flatten\stepdir5.$procmux$543_Y, Q = \stepdir5.positionMem).
+Adding EN signal on $flatten\stepdir5.$procdff$615 ($dff) from module rio (D = $flatten\stepdir5.$not$stepdir.v:27$428_Y, Q = \stepdir5.step).
+Adding EN signal on $flatten\stepdir4.$procdff$618 ($dff) from module rio (D = $flatten\stepdir4.$procmux$543_Y, Q = \stepdir4.positionMem).
+Adding EN signal on $flatten\stepdir4.$procdff$615 ($dff) from module rio (D = $flatten\stepdir4.$not$stepdir.v:27$428_Y, Q = \stepdir4.step).
+Adding EN signal on $flatten\stepdir3.$procdff$618 ($dff) from module rio (D = $flatten\stepdir3.$procmux$543_Y, Q = \stepdir3.positionMem).
+Adding EN signal on $flatten\stepdir3.$procdff$615 ($dff) from module rio (D = $flatten\stepdir3.$not$stepdir.v:27$428_Y, Q = \stepdir3.step).
+Adding EN signal on $flatten\spi1.$procdff$612 ($dff) from module rio (D = { \spi1.byte_data_receive [238:0] \PININ_SPI1_MOSI }, Q = \spi1.byte_data_receive).
+Adding SRST signal on $flatten\spi1.$procdff$611 ($dff) from module rio (D = $flatten\spi1.$procmux$530_Y, Q = \spi1.bitcnt, rval = 16'0000000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$676 ($sdff) from module rio (D = $flatten\spi1.$add$spi.v:33$444_Y, Q = \spi1.bitcnt).
+Adding EN signal on $flatten\spi1.$procdff$610 ($dff) from module rio (D = \spi1.byte_data_receive, Q = \spi1.byte_data_received).
+Adding SRST signal on $flatten\spi1.$procdff$609 ($dff) from module rio (D = $flatten\spi1.$procmux$517_Y, Q = \spi1.sync, rval = 1'0).
+Adding EN signal on $flatten\spi1.$procdff$608 ($dff) from module rio (D = $flatten\spi1.$procmux$513_Y, Q = \spi1.byte_data_sent).
+Adding SRST signal on $auto$ff.cc:266:slice$682 ($dffe) from module rio (D = { $flatten\spi1.$procmux$510_Y [239:208] $flatten\spi1.$procmux$510_Y [7:0] }, Q = { \spi1.byte_data_sent [239:208] \spi1.byte_data_sent [7:0] }, rval = 40'0110000101110100011000010110010000000000).
+Adding SRST signal on $flatten\blink0.$procdff$607 ($dff) from module rio (D = $flatten\blink0.$sub$blink.v:17$454_Y [24:0], Q = \blink0.counter, rval = 25'0111000110111001010010000).
+Adding EN signal on $flatten\blink0.$procdff$606 ($dff) from module rio (D = $flatten\blink0.$not$blink.v:15$453_Y, Q = \blink0.rled).
+
+10.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+Removed 43 unused cells and 43 unused wires.
+<suppressed ~44 debug messages>
+
+10.13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+<suppressed ~1 debug messages>
+
+10.13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+10.13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+10.13.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+10.13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.13.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.13.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+10.13.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.13.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.13.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.13.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.13.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.13.23. Finished OPT passes. (There is nothing left to do.)
+
+10.14. Executing WREDUCE pass (reducing word size of cells).
+Removed top 31 bits (of 32) from port B of cell rio.$flatten\blink0.$sub$blink.v:17$454 ($sub).
+Removed top 7 bits (of 32) from port Y of cell rio.$flatten\blink0.$sub$blink.v:17$454 ($sub).
+Removed top 1 bits (of 2) from port B of cell rio.$eq$rio.v:93$385 ($eq).
+Removed top 10 bits (of 32) from port B of cell rio.$lt$rio.v:102$388 ($lt).
+Removed top 31 bits (of 32) from port B of cell rio.$add$rio.v:103$389 ($add).
+Removed top 9 bits (of 32) from port Y of cell rio.$add$rio.v:103$389 ($add).
+Removed top 32 bits (of 240) from FF cell rio.$auto$ff.cc:266:slice$678 ($dffe).
+Removed top 32 bits (of 240) from mux cell rio.$flatten\spi1.$procmux$513 ($mux).
+Removed top 1 bits (of 32) from port B of cell rio.$flatten\spi1.$eq$spi.v:41$446 ($eq).
+Removed top 15 bits (of 16) from port B of cell rio.$flatten\spi1.$add$spi.v:33$444 ($add).
+Removed top 1 bits (of 2) from port B of cell rio.$flatten\spi1.$eq$spi.v:22$441 ($eq).
+Removed top 1 bits (of 2) from port B of cell rio.$flatten\spi1.$eq$spi.v:17$436 ($eq).
+Removed top 30 bits (of 32) from port B of cell rio.$flatten\stepdir3.$sub$stepdir.v:33$430 ($sub).
+Removed top 30 bits (of 32) from port B of cell rio.$flatten\stepdir3.$add$stepdir.v:31$429 ($add).
+Removed top 31 bits (of 32) from port B of cell rio.$flatten\stepdir3.$add$stepdir.v:24$423 ($add).
+Removed top 31 bits (of 32) from port B of cell rio.$flatten\stepdir3.$gt$stepdir.v:12$420 ($gt).
+Removed top 30 bits (of 32) from port B of cell rio.$flatten\stepdir4.$sub$stepdir.v:33$430 ($sub).
+Removed top 30 bits (of 32) from port B of cell rio.$flatten\stepdir4.$add$stepdir.v:31$429 ($add).
+Removed top 31 bits (of 32) from port B of cell rio.$flatten\stepdir4.$add$stepdir.v:24$423 ($add).
+Removed top 31 bits (of 32) from port B of cell rio.$flatten\stepdir4.$gt$stepdir.v:12$420 ($gt).
+Removed top 30 bits (of 32) from port B of cell rio.$flatten\stepdir5.$sub$stepdir.v:33$430 ($sub).
+Removed top 30 bits (of 32) from port B of cell rio.$flatten\stepdir5.$add$stepdir.v:31$429 ($add).
+Removed top 31 bits (of 32) from port B of cell rio.$flatten\stepdir5.$add$stepdir.v:24$423 ($add).
+Removed top 31 bits (of 32) from port B of cell rio.$flatten\stepdir5.$gt$stepdir.v:12$420 ($gt).
+Removed top 30 bits (of 32) from port B of cell rio.$flatten\stepdir6.$sub$stepdir.v:33$430 ($sub).
+Removed top 30 bits (of 32) from port B of cell rio.$flatten\stepdir6.$add$stepdir.v:31$429 ($add).
+Removed top 31 bits (of 32) from port B of cell rio.$flatten\stepdir6.$add$stepdir.v:24$423 ($add).
+Removed top 31 bits (of 32) from port B of cell rio.$flatten\stepdir6.$gt$stepdir.v:12$420 ($gt).
+Removed top 30 bits (of 32) from port B of cell rio.$flatten\stepdir7.$sub$stepdir.v:33$430 ($sub).
+Removed top 30 bits (of 32) from port B of cell rio.$flatten\stepdir7.$add$stepdir.v:31$429 ($add).
+Removed top 31 bits (of 32) from port B of cell rio.$flatten\stepdir7.$add$stepdir.v:24$423 ($add).
+Removed top 31 bits (of 32) from port B of cell rio.$flatten\stepdir7.$gt$stepdir.v:12$420 ($gt).
+Removed top 30 bits (of 32) from port B of cell rio.$flatten\stepdir8.$sub$stepdir.v:33$430 ($sub).
+Removed top 30 bits (of 32) from port B of cell rio.$flatten\stepdir8.$add$stepdir.v:31$429 ($add).
+Removed top 31 bits (of 32) from port B of cell rio.$flatten\stepdir8.$add$stepdir.v:24$423 ($add).
+Removed top 31 bits (of 32) from port B of cell rio.$flatten\stepdir8.$gt$stepdir.v:12$420 ($gt).
+Removed top 9 bits (of 32) from wire rio.$add$rio.v:103$389_Y.
+Removed top 32 bits (of 240) from wire rio.$flatten\spi1.$procmux$513_Y.
+Removed top 32 bits (of 240) from wire rio.rx_data.
+Removed top 32 bits (of 240) from wire rio.tx_data.
+
+10.15. Executing PEEPOPT pass (run peephole optimizers).
+
+10.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+10.17. Executing SHARE pass (SAT-based resource sharing).
+
+10.18. Executing TECHMAP pass (map to technology primitives).
+
+10.18.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/cmp2lut.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+10.18.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~88 debug messages>
+
+10.19. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.20. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.21. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+10.22. Executing WREDUCE pass (reducing word size of cells).
+
+10.23. Executing TECHMAP pass (map to technology primitives).
+
+10.23.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/mul2dsp.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/mul2dsp.v' to AST representation.
+Generating RTLIL representation for module `\_80_mul'.
+Generating RTLIL representation for module `\_90_soft_mul'.
+Successfully finished Verilog frontend.
+
+10.23.2. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/dsp_map.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/dsp_map.v' to AST representation.
+Generating RTLIL representation for module `\$__MUL16X16'.
+Successfully finished Verilog frontend.
+
+10.23.3. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~5 debug messages>
+
+10.24. Executing OPT_EXPR pass (perform const folding).
+
+10.25. Executing WREDUCE pass (reducing word size of cells).
+
+10.26. Executing ICE40_DSP pass (map multipliers).
+
+10.27. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module rio:
+  creating $macc model for $add$rio.v:103$389 ($add).
+  creating $macc model for $flatten\blink0.$sub$blink.v:17$454 ($sub).
+  creating $macc model for $flatten\spi1.$add$spi.v:33$444 ($add).
+  creating $macc model for $flatten\stepdir3.$add$stepdir.v:24$423 ($add).
+  creating $macc model for $flatten\stepdir3.$add$stepdir.v:31$429 ($add).
+  creating $macc model for $flatten\stepdir3.$neg$stepdir.v:22$422 ($neg).
+  creating $macc model for $flatten\stepdir3.$sub$stepdir.v:33$430 ($sub).
+  creating $macc model for $flatten\stepdir4.$add$stepdir.v:24$423 ($add).
+  creating $macc model for $flatten\stepdir4.$add$stepdir.v:31$429 ($add).
+  creating $macc model for $flatten\stepdir4.$neg$stepdir.v:22$422 ($neg).
+  creating $macc model for $flatten\stepdir4.$sub$stepdir.v:33$430 ($sub).
+  creating $macc model for $flatten\stepdir5.$add$stepdir.v:24$423 ($add).
+  creating $macc model for $flatten\stepdir5.$add$stepdir.v:31$429 ($add).
+  creating $macc model for $flatten\stepdir5.$neg$stepdir.v:22$422 ($neg).
+  creating $macc model for $flatten\stepdir5.$sub$stepdir.v:33$430 ($sub).
+  creating $macc model for $flatten\stepdir6.$add$stepdir.v:24$423 ($add).
+  creating $macc model for $flatten\stepdir6.$add$stepdir.v:31$429 ($add).
+  creating $macc model for $flatten\stepdir6.$neg$stepdir.v:22$422 ($neg).
+  creating $macc model for $flatten\stepdir6.$sub$stepdir.v:33$430 ($sub).
+  creating $macc model for $flatten\stepdir7.$add$stepdir.v:24$423 ($add).
+  creating $macc model for $flatten\stepdir7.$add$stepdir.v:31$429 ($add).
+  creating $macc model for $flatten\stepdir7.$neg$stepdir.v:22$422 ($neg).
+  creating $macc model for $flatten\stepdir7.$sub$stepdir.v:33$430 ($sub).
+  creating $macc model for $flatten\stepdir8.$add$stepdir.v:24$423 ($add).
+  creating $macc model for $flatten\stepdir8.$add$stepdir.v:31$429 ($add).
+  creating $macc model for $flatten\stepdir8.$neg$stepdir.v:22$422 ($neg).
+  creating $macc model for $flatten\stepdir8.$sub$stepdir.v:33$430 ($sub).
+  creating $alu model for $macc $flatten\stepdir8.$sub$stepdir.v:33$430.
+  creating $alu model for $macc $flatten\stepdir8.$neg$stepdir.v:22$422.
+  creating $alu model for $macc $flatten\stepdir8.$add$stepdir.v:31$429.
+  creating $alu model for $macc $flatten\stepdir8.$add$stepdir.v:24$423.
+  creating $alu model for $macc $flatten\stepdir7.$sub$stepdir.v:33$430.
+  creating $alu model for $macc $flatten\stepdir7.$neg$stepdir.v:22$422.
+  creating $alu model for $macc $flatten\stepdir7.$add$stepdir.v:31$429.
+  creating $alu model for $macc $flatten\stepdir7.$add$stepdir.v:24$423.
+  creating $alu model for $macc $flatten\stepdir6.$sub$stepdir.v:33$430.
+  creating $alu model for $macc $flatten\stepdir6.$neg$stepdir.v:22$422.
+  creating $alu model for $macc $flatten\stepdir6.$add$stepdir.v:31$429.
+  creating $alu model for $macc $flatten\stepdir6.$add$stepdir.v:24$423.
+  creating $alu model for $macc $flatten\stepdir5.$sub$stepdir.v:33$430.
+  creating $alu model for $macc $flatten\stepdir5.$neg$stepdir.v:22$422.
+  creating $alu model for $macc $flatten\stepdir5.$add$stepdir.v:31$429.
+  creating $alu model for $macc $flatten\stepdir5.$add$stepdir.v:24$423.
+  creating $alu model for $macc $flatten\stepdir4.$sub$stepdir.v:33$430.
+  creating $alu model for $macc $flatten\stepdir4.$neg$stepdir.v:22$422.
+  creating $alu model for $macc $flatten\stepdir4.$add$stepdir.v:31$429.
+  creating $alu model for $macc $flatten\stepdir4.$add$stepdir.v:24$423.
+  creating $alu model for $macc $flatten\stepdir3.$sub$stepdir.v:33$430.
+  creating $alu model for $macc $flatten\stepdir3.$neg$stepdir.v:22$422.
+  creating $alu model for $macc $flatten\stepdir3.$add$stepdir.v:31$429.
+  creating $alu model for $macc $flatten\stepdir3.$add$stepdir.v:24$423.
+  creating $alu model for $macc $flatten\spi1.$add$spi.v:33$444.
+  creating $alu model for $macc $flatten\blink0.$sub$blink.v:17$454.
+  creating $alu model for $macc $add$rio.v:103$389.
+  creating $alu model for $flatten\stepdir3.$ge$stepdir.v:26$427 ($ge): new $alu
+  creating $alu model for $flatten\stepdir3.$gt$stepdir.v:12$420 ($gt): new $alu
+  creating $alu model for $flatten\stepdir4.$ge$stepdir.v:26$427 ($ge): new $alu
+  creating $alu model for $flatten\stepdir4.$gt$stepdir.v:12$420 ($gt): new $alu
+  creating $alu model for $flatten\stepdir5.$ge$stepdir.v:26$427 ($ge): new $alu
+  creating $alu model for $flatten\stepdir5.$gt$stepdir.v:12$420 ($gt): new $alu
+  creating $alu model for $flatten\stepdir6.$ge$stepdir.v:26$427 ($ge): new $alu
+  creating $alu model for $flatten\stepdir6.$gt$stepdir.v:12$420 ($gt): new $alu
+  creating $alu model for $flatten\stepdir7.$ge$stepdir.v:26$427 ($ge): new $alu
+  creating $alu model for $flatten\stepdir7.$gt$stepdir.v:12$420 ($gt): new $alu
+  creating $alu model for $flatten\stepdir8.$ge$stepdir.v:26$427 ($ge): new $alu
+  creating $alu model for $flatten\stepdir8.$gt$stepdir.v:12$420 ($gt): new $alu
+  creating $alu model for $lt$rio.v:102$388 ($lt): new $alu
+  creating $alu cell for $lt$rio.v:102$388: $auto$alumacc.cc:485:replace_alu$711
+  creating $alu cell for $flatten\stepdir8.$gt$stepdir.v:12$420: $auto$alumacc.cc:485:replace_alu$722
+  creating $alu cell for $flatten\stepdir8.$ge$stepdir.v:26$427: $auto$alumacc.cc:485:replace_alu$729
+  creating $alu cell for $flatten\stepdir7.$gt$stepdir.v:12$420: $auto$alumacc.cc:485:replace_alu$738
+  creating $alu cell for $flatten\stepdir7.$ge$stepdir.v:26$427: $auto$alumacc.cc:485:replace_alu$745
+  creating $alu cell for $flatten\stepdir6.$gt$stepdir.v:12$420: $auto$alumacc.cc:485:replace_alu$754
+  creating $alu cell for $flatten\stepdir6.$ge$stepdir.v:26$427: $auto$alumacc.cc:485:replace_alu$761
+  creating $alu cell for $flatten\stepdir5.$gt$stepdir.v:12$420: $auto$alumacc.cc:485:replace_alu$770
+  creating $alu cell for $flatten\stepdir5.$ge$stepdir.v:26$427: $auto$alumacc.cc:485:replace_alu$777
+  creating $alu cell for $flatten\stepdir4.$gt$stepdir.v:12$420: $auto$alumacc.cc:485:replace_alu$786
+  creating $alu cell for $flatten\stepdir4.$ge$stepdir.v:26$427: $auto$alumacc.cc:485:replace_alu$793
+  creating $alu cell for $flatten\stepdir3.$gt$stepdir.v:12$420: $auto$alumacc.cc:485:replace_alu$802
+  creating $alu cell for $flatten\stepdir3.$ge$stepdir.v:26$427: $auto$alumacc.cc:485:replace_alu$809
+  creating $alu cell for $add$rio.v:103$389: $auto$alumacc.cc:485:replace_alu$818
+  creating $alu cell for $flatten\blink0.$sub$blink.v:17$454: $auto$alumacc.cc:485:replace_alu$821
+  creating $alu cell for $flatten\spi1.$add$spi.v:33$444: $auto$alumacc.cc:485:replace_alu$824
+  creating $alu cell for $flatten\stepdir3.$add$stepdir.v:24$423: $auto$alumacc.cc:485:replace_alu$827
+  creating $alu cell for $flatten\stepdir3.$add$stepdir.v:31$429: $auto$alumacc.cc:485:replace_alu$830
+  creating $alu cell for $flatten\stepdir3.$neg$stepdir.v:22$422: $auto$alumacc.cc:485:replace_alu$833
+  creating $alu cell for $flatten\stepdir3.$sub$stepdir.v:33$430: $auto$alumacc.cc:485:replace_alu$836
+  creating $alu cell for $flatten\stepdir4.$add$stepdir.v:24$423: $auto$alumacc.cc:485:replace_alu$839
+  creating $alu cell for $flatten\stepdir4.$add$stepdir.v:31$429: $auto$alumacc.cc:485:replace_alu$842
+  creating $alu cell for $flatten\stepdir4.$neg$stepdir.v:22$422: $auto$alumacc.cc:485:replace_alu$845
+  creating $alu cell for $flatten\stepdir4.$sub$stepdir.v:33$430: $auto$alumacc.cc:485:replace_alu$848
+  creating $alu cell for $flatten\stepdir5.$add$stepdir.v:24$423: $auto$alumacc.cc:485:replace_alu$851
+  creating $alu cell for $flatten\stepdir5.$add$stepdir.v:31$429: $auto$alumacc.cc:485:replace_alu$854
+  creating $alu cell for $flatten\stepdir5.$neg$stepdir.v:22$422: $auto$alumacc.cc:485:replace_alu$857
+  creating $alu cell for $flatten\stepdir5.$sub$stepdir.v:33$430: $auto$alumacc.cc:485:replace_alu$860
+  creating $alu cell for $flatten\stepdir6.$add$stepdir.v:24$423: $auto$alumacc.cc:485:replace_alu$863
+  creating $alu cell for $flatten\stepdir6.$add$stepdir.v:31$429: $auto$alumacc.cc:485:replace_alu$866
+  creating $alu cell for $flatten\stepdir6.$neg$stepdir.v:22$422: $auto$alumacc.cc:485:replace_alu$869
+  creating $alu cell for $flatten\stepdir6.$sub$stepdir.v:33$430: $auto$alumacc.cc:485:replace_alu$872
+  creating $alu cell for $flatten\stepdir7.$add$stepdir.v:24$423: $auto$alumacc.cc:485:replace_alu$875
+  creating $alu cell for $flatten\stepdir7.$add$stepdir.v:31$429: $auto$alumacc.cc:485:replace_alu$878
+  creating $alu cell for $flatten\stepdir7.$neg$stepdir.v:22$422: $auto$alumacc.cc:485:replace_alu$881
+  creating $alu cell for $flatten\stepdir7.$sub$stepdir.v:33$430: $auto$alumacc.cc:485:replace_alu$884
+  creating $alu cell for $flatten\stepdir8.$add$stepdir.v:24$423: $auto$alumacc.cc:485:replace_alu$887
+  creating $alu cell for $flatten\stepdir8.$add$stepdir.v:31$429: $auto$alumacc.cc:485:replace_alu$890
+  creating $alu cell for $flatten\stepdir8.$neg$stepdir.v:22$422: $auto$alumacc.cc:485:replace_alu$893
+  creating $alu cell for $flatten\stepdir8.$sub$stepdir.v:33$430: $auto$alumacc.cc:485:replace_alu$896
+  created 40 $alu and 0 $macc cells.
+
+10.28. Executing OPT pass (performing simple optimizations).
+
+10.28.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+<suppressed ~2 debug messages>
+
+10.28.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.28.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+10.28.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.28.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.28.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.28.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+Removed 1 unused cells and 14 unused wires.
+<suppressed ~2 debug messages>
+
+10.28.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.28.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.28.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+10.28.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.28.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.28.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.28.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.28.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.28.16. Finished OPT passes. (There is nothing left to do.)
+
+10.29. Executing MEMORY pass.
+
+10.29.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+10.29.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+10.29.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+10.29.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+10.29.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+10.29.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.29.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+10.29.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+10.29.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.29.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+10.30. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.31. Executing MEMORY_LIBMAP pass (mapping memories to cells).
+
+10.32. Executing TECHMAP pass (map to technology primitives).
+
+10.32.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/brams_map.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/brams_map.v' to AST representation.
+Generating RTLIL representation for module `\$__ICE40_RAM4K_'.
+Successfully finished Verilog frontend.
+
+10.32.2. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/spram_map.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/spram_map.v' to AST representation.
+Generating RTLIL representation for module `\$__ICE40_SPRAM_'.
+Successfully finished Verilog frontend.
+
+10.32.3. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+10.33. Executing ICE40_BRAMINIT pass.
+
+10.34. Executing OPT pass (performing simple optimizations).
+
+10.34.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+<suppressed ~31 debug messages>
+
+10.34.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.34.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.34.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+10.34.5. Finished fast OPT passes.
+
+10.35. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+10.36. Executing OPT pass (performing simple optimizations).
+
+10.36.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+    Consolidated identical input bits for $mux cell $flatten\spi1.$procmux$508:
+      Old ports: A={ \spi1.byte_data_sent [238:0] 1'0 }, B=240'000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, Y=$flatten\spi1.$procmux$508_Y
+      New ports: A=\spi1.byte_data_sent [238:0], B=239'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, Y=$flatten\spi1.$procmux$508_Y [239:1]
+      New connections: $flatten\spi1.$procmux$508_Y [0] = 1'0
+  Optimizing cells in module \rio.
+    Consolidated identical input bits for $mux cell $flatten\spi1.$procmux$513:
+      Old ports: A=$flatten\spi1.$procmux$508_Y [207:0], B={ \stepdir3.positionMem [7:0] \stepdir3.positionMem [15:8] \stepdir3.positionMem [23:16] \stepdir3.positionMem [31:24] \stepdir4.positionMem [7:0] \stepdir4.positionMem [15:8] \stepdir4.positionMem [23:16] \stepdir4.positionMem [31:24] \stepdir5.positionMem [7:0] \stepdir5.positionMem [15:8] \stepdir5.positionMem [23:16] \stepdir5.positionMem [31:24] \stepdir6.positionMem [7:0] \stepdir6.positionMem [15:8] \stepdir6.positionMem [23:16] \stepdir6.positionMem [31:24] \stepdir7.positionMem [7:0] \stepdir7.positionMem [15:8] \stepdir7.positionMem [23:16] \stepdir7.positionMem [31:24] \stepdir8.positionMem [7:0] \stepdir8.positionMem [15:8] \stepdir8.positionMem [23:16] \stepdir8.positionMem [31:24] \PININ_BITIN12_BIT_INVERTED \PININ_BITIN13_BIT_INVERTED \PININ_BITIN14_BIT_INVERTED \PININ_BITIN15_BIT_INVERTED \PININ_BITIN16_BIT_INVERTED \PININ_BITIN17_BIT_INVERTED \PININ_BITIN18_BIT_INVERTED \PININ_BITIN19_BIT_INVERTED 8'00000000 }, Y=$auto$wreduce.cc:461:run$694 [207:0]
+      New ports: A=$flatten\spi1.$procmux$508_Y [207:1], B={ \stepdir3.positionMem [7:0] \stepdir3.positionMem [15:8] \stepdir3.positionMem [23:16] \stepdir3.positionMem [31:24] \stepdir4.positionMem [7:0] \stepdir4.positionMem [15:8] \stepdir4.positionMem [23:16] \stepdir4.positionMem [31:24] \stepdir5.positionMem [7:0] \stepdir5.positionMem [15:8] \stepdir5.positionMem [23:16] \stepdir5.positionMem [31:24] \stepdir6.positionMem [7:0] \stepdir6.positionMem [15:8] \stepdir6.positionMem [23:16] \stepdir6.positionMem [31:24] \stepdir7.positionMem [7:0] \stepdir7.positionMem [15:8] \stepdir7.positionMem [23:16] \stepdir7.positionMem [31:24] \stepdir8.positionMem [7:0] \stepdir8.positionMem [15:8] \stepdir8.positionMem [23:16] \stepdir8.positionMem [31:24] \PININ_BITIN12_BIT_INVERTED \PININ_BITIN13_BIT_INVERTED \PININ_BITIN14_BIT_INVERTED \PININ_BITIN15_BIT_INVERTED \PININ_BITIN16_BIT_INVERTED \PININ_BITIN17_BIT_INVERTED \PININ_BITIN18_BIT_INVERTED \PININ_BITIN19_BIT_INVERTED 7'0000000 }, Y=$auto$wreduce.cc:461:run$694 [207:1]
+      New connections: $auto$wreduce.cc:461:run$694 [0] = 1'0
+  Optimizing cells in module \rio.
+Performed a total of 2 changes.
+
+10.36.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $auto$ff.cc:266:slice$689 ($sdffce) from module rio (D = { \spi1.byte_data_sent [238] \spi1.byte_data_sent [235:232] \spi1.byte_data_sent [230] \spi1.byte_data_sent [226] \spi1.byte_data_sent [224:222] \spi1.byte_data_sent [219:216] \spi1.byte_data_sent [214] \spi1.byte_data_sent [211:210] \spi1.byte_data_sent [208:207] }, Q = { \spi1.byte_data_sent [239] \spi1.byte_data_sent [236:233] \spi1.byte_data_sent [231] \spi1.byte_data_sent [227] \spi1.byte_data_sent [225:223] \spi1.byte_data_sent [220:217] \spi1.byte_data_sent [215] \spi1.byte_data_sent [212:211] \spi1.byte_data_sent [209:208] }, rval = 19'0000000000000000000).
+
+10.36.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.36.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.36.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.13. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$922 ($sdffce) from module rio.
+
+10.36.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.36.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+    Consolidated identical input bits for $mux cell $flatten\spi1.$procmux$508:
+      Old ports: A={ \spi1.byte_data_sent [238:1] 1'0 }, B=239'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, Y=$flatten\spi1.$procmux$508_Y [239:1]
+      New ports: A=\spi1.byte_data_sent [238:1], B=238'0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, Y=$flatten\spi1.$procmux$508_Y [239:2]
+      New connections: $flatten\spi1.$procmux$508_Y [1] = 1'0
+  Optimizing cells in module \rio.
+    Consolidated identical input bits for $mux cell $flatten\spi1.$procmux$513:
+      Old ports: A=$flatten\spi1.$procmux$508_Y [207:1], B={ \stepdir3.positionMem [7:0] \stepdir3.positionMem [15:8] \stepdir3.positionMem [23:16] \stepdir3.positionMem [31:24] \stepdir4.positionMem [7:0] \stepdir4.positionMem [15:8] \stepdir4.positionMem [23:16] \stepdir4.positionMem [31:24] \stepdir5.positionMem [7:0] \stepdir5.positionMem [15:8] \stepdir5.positionMem [23:16] \stepdir5.positionMem [31:24] \stepdir6.positionMem [7:0] \stepdir6.positionMem [15:8] \stepdir6.positionMem [23:16] \stepdir6.positionMem [31:24] \stepdir7.positionMem [7:0] \stepdir7.positionMem [15:8] \stepdir7.positionMem [23:16] \stepdir7.positionMem [31:24] \stepdir8.positionMem [7:0] \stepdir8.positionMem [15:8] \stepdir8.positionMem [23:16] \stepdir8.positionMem [31:24] \PININ_BITIN12_BIT_INVERTED \PININ_BITIN13_BIT_INVERTED \PININ_BITIN14_BIT_INVERTED \PININ_BITIN15_BIT_INVERTED \PININ_BITIN16_BIT_INVERTED \PININ_BITIN17_BIT_INVERTED \PININ_BITIN18_BIT_INVERTED \PININ_BITIN19_BIT_INVERTED 7'0000000 }, Y=$auto$wreduce.cc:461:run$694 [207:1]
+      New ports: A=$flatten\spi1.$procmux$508_Y [207:2], B={ \stepdir3.positionMem [7:0] \stepdir3.positionMem [15:8] \stepdir3.positionMem [23:16] \stepdir3.positionMem [31:24] \stepdir4.positionMem [7:0] \stepdir4.positionMem [15:8] \stepdir4.positionMem [23:16] \stepdir4.positionMem [31:24] \stepdir5.positionMem [7:0] \stepdir5.positionMem [15:8] \stepdir5.positionMem [23:16] \stepdir5.positionMem [31:24] \stepdir6.positionMem [7:0] \stepdir6.positionMem [15:8] \stepdir6.positionMem [23:16] \stepdir6.positionMem [31:24] \stepdir7.positionMem [7:0] \stepdir7.positionMem [15:8] \stepdir7.positionMem [23:16] \stepdir7.positionMem [31:24] \stepdir8.positionMem [7:0] \stepdir8.positionMem [15:8] \stepdir8.positionMem [23:16] \stepdir8.positionMem [31:24] \PININ_BITIN12_BIT_INVERTED \PININ_BITIN13_BIT_INVERTED \PININ_BITIN14_BIT_INVERTED \PININ_BITIN15_BIT_INVERTED \PININ_BITIN16_BIT_INVERTED \PININ_BITIN17_BIT_INVERTED \PININ_BITIN18_BIT_INVERTED \PININ_BITIN19_BIT_INVERTED 6'000000 }, Y=$auto$wreduce.cc:461:run$694 [207:2]
+      New connections: $auto$wreduce.cc:461:run$694 [1] = 1'0
+  Optimizing cells in module \rio.
+Performed a total of 2 changes.
+
+10.36.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.36.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.23. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.36.24. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.25. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.36.26. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.27. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$923 ($sdffce) from module rio.
+
+10.36.28. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.29. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.30. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.36.31. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.32. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+    Consolidated identical input bits for $mux cell $flatten\spi1.$procmux$508:
+      Old ports: A={ \spi1.byte_data_sent [238:2] 1'0 }, B=238'0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, Y=$flatten\spi1.$procmux$508_Y [239:2]
+      New ports: A=\spi1.byte_data_sent [238:2], B=237'000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, Y=$flatten\spi1.$procmux$508_Y [239:3]
+      New connections: $flatten\spi1.$procmux$508_Y [2] = 1'0
+  Optimizing cells in module \rio.
+    Consolidated identical input bits for $mux cell $flatten\spi1.$procmux$513:
+      Old ports: A=$flatten\spi1.$procmux$508_Y [207:2], B={ \stepdir3.positionMem [7:0] \stepdir3.positionMem [15:8] \stepdir3.positionMem [23:16] \stepdir3.positionMem [31:24] \stepdir4.positionMem [7:0] \stepdir4.positionMem [15:8] \stepdir4.positionMem [23:16] \stepdir4.positionMem [31:24] \stepdir5.positionMem [7:0] \stepdir5.positionMem [15:8] \stepdir5.positionMem [23:16] \stepdir5.positionMem [31:24] \stepdir6.positionMem [7:0] \stepdir6.positionMem [15:8] \stepdir6.positionMem [23:16] \stepdir6.positionMem [31:24] \stepdir7.positionMem [7:0] \stepdir7.positionMem [15:8] \stepdir7.positionMem [23:16] \stepdir7.positionMem [31:24] \stepdir8.positionMem [7:0] \stepdir8.positionMem [15:8] \stepdir8.positionMem [23:16] \stepdir8.positionMem [31:24] \PININ_BITIN12_BIT_INVERTED \PININ_BITIN13_BIT_INVERTED \PININ_BITIN14_BIT_INVERTED \PININ_BITIN15_BIT_INVERTED \PININ_BITIN16_BIT_INVERTED \PININ_BITIN17_BIT_INVERTED \PININ_BITIN18_BIT_INVERTED \PININ_BITIN19_BIT_INVERTED 6'000000 }, Y=$auto$wreduce.cc:461:run$694 [207:2]
+      New ports: A=$flatten\spi1.$procmux$508_Y [207:3], B={ \stepdir3.positionMem [7:0] \stepdir3.positionMem [15:8] \stepdir3.positionMem [23:16] \stepdir3.positionMem [31:24] \stepdir4.positionMem [7:0] \stepdir4.positionMem [15:8] \stepdir4.positionMem [23:16] \stepdir4.positionMem [31:24] \stepdir5.positionMem [7:0] \stepdir5.positionMem [15:8] \stepdir5.positionMem [23:16] \stepdir5.positionMem [31:24] \stepdir6.positionMem [7:0] \stepdir6.positionMem [15:8] \stepdir6.positionMem [23:16] \stepdir6.positionMem [31:24] \stepdir7.positionMem [7:0] \stepdir7.positionMem [15:8] \stepdir7.positionMem [23:16] \stepdir7.positionMem [31:24] \stepdir8.positionMem [7:0] \stepdir8.positionMem [15:8] \stepdir8.positionMem [23:16] \stepdir8.positionMem [31:24] \PININ_BITIN12_BIT_INVERTED \PININ_BITIN13_BIT_INVERTED \PININ_BITIN14_BIT_INVERTED \PININ_BITIN15_BIT_INVERTED \PININ_BITIN16_BIT_INVERTED \PININ_BITIN17_BIT_INVERTED \PININ_BITIN18_BIT_INVERTED \PININ_BITIN19_BIT_INVERTED 5'00000 }, Y=$auto$wreduce.cc:461:run$694 [207:3]
+      New connections: $auto$wreduce.cc:461:run$694 [2] = 1'0
+  Optimizing cells in module \rio.
+Performed a total of 2 changes.
+
+10.36.33. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.34. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.36.35. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.36. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.37. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.36.38. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.39. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.36.40. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.41. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$924 ($sdffce) from module rio.
+
+10.36.42. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.43. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.44. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.36.45. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.46. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+    Consolidated identical input bits for $mux cell $flatten\spi1.$procmux$508:
+      Old ports: A={ \spi1.byte_data_sent [238:3] 1'0 }, B=237'000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, Y=$flatten\spi1.$procmux$508_Y [239:3]
+      New ports: A=\spi1.byte_data_sent [238:3], B=236'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, Y=$flatten\spi1.$procmux$508_Y [239:4]
+      New connections: $flatten\spi1.$procmux$508_Y [3] = 1'0
+  Optimizing cells in module \rio.
+    Consolidated identical input bits for $mux cell $flatten\spi1.$procmux$513:
+      Old ports: A=$flatten\spi1.$procmux$508_Y [207:3], B={ \stepdir3.positionMem [7:0] \stepdir3.positionMem [15:8] \stepdir3.positionMem [23:16] \stepdir3.positionMem [31:24] \stepdir4.positionMem [7:0] \stepdir4.positionMem [15:8] \stepdir4.positionMem [23:16] \stepdir4.positionMem [31:24] \stepdir5.positionMem [7:0] \stepdir5.positionMem [15:8] \stepdir5.positionMem [23:16] \stepdir5.positionMem [31:24] \stepdir6.positionMem [7:0] \stepdir6.positionMem [15:8] \stepdir6.positionMem [23:16] \stepdir6.positionMem [31:24] \stepdir7.positionMem [7:0] \stepdir7.positionMem [15:8] \stepdir7.positionMem [23:16] \stepdir7.positionMem [31:24] \stepdir8.positionMem [7:0] \stepdir8.positionMem [15:8] \stepdir8.positionMem [23:16] \stepdir8.positionMem [31:24] \PININ_BITIN12_BIT_INVERTED \PININ_BITIN13_BIT_INVERTED \PININ_BITIN14_BIT_INVERTED \PININ_BITIN15_BIT_INVERTED \PININ_BITIN16_BIT_INVERTED \PININ_BITIN17_BIT_INVERTED \PININ_BITIN18_BIT_INVERTED \PININ_BITIN19_BIT_INVERTED 5'00000 }, Y=$auto$wreduce.cc:461:run$694 [207:3]
+      New ports: A=$flatten\spi1.$procmux$508_Y [207:4], B={ \stepdir3.positionMem [7:0] \stepdir3.positionMem [15:8] \stepdir3.positionMem [23:16] \stepdir3.positionMem [31:24] \stepdir4.positionMem [7:0] \stepdir4.positionMem [15:8] \stepdir4.positionMem [23:16] \stepdir4.positionMem [31:24] \stepdir5.positionMem [7:0] \stepdir5.positionMem [15:8] \stepdir5.positionMem [23:16] \stepdir5.positionMem [31:24] \stepdir6.positionMem [7:0] \stepdir6.positionMem [15:8] \stepdir6.positionMem [23:16] \stepdir6.positionMem [31:24] \stepdir7.positionMem [7:0] \stepdir7.positionMem [15:8] \stepdir7.positionMem [23:16] \stepdir7.positionMem [31:24] \stepdir8.positionMem [7:0] \stepdir8.positionMem [15:8] \stepdir8.positionMem [23:16] \stepdir8.positionMem [31:24] \PININ_BITIN12_BIT_INVERTED \PININ_BITIN13_BIT_INVERTED \PININ_BITIN14_BIT_INVERTED \PININ_BITIN15_BIT_INVERTED \PININ_BITIN16_BIT_INVERTED \PININ_BITIN17_BIT_INVERTED \PININ_BITIN18_BIT_INVERTED \PININ_BITIN19_BIT_INVERTED 4'0000 }, Y=$auto$wreduce.cc:461:run$694 [207:4]
+      New connections: $auto$wreduce.cc:461:run$694 [3] = 1'0
+  Optimizing cells in module \rio.
+Performed a total of 2 changes.
+
+10.36.47. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.48. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.36.49. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.50. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.51. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.36.52. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.53. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.36.54. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.55. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$925 ($sdffce) from module rio.
+
+10.36.56. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.57. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.58. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.36.59. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.60. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+    Consolidated identical input bits for $mux cell $flatten\spi1.$procmux$508:
+      Old ports: A={ \spi1.byte_data_sent [238:4] 1'0 }, B=236'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, Y=$flatten\spi1.$procmux$508_Y [239:4]
+      New ports: A=\spi1.byte_data_sent [238:4], B=235'0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, Y=$flatten\spi1.$procmux$508_Y [239:5]
+      New connections: $flatten\spi1.$procmux$508_Y [4] = 1'0
+  Optimizing cells in module \rio.
+    Consolidated identical input bits for $mux cell $flatten\spi1.$procmux$513:
+      Old ports: A=$flatten\spi1.$procmux$508_Y [207:4], B={ \stepdir3.positionMem [7:0] \stepdir3.positionMem [15:8] \stepdir3.positionMem [23:16] \stepdir3.positionMem [31:24] \stepdir4.positionMem [7:0] \stepdir4.positionMem [15:8] \stepdir4.positionMem [23:16] \stepdir4.positionMem [31:24] \stepdir5.positionMem [7:0] \stepdir5.positionMem [15:8] \stepdir5.positionMem [23:16] \stepdir5.positionMem [31:24] \stepdir6.positionMem [7:0] \stepdir6.positionMem [15:8] \stepdir6.positionMem [23:16] \stepdir6.positionMem [31:24] \stepdir7.positionMem [7:0] \stepdir7.positionMem [15:8] \stepdir7.positionMem [23:16] \stepdir7.positionMem [31:24] \stepdir8.positionMem [7:0] \stepdir8.positionMem [15:8] \stepdir8.positionMem [23:16] \stepdir8.positionMem [31:24] \PININ_BITIN12_BIT_INVERTED \PININ_BITIN13_BIT_INVERTED \PININ_BITIN14_BIT_INVERTED \PININ_BITIN15_BIT_INVERTED \PININ_BITIN16_BIT_INVERTED \PININ_BITIN17_BIT_INVERTED \PININ_BITIN18_BIT_INVERTED \PININ_BITIN19_BIT_INVERTED 4'0000 }, Y=$auto$wreduce.cc:461:run$694 [207:4]
+      New ports: A=$flatten\spi1.$procmux$508_Y [207:5], B={ \stepdir3.positionMem [7:0] \stepdir3.positionMem [15:8] \stepdir3.positionMem [23:16] \stepdir3.positionMem [31:24] \stepdir4.positionMem [7:0] \stepdir4.positionMem [15:8] \stepdir4.positionMem [23:16] \stepdir4.positionMem [31:24] \stepdir5.positionMem [7:0] \stepdir5.positionMem [15:8] \stepdir5.positionMem [23:16] \stepdir5.positionMem [31:24] \stepdir6.positionMem [7:0] \stepdir6.positionMem [15:8] \stepdir6.positionMem [23:16] \stepdir6.positionMem [31:24] \stepdir7.positionMem [7:0] \stepdir7.positionMem [15:8] \stepdir7.positionMem [23:16] \stepdir7.positionMem [31:24] \stepdir8.positionMem [7:0] \stepdir8.positionMem [15:8] \stepdir8.positionMem [23:16] \stepdir8.positionMem [31:24] \PININ_BITIN12_BIT_INVERTED \PININ_BITIN13_BIT_INVERTED \PININ_BITIN14_BIT_INVERTED \PININ_BITIN15_BIT_INVERTED \PININ_BITIN16_BIT_INVERTED \PININ_BITIN17_BIT_INVERTED \PININ_BITIN18_BIT_INVERTED \PININ_BITIN19_BIT_INVERTED 3'000 }, Y=$auto$wreduce.cc:461:run$694 [207:5]
+      New connections: $auto$wreduce.cc:461:run$694 [4] = 1'0
+  Optimizing cells in module \rio.
+Performed a total of 2 changes.
+
+10.36.61. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.62. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.36.63. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.64. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.65. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.36.66. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.67. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.36.68. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.69. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$926 ($sdffce) from module rio.
+
+10.36.70. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.71. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.72. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.36.73. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.74. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+    Consolidated identical input bits for $mux cell $flatten\spi1.$procmux$508:
+      Old ports: A={ \spi1.byte_data_sent [238:5] 1'0 }, B=235'0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, Y=$flatten\spi1.$procmux$508_Y [239:5]
+      New ports: A=\spi1.byte_data_sent [238:5], B=234'000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, Y=$flatten\spi1.$procmux$508_Y [239:6]
+      New connections: $flatten\spi1.$procmux$508_Y [5] = 1'0
+  Optimizing cells in module \rio.
+    Consolidated identical input bits for $mux cell $flatten\spi1.$procmux$513:
+      Old ports: A=$flatten\spi1.$procmux$508_Y [207:5], B={ \stepdir3.positionMem [7:0] \stepdir3.positionMem [15:8] \stepdir3.positionMem [23:16] \stepdir3.positionMem [31:24] \stepdir4.positionMem [7:0] \stepdir4.positionMem [15:8] \stepdir4.positionMem [23:16] \stepdir4.positionMem [31:24] \stepdir5.positionMem [7:0] \stepdir5.positionMem [15:8] \stepdir5.positionMem [23:16] \stepdir5.positionMem [31:24] \stepdir6.positionMem [7:0] \stepdir6.positionMem [15:8] \stepdir6.positionMem [23:16] \stepdir6.positionMem [31:24] \stepdir7.positionMem [7:0] \stepdir7.positionMem [15:8] \stepdir7.positionMem [23:16] \stepdir7.positionMem [31:24] \stepdir8.positionMem [7:0] \stepdir8.positionMem [15:8] \stepdir8.positionMem [23:16] \stepdir8.positionMem [31:24] \PININ_BITIN12_BIT_INVERTED \PININ_BITIN13_BIT_INVERTED \PININ_BITIN14_BIT_INVERTED \PININ_BITIN15_BIT_INVERTED \PININ_BITIN16_BIT_INVERTED \PININ_BITIN17_BIT_INVERTED \PININ_BITIN18_BIT_INVERTED \PININ_BITIN19_BIT_INVERTED 3'000 }, Y=$auto$wreduce.cc:461:run$694 [207:5]
+      New ports: A=$flatten\spi1.$procmux$508_Y [207:6], B={ \stepdir3.positionMem [7:0] \stepdir3.positionMem [15:8] \stepdir3.positionMem [23:16] \stepdir3.positionMem [31:24] \stepdir4.positionMem [7:0] \stepdir4.positionMem [15:8] \stepdir4.positionMem [23:16] \stepdir4.positionMem [31:24] \stepdir5.positionMem [7:0] \stepdir5.positionMem [15:8] \stepdir5.positionMem [23:16] \stepdir5.positionMem [31:24] \stepdir6.positionMem [7:0] \stepdir6.positionMem [15:8] \stepdir6.positionMem [23:16] \stepdir6.positionMem [31:24] \stepdir7.positionMem [7:0] \stepdir7.positionMem [15:8] \stepdir7.positionMem [23:16] \stepdir7.positionMem [31:24] \stepdir8.positionMem [7:0] \stepdir8.positionMem [15:8] \stepdir8.positionMem [23:16] \stepdir8.positionMem [31:24] \PININ_BITIN12_BIT_INVERTED \PININ_BITIN13_BIT_INVERTED \PININ_BITIN14_BIT_INVERTED \PININ_BITIN15_BIT_INVERTED \PININ_BITIN16_BIT_INVERTED \PININ_BITIN17_BIT_INVERTED \PININ_BITIN18_BIT_INVERTED \PININ_BITIN19_BIT_INVERTED 2'00 }, Y=$auto$wreduce.cc:461:run$694 [207:6]
+      New connections: $auto$wreduce.cc:461:run$694 [5] = 1'0
+  Optimizing cells in module \rio.
+Performed a total of 2 changes.
+
+10.36.75. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.76. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.36.77. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.78. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.79. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.36.80. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.81. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.36.82. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.83. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$927 ($sdffce) from module rio.
+
+10.36.84. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.85. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.86. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.36.87. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.88. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+    Consolidated identical input bits for $mux cell $flatten\spi1.$procmux$508:
+      Old ports: A={ \spi1.byte_data_sent [238:6] 1'0 }, B=234'000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, Y=$flatten\spi1.$procmux$508_Y [239:6]
+      New ports: A=\spi1.byte_data_sent [238:6], B=233'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, Y=$flatten\spi1.$procmux$508_Y [239:7]
+      New connections: $flatten\spi1.$procmux$508_Y [6] = 1'0
+  Optimizing cells in module \rio.
+    Consolidated identical input bits for $mux cell $flatten\spi1.$procmux$513:
+      Old ports: A=$flatten\spi1.$procmux$508_Y [207:6], B={ \stepdir3.positionMem [7:0] \stepdir3.positionMem [15:8] \stepdir3.positionMem [23:16] \stepdir3.positionMem [31:24] \stepdir4.positionMem [7:0] \stepdir4.positionMem [15:8] \stepdir4.positionMem [23:16] \stepdir4.positionMem [31:24] \stepdir5.positionMem [7:0] \stepdir5.positionMem [15:8] \stepdir5.positionMem [23:16] \stepdir5.positionMem [31:24] \stepdir6.positionMem [7:0] \stepdir6.positionMem [15:8] \stepdir6.positionMem [23:16] \stepdir6.positionMem [31:24] \stepdir7.positionMem [7:0] \stepdir7.positionMem [15:8] \stepdir7.positionMem [23:16] \stepdir7.positionMem [31:24] \stepdir8.positionMem [7:0] \stepdir8.positionMem [15:8] \stepdir8.positionMem [23:16] \stepdir8.positionMem [31:24] \PININ_BITIN12_BIT_INVERTED \PININ_BITIN13_BIT_INVERTED \PININ_BITIN14_BIT_INVERTED \PININ_BITIN15_BIT_INVERTED \PININ_BITIN16_BIT_INVERTED \PININ_BITIN17_BIT_INVERTED \PININ_BITIN18_BIT_INVERTED \PININ_BITIN19_BIT_INVERTED 2'00 }, Y=$auto$wreduce.cc:461:run$694 [207:6]
+      New ports: A=$flatten\spi1.$procmux$508_Y [207:7], B={ \stepdir3.positionMem [7:0] \stepdir3.positionMem [15:8] \stepdir3.positionMem [23:16] \stepdir3.positionMem [31:24] \stepdir4.positionMem [7:0] \stepdir4.positionMem [15:8] \stepdir4.positionMem [23:16] \stepdir4.positionMem [31:24] \stepdir5.positionMem [7:0] \stepdir5.positionMem [15:8] \stepdir5.positionMem [23:16] \stepdir5.positionMem [31:24] \stepdir6.positionMem [7:0] \stepdir6.positionMem [15:8] \stepdir6.positionMem [23:16] \stepdir6.positionMem [31:24] \stepdir7.positionMem [7:0] \stepdir7.positionMem [15:8] \stepdir7.positionMem [23:16] \stepdir7.positionMem [31:24] \stepdir8.positionMem [7:0] \stepdir8.positionMem [15:8] \stepdir8.positionMem [23:16] \stepdir8.positionMem [31:24] \PININ_BITIN12_BIT_INVERTED \PININ_BITIN13_BIT_INVERTED \PININ_BITIN14_BIT_INVERTED \PININ_BITIN15_BIT_INVERTED \PININ_BITIN16_BIT_INVERTED \PININ_BITIN17_BIT_INVERTED \PININ_BITIN18_BIT_INVERTED \PININ_BITIN19_BIT_INVERTED 1'0 }, Y=$auto$wreduce.cc:461:run$694 [207:7]
+      New connections: $auto$wreduce.cc:461:run$694 [6] = 1'0
+  Optimizing cells in module \rio.
+Performed a total of 2 changes.
+
+10.36.89. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.90. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.36.91. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.92. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.93. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.36.94. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.95. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.36.96. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.97. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$928 ($sdffce) from module rio.
+
+10.36.98. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.99. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.100. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.36.101. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.102. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+    Consolidated identical input bits for $mux cell $flatten\spi1.$procmux$508:
+      Old ports: A={ \spi1.byte_data_sent [238:7] 1'0 }, B=233'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, Y=$flatten\spi1.$procmux$508_Y [239:7]
+      New ports: A=\spi1.byte_data_sent [238:7], B=232'0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, Y=$flatten\spi1.$procmux$508_Y [239:8]
+      New connections: $flatten\spi1.$procmux$508_Y [7] = 1'0
+  Optimizing cells in module \rio.
+    Consolidated identical input bits for $mux cell $flatten\spi1.$procmux$513:
+      Old ports: A=$flatten\spi1.$procmux$508_Y [207:7], B={ \stepdir3.positionMem [7:0] \stepdir3.positionMem [15:8] \stepdir3.positionMem [23:16] \stepdir3.positionMem [31:24] \stepdir4.positionMem [7:0] \stepdir4.positionMem [15:8] \stepdir4.positionMem [23:16] \stepdir4.positionMem [31:24] \stepdir5.positionMem [7:0] \stepdir5.positionMem [15:8] \stepdir5.positionMem [23:16] \stepdir5.positionMem [31:24] \stepdir6.positionMem [7:0] \stepdir6.positionMem [15:8] \stepdir6.positionMem [23:16] \stepdir6.positionMem [31:24] \stepdir7.positionMem [7:0] \stepdir7.positionMem [15:8] \stepdir7.positionMem [23:16] \stepdir7.positionMem [31:24] \stepdir8.positionMem [7:0] \stepdir8.positionMem [15:8] \stepdir8.positionMem [23:16] \stepdir8.positionMem [31:24] \PININ_BITIN12_BIT_INVERTED \PININ_BITIN13_BIT_INVERTED \PININ_BITIN14_BIT_INVERTED \PININ_BITIN15_BIT_INVERTED \PININ_BITIN16_BIT_INVERTED \PININ_BITIN17_BIT_INVERTED \PININ_BITIN18_BIT_INVERTED \PININ_BITIN19_BIT_INVERTED 1'0 }, Y=$auto$wreduce.cc:461:run$694 [207:7]
+      New ports: A=$flatten\spi1.$procmux$508_Y [207:8], B={ \stepdir3.positionMem [7:0] \stepdir3.positionMem [15:8] \stepdir3.positionMem [23:16] \stepdir3.positionMem [31:24] \stepdir4.positionMem [7:0] \stepdir4.positionMem [15:8] \stepdir4.positionMem [23:16] \stepdir4.positionMem [31:24] \stepdir5.positionMem [7:0] \stepdir5.positionMem [15:8] \stepdir5.positionMem [23:16] \stepdir5.positionMem [31:24] \stepdir6.positionMem [7:0] \stepdir6.positionMem [15:8] \stepdir6.positionMem [23:16] \stepdir6.positionMem [31:24] \stepdir7.positionMem [7:0] \stepdir7.positionMem [15:8] \stepdir7.positionMem [23:16] \stepdir7.positionMem [31:24] \stepdir8.positionMem [7:0] \stepdir8.positionMem [15:8] \stepdir8.positionMem [23:16] \stepdir8.positionMem [31:24] \PININ_BITIN12_BIT_INVERTED \PININ_BITIN13_BIT_INVERTED \PININ_BITIN14_BIT_INVERTED \PININ_BITIN15_BIT_INVERTED \PININ_BITIN16_BIT_INVERTED \PININ_BITIN17_BIT_INVERTED \PININ_BITIN18_BIT_INVERTED \PININ_BITIN19_BIT_INVERTED }, Y=$auto$wreduce.cc:461:run$694 [207:8]
+      New connections: $auto$wreduce.cc:461:run$694 [7] = 1'0
+  Optimizing cells in module \rio.
+Performed a total of 2 changes.
+
+10.36.103. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.104. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.36.105. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.106. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.107. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.36.108. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.109. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.36.110. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.111. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$929 ($sdffce) from module rio.
+
+10.36.112. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.113. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.114. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.36.115. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.116. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+    Consolidated identical input bits for $mux cell $flatten\spi1.$procmux$508:
+      Old ports: A={ \spi1.byte_data_sent [238:8] 1'0 }, B=232'0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, Y=$flatten\spi1.$procmux$508_Y [239:8]
+      New ports: A=\spi1.byte_data_sent [238:8], B=231'000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, Y=$flatten\spi1.$procmux$508_Y [239:9]
+      New connections: $flatten\spi1.$procmux$508_Y [8] = 1'0
+  Optimizing cells in module \rio.
+Performed a total of 1 changes.
+
+10.36.117. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.118. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.36.119. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.120. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.121. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.36.122. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.123. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.36.124. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.125. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $auto$ff.cc:266:slice$690 ($dffe) from module rio (D = \PININ_BITIN19_BIT_INVERTED, Q = \spi1.byte_data_sent [8], rval = 1'0).
+
+10.36.126. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.127. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.128. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.36.129. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+10.36.130. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.36.131. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.36.132. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.36.133. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.36.134. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.36.135. Finished OPT passes. (There is nothing left to do.)
+
+10.37. Executing ICE40_WRAPCARRY pass (wrap carries).
+
+10.38. Executing TECHMAP pass (map to technology primitives).
+
+10.38.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+10.38.2. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v' to AST representation.
+Generating RTLIL representation for module `\_80_ice40_alu'.
+Successfully finished Verilog frontend.
+
+10.38.3. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $not.
+Using template $paramod$2af30114e9bd4ccb04dad757b3f0a8f6bf0615b0\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $logic_not.
+Using template $paramod$e874d9688cf6f9b1e7354dc696c66145a4e4548c\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $sdffce.
+Using extmapper simplemap for cells of type $eq.
+Using template $paramod$7b00947614a4c48e09c066dca449366ddfa907a5\_80_ice40_alu for cells of type $alu.
+Using template $paramod$6b2e55a5f89bfecc6aebd640439f7b15a0e51965\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod$6a42b6fefed750f8a1c58eab59479d960557103c\_80_ice40_alu for cells of type $alu.
+Using template $paramod$c6baa65225090ac0a120feab1b920965244aa496\_80_ice40_alu for cells of type $alu.
+Using template $paramod$36fdbc18fab0758c8553dda57bd33e3f8f3e8765\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using template $paramod$6412f7f13655de512a17af2c71a87b50b4a57324\_80_ice40_alu for cells of type $alu.
+Using template $paramod$050f15daba5036a0512adf25d3c6631f629623f7\_80_ice40_alu for cells of type $alu.
+Using template $paramod$fbc7873bff55778c0b3173955b7e4bce1d9d6834\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $pos.
+No more expansions possible.
+<suppressed ~666 debug messages>
+
+10.39. Executing OPT pass (performing simple optimizations).
+
+10.39.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+<suppressed ~3069 debug messages>
+
+10.39.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+<suppressed ~1833 debug messages>
+Removed a total of 611 cells.
+
+10.39.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.39.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+Removed 260 unused cells and 911 unused wires.
+<suppressed ~262 debug messages>
+
+10.39.5. Finished fast OPT passes.
+
+10.40. Executing ICE40_OPT pass (performing simple optimizations).
+
+10.40.1. Running ICE40 specific optimizations.
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$711.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$711.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$722.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$722.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$738.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$738.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$754.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$754.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$770.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$770.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$786.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$786.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$802.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$802.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$818.slice[0].carry: CO=\timeout_counter [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$821.slice[0].carry: CO=\blink0.counter [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$824.slice[0].carry: CO=\spi1.bitcnt [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$827.slice[0].carry: CO=\stepdir3.jointCounter [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$830.slice[0].carry: CO=\stepdir3.positionMem [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$833.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$802.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$836.slice[0].carry: CO=\stepdir3.positionMem [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$839.slice[0].carry: CO=\stepdir4.jointCounter [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$842.slice[0].carry: CO=\stepdir4.positionMem [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$845.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$786.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$848.slice[0].carry: CO=\stepdir4.positionMem [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$851.slice[0].carry: CO=\stepdir5.jointCounter [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$854.slice[0].carry: CO=\stepdir5.positionMem [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$857.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$770.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$860.slice[0].carry: CO=\stepdir5.positionMem [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$863.slice[0].carry: CO=\stepdir6.jointCounter [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$866.slice[0].carry: CO=\stepdir6.positionMem [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$869.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$754.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$872.slice[0].carry: CO=\stepdir6.positionMem [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$875.slice[0].carry: CO=\stepdir7.jointCounter [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$878.slice[0].carry: CO=\stepdir7.positionMem [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$881.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$738.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$884.slice[0].carry: CO=\stepdir7.positionMem [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$887.slice[0].carry: CO=\stepdir8.jointCounter [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$890.slice[0].carry: CO=\stepdir8.positionMem [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$893.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$722.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) rio.$auto$alumacc.cc:485:replace_alu$896.slice[0].carry: CO=\stepdir8.positionMem [0]
+
+10.40.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+<suppressed ~6 debug messages>
+
+10.40.3. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+<suppressed ~18 debug messages>
+Removed a total of 6 cells.
+
+10.40.4. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.40.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+Removed 1 unused cells and 0 unused wires.
+<suppressed ~1 debug messages>
+
+10.40.6. Rerunning OPT passes. (Removed registers in this run.)
+
+10.40.7. Running ICE40 specific optimizations.
+
+10.40.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.40.9. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.40.10. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.40.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.40.12. Finished OPT passes. (There is nothing left to do.)
+
+10.41. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+
+10.42. Executing TECHMAP pass (map to technology primitives).
+
+10.42.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/ff_map.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/ff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFFCE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFFCE_NP1P_'.
+Generating RTLIL representation for module `\$_SDFFCE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFCE_PP1P_'.
+Successfully finished Verilog frontend.
+
+10.42.2. Continuing TECHMAP pass.
+Using template \$_SDFFCE_PP1P_ for cells of type $_SDFFCE_PP1P_.
+Using template \$_SDFFCE_PP0P_ for cells of type $_SDFFCE_PP0P_.
+Using template \$_DFFE_PP_ for cells of type $_DFFE_PP_.
+Using template \$_SDFF_PP0_ for cells of type $_SDFF_PP0_.
+Using template \$_DFF_P_ for cells of type $_DFF_P_.
+Using template \$_SDFF_PP1_ for cells of type $_SDFF_PP1_.
+No more expansions possible.
+<suppressed ~1354 debug messages>
+
+10.43. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.44. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$722.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$738.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$754.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$770.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$786.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$802.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$818.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$821.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$824.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$827.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$830.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$836.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$839.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$842.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$848.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$851.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$854.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$860.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$863.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$866.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$872.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$875.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$878.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$884.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$887.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$890.slice[0].carry ($lut).
+Mapping rio.$auto$alumacc.cc:485:replace_alu$896.slice[0].carry ($lut).
+
+10.45. Executing ICE40_OPT pass (performing simple optimizations).
+
+10.45.1. Running ICE40 specific optimizations.
+
+10.45.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+<suppressed ~601 debug messages>
+
+10.45.3. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+<suppressed ~480 debug messages>
+Removed a total of 160 cells.
+
+10.45.4. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.45.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+Removed 0 unused cells and 6581 unused wires.
+<suppressed ~1 debug messages>
+
+10.45.6. Rerunning OPT passes. (Removed registers in this run.)
+
+10.45.7. Running ICE40 specific optimizations.
+
+10.45.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+<suppressed ~6 debug messages>
+
+10.45.9. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.45.10. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.45.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.45.12. Rerunning OPT passes. (Removed registers in this run.)
+
+10.45.13. Running ICE40 specific optimizations.
+
+10.45.14. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.45.15. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.45.16. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.45.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.45.18. Finished OPT passes. (There is nothing left to do.)
+
+10.46. Executing TECHMAP pass (map to technology primitives).
+
+10.46.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/latches_map.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/latches_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Successfully finished Verilog frontend.
+
+10.46.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+10.47. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v' to AST representation.
+Generating RTLIL representation for module `$__ICE40_CARRY_WRAPPER'.
+Successfully finished Verilog frontend.
+
+10.48. Executing ABC9 pass.
+
+10.48.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+10.48.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+10.48.3. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module rio.
+Found 0 SCCs.
+
+10.48.4. Executing ABC9_OPS pass (helper functions for ABC9).
+
+10.48.5. Executing PROC pass (convert processes to netlists).
+
+10.48.5.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+10.48.5.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+10.48.5.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+10.48.5.4. Executing PROC_INIT pass (extract init attributes).
+
+10.48.5.5. Executing PROC_ARST pass (detect async resets in processes).
+
+10.48.5.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+10.48.5.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+10.48.5.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+10.48.5.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+10.48.5.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+10.48.5.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+10.48.5.12. Executing OPT_EXPR pass (perform const folding).
+
+10.48.6. Executing TECHMAP pass (map to technology primitives).
+
+10.48.6.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+10.48.6.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~126 debug messages>
+
+10.48.7. Executing OPT pass (performing simple optimizations).
+
+10.48.7.1. Executing OPT_EXPR pass (perform const folding).
+
+10.48.7.2. Executing OPT_MERGE pass (detect identical cells).
+Removed a total of 0 cells.
+
+10.48.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Removed 0 multiplexer ports.
+
+10.48.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Performed a total of 0 changes.
+
+10.48.7.5. Executing OPT_MERGE pass (detect identical cells).
+Removed a total of 0 cells.
+
+10.48.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.48.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+
+10.48.7.8. Executing OPT_EXPR pass (perform const folding).
+
+10.48.7.9. Finished OPT passes. (There is nothing left to do.)
+
+10.48.8. Executing TECHMAP pass (map to technology primitives).
+
+10.48.8.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/abc9_map.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/abc9_map.v' to AST representation.
+Successfully finished Verilog frontend.
+
+10.48.8.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~2 debug messages>
+
+10.48.9. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/abc9_model.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/abc9_model.v' to AST representation.
+Generating RTLIL representation for module `$__ABC9_DELAY'.
+Generating RTLIL representation for module `$__ABC9_SCC_BREAKER'.
+Generating RTLIL representation for module `$__DFF_N__$abc9_flop'.
+Generating RTLIL representation for module `$__DFF_P__$abc9_flop'.
+Successfully finished Verilog frontend.
+
+10.48.10. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~1432 debug messages>
+
+10.48.11. Executing ABC9_OPS pass (helper functions for ABC9).
+
+10.48.12. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~2 debug messages>
+
+10.48.13. Executing TECHMAP pass (map to technology primitives).
+
+10.48.13.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+10.48.13.2. Continuing TECHMAP pass.
+Using template $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1 for cells of type $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1.
+Using template $paramod\SB_LUT4\LUT_INIT=16'0110100110010110 for cells of type SB_LUT4.
+Using template SB_CARRY for cells of type SB_CARRY.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $mux.
+No more expansions possible.
+<suppressed ~147 debug messages>
+
+10.48.14. Executing OPT pass (performing simple optimizations).
+
+10.48.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+<suppressed ~4 debug messages>
+
+10.48.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+<suppressed ~29 debug messages>
+Removed a total of 12 cells.
+
+10.48.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+10.48.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.48.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.48.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.48.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+Removed 0 unused cells and 24 unused wires.
+<suppressed ~1 debug messages>
+
+10.48.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.48.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.48.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rio..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+10.48.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rio.
+Performed a total of 0 changes.
+
+10.48.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rio'.
+Removed a total of 0 cells.
+
+10.48.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.48.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rio..
+
+10.48.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rio.
+
+10.48.14.16. Finished OPT passes. (There is nothing left to do.)
+
+10.48.15. Executing AIGMAP pass (map logic to AIG).
+Module rio: replaced 7 cells with 43 new cells, skipped 11 cells.
+  replaced 2 cell types:
+       2 $_OR_
+       5 $_MUX_
+  not replaced 3 cell types:
+       8 $specify2
+       1 $_NOT_
+       2 $_AND_
+
+10.48.16. Executing AIGMAP pass (map logic to AIG).
+Module rio: replaced 1430 cells with 9195 new cells, skipped 4904 cells.
+  replaced 4 cell types:
+     270 $_OR_
+     204 $_XOR_
+       1 $_ANDNOT_
+     955 $_MUX_
+  not replaced 13 cell types:
+       9 $scopeinfo
+     475 $_NOT_
+     452 $_AND_
+     393 SB_DFF
+     841 SB_DFFE
+      15 SB_DFFSR
+      11 SB_DFFSS
+      59 SB_DFFESR
+      13 SB_DFFESS
+       1 SB_PLL40_PAD
+      98 $paramod$__ABC9_DELAY\DELAY=32'00000000000000000000000011001011
+    1332 $paramod$__ABC9_DELAY\DELAY=32'00000000000000000000000000010101
+    1205 $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1
+
+10.48.16.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+10.48.16.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+10.48.16.3. Executing XAIGER backend.
+<suppressed ~1343 debug messages>
+Extracted 4200 AND gates and 16295 wires from module `rio' to a netlist network with 1345 inputs and 1468 outputs.
+
+10.48.16.4. Executing ABC9_EXE pass (technology mapping using ABC9).
+
+10.48.16.5. Executing ABC9.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_lut <abc-temp-dir>/input.lut 
+ABC: + read_box <abc-temp-dir>/input.box 
+ABC: + &read <abc-temp-dir>/input.xaig 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =   1345/   1468  and =    3816  lev =   11 (0.70)  mem = 0.26 MB  box = 2635  bb = 1430
+ABC: Warning: AIG with boxes has internal fanout in 0 complex flops and 6 carries.
+ABC: + &scorr 
+ABC: Warning: The network is combinational.
+ABC: + &sweep 
+ABC: + &dc2 
+ABC: + &dch -f 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =   1345/   1468  and =    4881  lev =   10 (0.66)  mem = 0.25 MB  ch =  494  box = 2454  bb = 1430
+ABC: Warning: AIG with boxes has internal fanout in 0 complex flops and 6 carries.
+ABC: + &if -W 250 -v 
+ABC: K = 4. Memory (bytes): Truth =    0. Cut =   52. Obj =  136. Set =  564. CutMin = no
+ABC: Node =    4881.  Ch =   488.  Total mem =    2.57 MB. Peak cut mem =    0.05 MB.
+ABC: P:  Del = 5355.00.  Ar =    1045.0.  Edge =     3973.  Cut =    25153.  T =     0.04 sec
+ABC: P:  Del = 5355.00.  Ar =    1038.0.  Edge =     3979.  Cut =    25018.  T =     0.05 sec
+ABC: P:  Del = 5355.00.  Ar =    1018.0.  Edge =     3525.  Cut =    25174.  T =     0.06 sec
+ABC: F:  Del = 5355.00.  Ar =    1006.0.  Edge =     3549.  Cut =    17310.  T =     0.04 sec
+ABC: A:  Del = 5355.00.  Ar =    1003.0.  Edge =     3520.  Cut =    17312.  T =     0.05 sec
+ABC: A:  Del = 5355.00.  Ar =    1003.0.  Edge =     3520.  Cut =    17312.  T =     0.05 sec
+ABC: Total time =     0.29 sec
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &mfs 
+ABC: + &ps -l 
+ABC: <abc-temp-dir>/input : i/o =   1345/   1468  and =    3190  lev =   13 (0.68)  mem = 0.23 MB  box = 2449  bb = 1430
+ABC: Mapping (K=4)  :  lut =   1002  edge =    3496  lev =    6 (0.38)  Boxes are not in a topological order. Switching to level computation without boxes.
+ABC: levB =   13  mem = 0.08 MB
+ABC: LUT = 1002 : 2=58 5.8 %  3=396 39.5 %  4=548 54.7 %  Ave = 3.49
+ABC: Warning: AIG with boxes has internal fanout in 0 complex flops and 6 carries.
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + time 
+ABC: elapse: 3.93 seconds, total: 3.93 seconds
+
+10.48.16.6. Executing AIGER frontend.
+<suppressed ~5824 debug messages>
+Removed 4945 unused cells and 17743 unused wires.
+
+10.48.16.7. Executing ABC9_OPS pass (helper functions for ABC9).
+ABC RESULTS:              $lut cells:     1428
+ABC RESULTS:   $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1 cells:     1019
+ABC RESULTS:           input signals:       51
+ABC RESULTS:          output signals:     1468
+Removing temp directory.
+
+10.48.17. Executing TECHMAP pass (map to technology primitives).
+
+10.48.17.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/abc9_unmap.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/abc9_unmap.v' to AST representation.
+Generating RTLIL representation for module `\$__DFF_x__$abc9_flop'.
+Generating RTLIL representation for module `\$__ABC9_SCC_BREAKER'.
+Successfully finished Verilog frontend.
+
+10.48.17.2. Continuing TECHMAP pass.
+Using template $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1 for cells of type $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1.
+No more expansions possible.
+<suppressed ~1025 debug messages>
+
+10.49. Executing ICE40_WRAPCARRY pass (wrap carries).
+
+10.50. Executing TECHMAP pass (map to technology primitives).
+
+10.50.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/ff_map.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/ff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFFCE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFFCE_NP1P_'.
+Generating RTLIL representation for module `\$_SDFFCE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFCE_PP1P_'.
+Successfully finished Verilog frontend.
+
+10.50.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~22 debug messages>
+Removed 451 unused cells and 21406 unused wires.
+
+10.51. Executing OPT_LUT pass (optimize LUTs).
+Discovering LUTs.
+Number of LUTs:     2223
+  1-LUT              426
+  2-LUT               81
+  3-LUT             1168
+  4-LUT              548
+  with \SB_CARRY    (#0)  772
+  with \SB_CARRY    (#1)  964
+
+Eliminating LUTs.
+Number of LUTs:     2223
+  1-LUT              426
+  2-LUT               81
+  3-LUT             1168
+  4-LUT              548
+  with \SB_CARRY    (#0)  772
+  with \SB_CARRY    (#1)  964
+
+Combining LUTs.
+Number of LUTs:     2211
+  1-LUT              426
+  2-LUT               69
+  3-LUT             1156
+  4-LUT              560
+  with \SB_CARRY    (#0)  772
+  with \SB_CARRY    (#1)  964
+
+Eliminated 0 LUTs.
+Combined 12 LUTs.
+<suppressed ~12944 debug messages>
+
+10.52. Executing TECHMAP pass (map to technology primitives).
+
+10.52.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$lut'.
+Successfully finished Verilog frontend.
+
+10.52.2. Continuing TECHMAP pass.
+Using template $paramod$fd904e9e35cfd343a9df248824bd3f1408724879\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10101100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11000110 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00000010 for cells of type $lut.
+Using template $paramod$b86b68a00733dbecb31d58a14a13683475a2002a\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10010000 for cells of type $lut.
+Using template $paramod$65d5d5c1e01bf41ee659754efba932f3d99198e5\$lut for cells of type $lut.
+Using template $paramod$df196ed0a1da5c4a58c5e08a1dac304fd3fccaab\$lut for cells of type $lut.
+Using template $paramod$2d07c1a6c53c7b878509360922c4fa5ebedc3011\$lut for cells of type $lut.
+Using template $paramod$571404c0889eaf57f492cb5e37f8acb5df5852f9\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
+Using template $paramod$ba7c22fadfbf9ee7abcb895a21403114111dd201\$lut for cells of type $lut.
+Using template $paramod$ba05b8a1a425003df083aea0e69541f5cbdc68f2\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0010 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1000 for cells of type $lut.
+Using template $paramod$06af8e98b1ee32760d0eff675cf4988d49cbfdfa\$lut for cells of type $lut.
+Using template $paramod$b8f75cf9c6c06c079da053f4aa60c4d5363c32b3\$lut for cells of type $lut.
+Using template $paramod$1114d560ed98e9182fe073c9893577168d869f6b\$lut for cells of type $lut.
+Using template $paramod$aaf2ef5cf75121bbc717334d538c8a2de3e26e03\$lut for cells of type $lut.
+Using template $paramod$9e1755e3954600257bb9b9ab192e2c0243b0f35a\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000000 for cells of type $lut.
+Using template $paramod$43779580bfffd5d5a9f321249a174febf1dac288\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01000000 for cells of type $lut.
+Using template $paramod$658b9ed803f0d3d335616d3858b53e0a2522f1e8\$lut for cells of type $lut.
+Using template $paramod$992bdc10cff2c6edd722994f0e1044bc863f79f7\$lut for cells of type $lut.
+Using template $paramod$6d6beead1425af15cf78b27fd9b11b41b5d4bce8\$lut for cells of type $lut.
+Using template $paramod$9daee386039d07b0aa344545d30dda7d98529f57\$lut for cells of type $lut.
+Using template $paramod$762dcdf49521c1aa2145fa6746ab6d57dd5df22e\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00001101 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1101 for cells of type $lut.
+Using template $paramod$c1e4179198d86bbaf8ac5c0cd5967e4052e49ffe\$lut for cells of type $lut.
+Using template $paramod$edc3c77d6d0cfa370b4c94131cecc413b4b0ef1c\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1011 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10001111 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0111 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11110100 for cells of type $lut.
+Using template $paramod$b7944410d6d04b6d6c1e394a2577bba154fa7c93\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00000100 for cells of type $lut.
+Using template $paramod$c28a8b7ce0535d090c4cfb52e9c74affd52b110c\$lut for cells of type $lut.
+Using template $paramod$8e44661def013b6bf9fe6f8b049ef2c838d749f9\$lut for cells of type $lut.
+Using template $paramod$47a8214374025465e226fa66bee690ff33268a25\$lut for cells of type $lut.
+Using template $paramod$6e238df02989b317f10820a22773676e71120644\$lut for cells of type $lut.
+Using template $paramod$272652f6c6fbe9a75eff76e45cc7e2788835518b\$lut for cells of type $lut.
+Using template $paramod$72043e0aa7fa64cb454e3c2ca3dbe1636171896a\$lut for cells of type $lut.
+Using template $paramod$609ff53b8e25fddda2f58be8d19c2d47b81baf45\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10001100 for cells of type $lut.
+No more expansions possible.
+<suppressed ~2838 debug messages>
+Removed 0 unused cells and 4738 unused wires.
+
+10.53. Executing AUTONAME pass.
+Renamed 88606 objects in module rio (226 iterations).
+<suppressed ~7436 debug messages>
+
+10.54. Executing HIERARCHY pass (managing design hierarchy).
+
+10.54.1. Analyzing design hierarchy..
+Top module:  \rio
+
+10.54.2. Analyzing design hierarchy..
+Top module:  \rio
+Removed 0 unused modules.
+
+10.55. Printing statistics.
+
+=== rio ===
+
+   Number of wires:               3049
+   Number of wire bits:           8069
+   Number of public wires:        3049
+   Number of public wire bits:    8069
+   Number of ports:                 30
+   Number of port bits:             30
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               4551
+     $scopeinfo                      9
+     SB_CARRY                      998
+     SB_DFF                        393
+     SB_DFFE                       841
+     SB_DFFESR                      59
+     SB_DFFESS                      13
+     SB_DFFSR                       15
+     SB_DFFSS                       11
+     SB_LUT4                      2211
+     SB_PLL40_PAD                    1
+
+10.56. Executing CHECK pass (checking for obvious problems).
+Checking module rio...
+Found and reported 0 problems.
+
+10.57. Executing JSON backend.
+
+End of script. Logfile hash: a1a3e8be2d, CPU: user 33.44s system 0.53s, MEM: 76.08 MB peak
+Yosys 0.44+71 (git sha1 6b9321250, aarch64-linux-gnu-g++ 11.4.0-1ubuntu1~22.04 -fPIC -O3)
+Time spent: 14% 43x opt_clean (5 sec), 11% 48x opt_expr (4 sec), ...

@@ -1,0 +1,24 @@
+rm -rf rio.bin rio.asc rio.json yosys.log nextpnr.log
+yosys -q -l yosys.log -p 'synth_ice40 -dsp -top rio -json rio.json' globals.v pll.v blink.v spi.v stepdir.v debouncer.v toggle.v pwmmod.v rio.v
+nextpnr-ice40 -q -l nextpnr.log --timing-allow-fail --pre-pack prepack.py --up5k --package sg48 --json rio.json --freq 29.812 --pcf pins.pcf --asc rio.asc
+
+Info: Device utilisation:
+Info: 	         ICESTORM_LC:    2750/   5280    52%
+Info: 	        ICESTORM_RAM:       0/     30     0%
+Info: 	               SB_IO:      30/     96    31%
+Info: 	               SB_GB:       8/      8   100%
+Info: 	        ICESTORM_PLL:       1/      1   100%
+Info: 	         SB_WARMBOOT:       0/      1     0%
+Info: 	        ICESTORM_DSP:       0/      8     0%
+Info: 	      ICESTORM_HFOSC:       0/      1     0%
+Info: 	      ICESTORM_LFOSC:       0/      1     0%
+Info: 	              SB_I2C:       0/      2     0%
+Info: 	              SB_SPI:       0/      2     0%
+Info: 	              IO_I3C:       0/      2     0%
+Info: 	         SB_LEDDA_IP:       0/      1     0%
+Info: 	         SB_RGBA_DRV:       0/      1     0%
+Info: 	      ICESTORM_SPRAM:       0/      4     0%
+
+icepack rio.asc rio.bin
+cp -v hash_new.txt hash_compiled.txt
+'hash_new.txt' -> 'hash_compiled.txt'

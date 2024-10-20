@@ -1,0 +1,73 @@
+### base ###
+set_io sysclk_in 35
+
+### blink0 ###
+set_io PINOUT_BLINK0_LED 18
+
+### spi1 ###
+set_io PININ_SPI1_MOSI 14
+set_io PINOUT_SPI1_MISO 17
+set_io PININ_SPI1_SCLK 15
+set_io PININ_SPI1_SEL 32
+
+### bitout2 ###
+set_io PINOUT_BITOUT2_BIT 45
+
+### stepdir3 ###
+set_io PINOUT_STEPDIR3_STEP 13
+set_io PINOUT_STEPDIR3_DIR 12
+
+### stepdir4 ###
+set_io PINOUT_STEPDIR4_STEP 11
+set_io PINOUT_STEPDIR4_DIR 10
+
+### stepdir5 ###
+set_io PINOUT_STEPDIR5_STEP 9
+set_io PINOUT_STEPDIR5_DIR 6
+
+### stepdir6 ###
+set_io PINOUT_STEPDIR6_STEP 4
+set_io PINOUT_STEPDIR6_DIR 3
+
+### stepdir7 ###
+set_io PINOUT_STEPDIR7_STEP 2
+set_io PINOUT_STEPDIR7_DIR 48
+
+### stepdir8 ###
+set_io PINOUT_STEPDIR8_STEP 47
+set_io PINOUT_STEPDIR8_DIR 46
+
+### bitout9 ###
+set_io PINOUT_BITOUT9_BIT 44
+
+### bitout10 ###
+set_io PINOUT_BITOUT10_BIT 43
+
+### bitout11 ###
+set_io PINOUT_BITOUT11_BIT 19
+
+### bitin12 ###
+set_io -pullup yes PININ_BITIN12_BIT 41
+
+### bitin13 ###
+set_io -pullup yes PININ_BITIN13_BIT 40
+
+### bitin14 ###
+set_io -pullup yes PININ_BITIN14_BIT 39
+
+### bitin15 ###
+set_io -pullup yes PININ_BITIN15_BIT 38
+
+### bitin16 ###
+set_io -pullup yes PININ_BITIN16_BIT 37
+
+### bitin17 ###
+set_io -pullup yes PININ_BITIN17_BIT 36
+
+### bitin18 ###
+set_io -pullup yes PININ_BITIN18_BIT 42
+
+### bitin19 ###
+set_io -pullup yes PININ_BITIN19_BIT 34
+
+### signal20 ###

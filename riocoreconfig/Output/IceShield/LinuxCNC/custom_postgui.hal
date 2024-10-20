@@ -1,0 +1,57 @@
+
+# riov-riotime-value
+net riov-riotime-value => pyvcp.riotime.value
+
+# pyvcp-halui-mdi-command-00
+net pyvcp-halui-mdi-command-00 <= pyvcp.halui.mdi-command-00
+
+# pyvcp-halui-mdi-command-01
+net pyvcp-halui-mdi-command-01 <= pyvcp.halui.mdi-command-01
+
+# pyvcp-halui-mdi-command-02
+net pyvcp-halui-mdi-command-02 <= pyvcp.halui.mdi-command-02
+
+# pyvcp-halui-mdi-command-03
+net pyvcp-halui-mdi-command-03 <= pyvcp.halui.mdi-command-03
+
+# pyvcp-halui-mdi-command-04
+net pyvcp-halui-mdi-command-04 <= pyvcp.halui.mdi-command-04
+
+# pyvcp-halui-mdi-command-05
+net pyvcp-halui-mdi-command-05 <= pyvcp.halui.mdi-command-05
+
+# pyvcp-enable-bit
+net pyvcp-enable-bit <= pyvcp.enable.bit
+
+# pyvcp-Output1-bit
+net pyvcp-Output1-bit <= pyvcp.Output1.bit
+
+# pyvcp-Output2-bit
+net pyvcp-Output2-bit <= pyvcp.Output2.bit
+
+# pyvcp-LED-bit
+net pyvcp-LED-bit <= pyvcp.LED.bit
+
+# pyvcp-Input1-bit
+net pyvcp-Input1-bit => pyvcp.Input1.bit
+
+# pyvcp-Input2-bit
+net pyvcp-Input2-bit => pyvcp.Input2.bit
+
+# pyvcp-Input3-bit
+net pyvcp-Input3-bit => pyvcp.Input3.bit
+
+# pyvcp-Input4-bit
+net pyvcp-Input4-bit => pyvcp.Input4.bit
+
+# pyvcp-Input5-bit
+net pyvcp-Input5-bit => pyvcp.Input5.bit
+
+# pyvcp-Input6-bit
+net pyvcp-Input6-bit => pyvcp.Input6.bit
+
+# pyvcp-Input7-bit
+net pyvcp-Input7-bit => pyvcp.Input7.bit
+
+# pyvcp-Input8-bit
+net pyvcp-Input8-bit => pyvcp.Input8.bit
