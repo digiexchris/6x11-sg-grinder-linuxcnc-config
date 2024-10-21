@@ -1,0 +1,21 @@
+(ngcgui: FEATURE 241020:18.45.14)
+(ngcgui: files: </usr/share/linuxcnc/ncfiles/ngcgui_lib/utilitysubs/in_std.ngc /usr/share/linuxcnc/ncfiles/ngcgui_lib/simp.ngc >)
+(ngcgui: feature line added) #<_feature:> = 0
+(ngcgui: remaining_features line added) #<_remaining_features:> = 0
+(ngcgui: preamble file: /usr/share/linuxcnc/ncfiles/ngcgui_lib/utilitysubs/in_std.ngc)
+g17 (xy plane)
+g20 (inches)
+g40 (cancel cutter radius compensation)
+g49 (cancel tool lengthoffset)
+g90 (absolute distance mode)
+g94 (units/min feedrate)
+g54 (Coordinate system 1 default)
+#<tol>  = 0.001
+g64 p#<tol> (path control stop)
+(ngcgui: call subroutine file: /usr/share/linuxcnc/ncfiles/ngcgui_lib/simp.ngc)
+(ngcgui: positional parameters:)
+(         #1 =           ra =           .6)
+(         #2 =     radius_b =          0.4)
+(         #3 =     feedrate =          100)
+o<simp> call [.6][0.4][100]
+(ngcgui: m2 line added) m2 (g54 activated)
