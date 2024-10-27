@@ -88,6 +88,8 @@ then
 	fi
 fi
 
+flashrom -p linux_spi:dev=$SPIDEV,spispeed=$SPISPEED -w /tmp/_flash.bin > /tmp/_verify.log
+
 echo "  unload drivers / reset FPGA"
 sudo rmmod spidev
 sudo rmmod spi_bcm2835
