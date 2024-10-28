@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=LinuxCNC Surface Grinder
+Comment=Start SG UI
+Exec=/home/cnc/6x11-sg-grinder-linuxcnc-config/LinuxCNC/start.sh
+Icon=qtpyvcp
+Path=/home/cnc/6x11-sg-grinder-linuxcnc-config/LinuxCNC/
+Terminal=false
+StartupNotify=false
