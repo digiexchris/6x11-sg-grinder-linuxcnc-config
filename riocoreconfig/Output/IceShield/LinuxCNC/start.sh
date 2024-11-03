@@ -5,4 +5,4 @@ set -x
 
 DIRNAME=`dirname "$0"`
 
-linuxcnc "$DIRNAME/config.ini" $@
+linuxcnc "$DIRNAME/rio.ini" $@

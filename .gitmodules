@@ -1,6 +1,7 @@
 [submodule "riocoreconfig/riocore"]
 	path = riocoreconfig/riocore
 	url = https://github.com/multigcs/riocore.git
+	branch = master
 [submodule "SurfaceGrinder-linuxcnc-ui"]
 	path = SurfaceGrinder-linuxcnc-ui
 	url = git@github.com:digiexchris/SurfaceGrinder-linuxcnc-ui.git

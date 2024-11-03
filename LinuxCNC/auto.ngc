@@ -1,7 +1,5 @@
-%
-(ngcgui: nom2 option)
-(ngcgui: FEATURE 241020:21.54.38)
-(ngcgui: files: </usr/share/linuxcnc/ncfiles/ngcgui_lib/utilitysubs/in_std.ngc ./subroutines/ngcgui_lib/facing.ngc >)
+(ngcgui: FEATURE 241020:18.45.14)
+(ngcgui: files: </usr/share/linuxcnc/ncfiles/ngcgui_lib/utilitysubs/in_std.ngc /usr/share/linuxcnc/ncfiles/ngcgui_lib/simp.ngc >)
 (ngcgui: feature line added) #<_feature:> = 0
 (ngcgui: remaining_features line added) #<_remaining_features:> = 0
 (ngcgui: preamble file: /usr/share/linuxcnc/ncfiles/ngcgui_lib/utilitysubs/in_std.ngc)
@@ -14,53 +12,10 @@ g94 (units/min feedrate)
 g54 (Coordinate system 1 default)
 #<tol>  = 0.001
 g64 p#<tol> (path control stop)
-(Positional parameters for ./subroutines/ngcgui_lib/facing.ngc:)
-          #1 = 11
-          #2 = 6
-          #3 = 0.05
-          #4 = 20
-          #5 = 20
-(expanded file: ./subroutines/ngcgui_lib/facing.ngc)
-    (info: facing -- face in x/y only. X and Y distance will be related to 0/0 -- Ctrl-U pour éditer/)
-    (inline: <facing>)
-    (AXIS,stop)
-      #<facing-length>       = #1 (=11 X distance) ; Example of parameter with a comment
-      #<facing-width>        = #2 (=6 Y distance)  ; Example of parameter without comment
-      #<facing-stepover>     = #3 (=0.05 stepover distance) ; Example without preset
-      #<facing-x-feedrate>   = #4 (=20 X feedrate)
-      #<facing-y-feedrate>   = #5 (=20 Y feedrate)
-      #100 = #<facing-length>       ; Workpiece length
-      #101 = #<facing-width>        ; Workpiece width
-      #102 = #<facing-stepover>     ; Step-over amount
-      #110 = #<facing-x-feedrate>   ; X-axis feed rate
-      #111 = #<facing-y-feedrate>   ; Y-axis feed rate
-      #100 = #<facing-length>       ; Workpiece length
-      #101 = #<facing-width>        ; Workpiece width
-      #102 = #<facing-stepover>     ; Step-over amount
-      #110 = #<facing-x-feedrate>   ; X-axis feed rate
-      #111 = #<facing-y-feedrate>   ; Y-axis feed rate
-      #105 = [#101 MOD #102]        ; Calculate remainder of width / step-over
-      #104 = [FUP[#101 / #102]]       ; Calculate total passes, rounded up
-      G0 X0                        ; Move to X0 first
-      G0 Y0                         ; Then move to Y0
-      G90                           ; Switch to absolute positioning
-    ; Loop for facing passes
-      #200 = 0                      ; Initialize Y position tracker
-      #120 = 0 ; continue looping until it's 0
-o<000o101>  while [ #120 LT 1 ]
-      G1 X#100 F#110 ; Move forward along X to workpiece length
-      G1 X0 F#110                 ; Move back along X to start
-      ; #<currentY> = #5022                         ; Get the current Y position in work coordinates
-o<000o102>  IF [[$5022 + #102] GT #101]
-          #200 = #101                 ; Set Y to final width if next step exceeds
-o<000o102>  ELSE
-          #200 = [#5022 + #102] ; Increment Y by step-over
-o<000o102>  ENDIF
-o<000o103>  IF [#200 GE #101] ;GOTO loop_end ; Exit loop if final Y position is reached
-          #120 = 2
-o<000o103>  ELSE
-          G1 Y#200 F#111
-o<000o103>  ENDIF
-o<000o101>  endwhile
-    G90                           ; Confirm absolute positioning
-%
+(ngcgui: call subroutine file: /usr/share/linuxcnc/ncfiles/ngcgui_lib/simp.ngc)
+(ngcgui: positional parameters:)
+(         #1 =           ra =           .6)
+(         #2 =     radius_b =          0.4)
+(         #3 =     feedrate =          100)
+o<simp> call [.6][0.4][100]
+(ngcgui: m2 line added) m2 (g54 activated)

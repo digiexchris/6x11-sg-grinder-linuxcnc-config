@@ -2342,13 +2342,13 @@ ABC: Warning: AIG with boxes has internal fanout in 0 complex flops and 6 carrie
 ABC: + &if -W 250 -v 
 ABC: K = 4. Memory (bytes): Truth =    0. Cut =   52. Obj =  136. Set =  564. CutMin = no
 ABC: Node =    4881.  Ch =   488.  Total mem =    2.57 MB. Peak cut mem =    0.05 MB.
-ABC: P:  Del = 5355.00.  Ar =    1045.0.  Edge =     3973.  Cut =    25153.  T =     0.04 sec
-ABC: P:  Del = 5355.00.  Ar =    1038.0.  Edge =     3979.  Cut =    25018.  T =     0.04 sec
-ABC: P:  Del = 5355.00.  Ar =    1018.0.  Edge =     3525.  Cut =    25174.  T =     0.04 sec
-ABC: F:  Del = 5355.00.  Ar =    1006.0.  Edge =     3549.  Cut =    17310.  T =     0.03 sec
-ABC: A:  Del = 5355.00.  Ar =    1003.0.  Edge =     3520.  Cut =    17312.  T =     0.05 sec
-ABC: A:  Del = 5355.00.  Ar =    1003.0.  Edge =     3520.  Cut =    17312.  T =     0.05 sec
-ABC: Total time =     0.26 sec
+ABC: P:  Del = 5355.00.  Ar =    1045.0.  Edge =     3973.  Cut =    25153.  T =     0.02 sec
+ABC: P:  Del = 5355.00.  Ar =    1038.0.  Edge =     3979.  Cut =    25018.  T =     0.02 sec
+ABC: P:  Del = 5355.00.  Ar =    1018.0.  Edge =     3525.  Cut =    25174.  T =     0.02 sec
+ABC: F:  Del = 5355.00.  Ar =    1006.0.  Edge =     3549.  Cut =    17310.  T =     0.02 sec
+ABC: A:  Del = 5355.00.  Ar =    1003.0.  Edge =     3520.  Cut =    17312.  T =     0.02 sec
+ABC: A:  Del = 5355.00.  Ar =    1003.0.  Edge =     3520.  Cut =    17312.  T =     0.02 sec
+ABC: Total time =     0.13 sec
 ABC: + &write -n <abc-temp-dir>/output.aig 
 ABC: + &mfs 
 ABC: + &ps -l 
@@ -2359,7 +2359,7 @@ ABC: LUT = 1002 : 2=58 5.8 %  3=396 39.5 %  4=548 54.7 %  Ave = 3.49
 ABC: Warning: AIG with boxes has internal fanout in 0 complex flops and 6 carries.
 ABC: + &write -n <abc-temp-dir>/output.aig 
 ABC: + time 
-ABC: elapse: 3.88 seconds, total: 3.88 seconds
+ABC: elapse: 1.67 seconds, total: 1.67 seconds
 
 10.48.16.6. Executing AIGER frontend.
 <suppressed ~5824 debug messages>
@@ -2554,6 +2554,6 @@ Found and reported 0 problems.
 
 10.57. Executing JSON backend.
 
-End of script. Logfile hash: 4e4a4aef5a, CPU: user 33.15s system 0.55s, MEM: 76.07 MB peak
+End of script. Logfile hash: 4e0b200024, CPU: user 15.99s system 0.27s, MEM: 75.72 MB peak
 Yosys 0.44+71 (git sha1 6b9321250, aarch64-linux-gnu-g++ 11.4.0-1ubuntu1~22.04 -fPIC -O3)
-Time spent: 14% 43x opt_clean (5 sec), 11% 48x opt_expr (4 sec), ...
+Time spent: 14% 43x opt_clean (2 sec), 10% 48x opt_expr (1 sec), ...

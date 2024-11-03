@@ -50,36 +50,36 @@ typedef struct {
     hal_bit_t   *sys_status;
     hal_float_t *duration;
     hal_bit_t   *SIGOUT_ENABLE_BIT;
-    hal_float_t *SIGOUT_STEPPER1_VELOCITY;
-    hal_float_t *SIGOUT_STEPPER1_VELOCITY_SCALE;
-    hal_float_t *SIGOUT_STEPPER1_VELOCITY_OFFSET;
-    hal_float_t *SIGIN_STEPPER1_POSITION;
-    hal_float_t *SIGIN_STEPPER1_POSITION_ABS;
-    hal_s32_t *SIGIN_STEPPER1_POSITION_S32;
-    hal_u32_t *SIGIN_STEPPER1_POSITION_U32_ABS;
-    hal_float_t *SIGIN_STEPPER1_POSITION_SCALE;
-    hal_float_t *SIGIN_STEPPER1_POSITION_OFFSET;
-    hal_bit_t   *SIGOUT_STEPPER1_ENABLE;
-    hal_float_t *SIGOUT_STEPPER2_VELOCITY;
-    hal_float_t *SIGOUT_STEPPER2_VELOCITY_SCALE;
-    hal_float_t *SIGOUT_STEPPER2_VELOCITY_OFFSET;
-    hal_float_t *SIGIN_STEPPER2_POSITION;
-    hal_float_t *SIGIN_STEPPER2_POSITION_ABS;
-    hal_s32_t *SIGIN_STEPPER2_POSITION_S32;
-    hal_u32_t *SIGIN_STEPPER2_POSITION_U32_ABS;
-    hal_float_t *SIGIN_STEPPER2_POSITION_SCALE;
-    hal_float_t *SIGIN_STEPPER2_POSITION_OFFSET;
-    hal_bit_t   *SIGOUT_STEPPER2_ENABLE;
-    hal_float_t *SIGOUT_STEPPER3_VELOCITY;
-    hal_float_t *SIGOUT_STEPPER3_VELOCITY_SCALE;
-    hal_float_t *SIGOUT_STEPPER3_VELOCITY_OFFSET;
-    hal_float_t *SIGIN_STEPPER3_POSITION;
-    hal_float_t *SIGIN_STEPPER3_POSITION_ABS;
-    hal_s32_t *SIGIN_STEPPER3_POSITION_S32;
-    hal_u32_t *SIGIN_STEPPER3_POSITION_U32_ABS;
-    hal_float_t *SIGIN_STEPPER3_POSITION_SCALE;
-    hal_float_t *SIGIN_STEPPER3_POSITION_OFFSET;
-    hal_bit_t   *SIGOUT_STEPPER3_ENABLE;
+    hal_float_t *SIGOUT_STEPPERX_VELOCITY;
+    hal_float_t *SIGOUT_STEPPERX_VELOCITY_SCALE;
+    hal_float_t *SIGOUT_STEPPERX_VELOCITY_OFFSET;
+    hal_float_t *SIGIN_STEPPERX_POSITION;
+    hal_float_t *SIGIN_STEPPERX_POSITION_ABS;
+    hal_s32_t *SIGIN_STEPPERX_POSITION_S32;
+    hal_u32_t *SIGIN_STEPPERX_POSITION_U32_ABS;
+    hal_float_t *SIGIN_STEPPERX_POSITION_SCALE;
+    hal_float_t *SIGIN_STEPPERX_POSITION_OFFSET;
+    hal_bit_t   *SIGOUT_STEPPERX_ENABLE;
+    hal_float_t *SIGOUT_STEPPERY_VELOCITY;
+    hal_float_t *SIGOUT_STEPPERY_VELOCITY_SCALE;
+    hal_float_t *SIGOUT_STEPPERY_VELOCITY_OFFSET;
+    hal_float_t *SIGIN_STEPPERY_POSITION;
+    hal_float_t *SIGIN_STEPPERY_POSITION_ABS;
+    hal_s32_t *SIGIN_STEPPERY_POSITION_S32;
+    hal_u32_t *SIGIN_STEPPERY_POSITION_U32_ABS;
+    hal_float_t *SIGIN_STEPPERY_POSITION_SCALE;
+    hal_float_t *SIGIN_STEPPERY_POSITION_OFFSET;
+    hal_bit_t   *SIGOUT_STEPPERY_ENABLE;
+    hal_float_t *SIGOUT_STEPPERZ_VELOCITY;
+    hal_float_t *SIGOUT_STEPPERZ_VELOCITY_SCALE;
+    hal_float_t *SIGOUT_STEPPERZ_VELOCITY_OFFSET;
+    hal_float_t *SIGIN_STEPPERZ_POSITION;
+    hal_float_t *SIGIN_STEPPERZ_POSITION_ABS;
+    hal_s32_t *SIGIN_STEPPERZ_POSITION_S32;
+    hal_u32_t *SIGIN_STEPPERZ_POSITION_U32_ABS;
+    hal_float_t *SIGIN_STEPPERZ_POSITION_SCALE;
+    hal_float_t *SIGIN_STEPPERZ_POSITION_OFFSET;
+    hal_bit_t   *SIGOUT_STEPPERZ_ENABLE;
     hal_float_t *SIGOUT_STEPPER4_VELOCITY;
     hal_float_t *SIGOUT_STEPPER4_VELOCITY_SCALE;
     hal_float_t *SIGOUT_STEPPER4_VELOCITY_OFFSET;
@@ -204,66 +204,66 @@ void register_signals(void) {
     *data->duration = rtapi_get_time();
     if (retval = hal_pin_bit_newf  (HAL_IN, &(data->SIGOUT_ENABLE_BIT), comp_id, "%s.enable.bit", prefix) != 0) error_handler(retval);
     *data->SIGOUT_ENABLE_BIT = 0;
-    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPER1_VELOCITY_SCALE), comp_id, "%s.Stepper1.velocity-scale", prefix) != 0) error_handler(retval);
-    *data->SIGOUT_STEPPER1_VELOCITY_SCALE = 1.0;
-    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPER1_VELOCITY_OFFSET), comp_id, "%s.Stepper1.velocity-offset", prefix) != 0) error_handler(retval);
-    *data->SIGOUT_STEPPER1_VELOCITY_OFFSET = 0.0;
-    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPER1_VELOCITY), comp_id, "%s.Stepper1.velocity", prefix) != 0) error_handler(retval);
-    *data->SIGOUT_STEPPER1_VELOCITY = 0;
-    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGIN_STEPPER1_POSITION_SCALE), comp_id, "%s.Stepper1.position-scale", prefix) != 0) error_handler(retval);
-    *data->SIGIN_STEPPER1_POSITION_SCALE = 1.0;
-    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGIN_STEPPER1_POSITION_OFFSET), comp_id, "%s.Stepper1.position-offset", prefix) != 0) error_handler(retval);
-    *data->SIGIN_STEPPER1_POSITION_OFFSET = 0.0;
-    if (retval = hal_pin_float_newf(HAL_OUT, &(data->SIGIN_STEPPER1_POSITION), comp_id, "%s.Stepper1.position", prefix) != 0) error_handler(retval);
-    *data->SIGIN_STEPPER1_POSITION = 0;
-    if (retval = hal_pin_float_newf(HAL_OUT, &(data->SIGIN_STEPPER1_POSITION_ABS), comp_id, "%s.Stepper1.position-abs", prefix) != 0) error_handler(retval);
-    *data->SIGIN_STEPPER1_POSITION_ABS = 0;
-    if (retval = hal_pin_s32_newf(HAL_OUT, &(data->SIGIN_STEPPER1_POSITION_S32), comp_id, "%s.Stepper1.position-s32", prefix) != 0) error_handler(retval);
-    *data->SIGIN_STEPPER1_POSITION_S32 = 0;
-    if (retval = hal_pin_u32_newf(HAL_OUT, &(data->SIGIN_STEPPER1_POSITION_U32_ABS), comp_id, "%s.Stepper1.position-u32-abs", prefix) != 0) error_handler(retval);
-    *data->SIGIN_STEPPER1_POSITION_U32_ABS = 0;
-    if (retval = hal_pin_bit_newf  (HAL_IN, &(data->SIGOUT_STEPPER1_ENABLE), comp_id, "%s.Stepper1.enable", prefix) != 0) error_handler(retval);
-    *data->SIGOUT_STEPPER1_ENABLE = 0;
-    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPER2_VELOCITY_SCALE), comp_id, "%s.Stepper2.velocity-scale", prefix) != 0) error_handler(retval);
-    *data->SIGOUT_STEPPER2_VELOCITY_SCALE = 1.0;
-    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPER2_VELOCITY_OFFSET), comp_id, "%s.Stepper2.velocity-offset", prefix) != 0) error_handler(retval);
-    *data->SIGOUT_STEPPER2_VELOCITY_OFFSET = 0.0;
-    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPER2_VELOCITY), comp_id, "%s.Stepper2.velocity", prefix) != 0) error_handler(retval);
-    *data->SIGOUT_STEPPER2_VELOCITY = 0;
-    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGIN_STEPPER2_POSITION_SCALE), comp_id, "%s.Stepper2.position-scale", prefix) != 0) error_handler(retval);
-    *data->SIGIN_STEPPER2_POSITION_SCALE = 1.0;
-    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGIN_STEPPER2_POSITION_OFFSET), comp_id, "%s.Stepper2.position-offset", prefix) != 0) error_handler(retval);
-    *data->SIGIN_STEPPER2_POSITION_OFFSET = 0.0;
-    if (retval = hal_pin_float_newf(HAL_OUT, &(data->SIGIN_STEPPER2_POSITION), comp_id, "%s.Stepper2.position", prefix) != 0) error_handler(retval);
-    *data->SIGIN_STEPPER2_POSITION = 0;
-    if (retval = hal_pin_float_newf(HAL_OUT, &(data->SIGIN_STEPPER2_POSITION_ABS), comp_id, "%s.Stepper2.position-abs", prefix) != 0) error_handler(retval);
-    *data->SIGIN_STEPPER2_POSITION_ABS = 0;
-    if (retval = hal_pin_s32_newf(HAL_OUT, &(data->SIGIN_STEPPER2_POSITION_S32), comp_id, "%s.Stepper2.position-s32", prefix) != 0) error_handler(retval);
-    *data->SIGIN_STEPPER2_POSITION_S32 = 0;
-    if (retval = hal_pin_u32_newf(HAL_OUT, &(data->SIGIN_STEPPER2_POSITION_U32_ABS), comp_id, "%s.Stepper2.position-u32-abs", prefix) != 0) error_handler(retval);
-    *data->SIGIN_STEPPER2_POSITION_U32_ABS = 0;
-    if (retval = hal_pin_bit_newf  (HAL_IN, &(data->SIGOUT_STEPPER2_ENABLE), comp_id, "%s.Stepper2.enable", prefix) != 0) error_handler(retval);
-    *data->SIGOUT_STEPPER2_ENABLE = 0;
-    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPER3_VELOCITY_SCALE), comp_id, "%s.Stepper3.velocity-scale", prefix) != 0) error_handler(retval);
-    *data->SIGOUT_STEPPER3_VELOCITY_SCALE = 1.0;
-    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPER3_VELOCITY_OFFSET), comp_id, "%s.Stepper3.velocity-offset", prefix) != 0) error_handler(retval);
-    *data->SIGOUT_STEPPER3_VELOCITY_OFFSET = 0.0;
-    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPER3_VELOCITY), comp_id, "%s.Stepper3.velocity", prefix) != 0) error_handler(retval);
-    *data->SIGOUT_STEPPER3_VELOCITY = 0;
-    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGIN_STEPPER3_POSITION_SCALE), comp_id, "%s.Stepper3.position-scale", prefix) != 0) error_handler(retval);
-    *data->SIGIN_STEPPER3_POSITION_SCALE = 1.0;
-    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGIN_STEPPER3_POSITION_OFFSET), comp_id, "%s.Stepper3.position-offset", prefix) != 0) error_handler(retval);
-    *data->SIGIN_STEPPER3_POSITION_OFFSET = 0.0;
-    if (retval = hal_pin_float_newf(HAL_OUT, &(data->SIGIN_STEPPER3_POSITION), comp_id, "%s.Stepper3.position", prefix) != 0) error_handler(retval);
-    *data->SIGIN_STEPPER3_POSITION = 0;
-    if (retval = hal_pin_float_newf(HAL_OUT, &(data->SIGIN_STEPPER3_POSITION_ABS), comp_id, "%s.Stepper3.position-abs", prefix) != 0) error_handler(retval);
-    *data->SIGIN_STEPPER3_POSITION_ABS = 0;
-    if (retval = hal_pin_s32_newf(HAL_OUT, &(data->SIGIN_STEPPER3_POSITION_S32), comp_id, "%s.Stepper3.position-s32", prefix) != 0) error_handler(retval);
-    *data->SIGIN_STEPPER3_POSITION_S32 = 0;
-    if (retval = hal_pin_u32_newf(HAL_OUT, &(data->SIGIN_STEPPER3_POSITION_U32_ABS), comp_id, "%s.Stepper3.position-u32-abs", prefix) != 0) error_handler(retval);
-    *data->SIGIN_STEPPER3_POSITION_U32_ABS = 0;
-    if (retval = hal_pin_bit_newf  (HAL_IN, &(data->SIGOUT_STEPPER3_ENABLE), comp_id, "%s.Stepper3.enable", prefix) != 0) error_handler(retval);
-    *data->SIGOUT_STEPPER3_ENABLE = 0;
+    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPERX_VELOCITY_SCALE), comp_id, "%s.StepperX.velocity-scale", prefix) != 0) error_handler(retval);
+    *data->SIGOUT_STEPPERX_VELOCITY_SCALE = 1.0;
+    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPERX_VELOCITY_OFFSET), comp_id, "%s.StepperX.velocity-offset", prefix) != 0) error_handler(retval);
+    *data->SIGOUT_STEPPERX_VELOCITY_OFFSET = 0.0;
+    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPERX_VELOCITY), comp_id, "%s.StepperX.velocity", prefix) != 0) error_handler(retval);
+    *data->SIGOUT_STEPPERX_VELOCITY = 0;
+    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGIN_STEPPERX_POSITION_SCALE), comp_id, "%s.StepperX.position-scale", prefix) != 0) error_handler(retval);
+    *data->SIGIN_STEPPERX_POSITION_SCALE = 1.0;
+    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGIN_STEPPERX_POSITION_OFFSET), comp_id, "%s.StepperX.position-offset", prefix) != 0) error_handler(retval);
+    *data->SIGIN_STEPPERX_POSITION_OFFSET = 0.0;
+    if (retval = hal_pin_float_newf(HAL_OUT, &(data->SIGIN_STEPPERX_POSITION), comp_id, "%s.StepperX.position", prefix) != 0) error_handler(retval);
+    *data->SIGIN_STEPPERX_POSITION = 0;
+    if (retval = hal_pin_float_newf(HAL_OUT, &(data->SIGIN_STEPPERX_POSITION_ABS), comp_id, "%s.StepperX.position-abs", prefix) != 0) error_handler(retval);
+    *data->SIGIN_STEPPERX_POSITION_ABS = 0;
+    if (retval = hal_pin_s32_newf(HAL_OUT, &(data->SIGIN_STEPPERX_POSITION_S32), comp_id, "%s.StepperX.position-s32", prefix) != 0) error_handler(retval);
+    *data->SIGIN_STEPPERX_POSITION_S32 = 0;
+    if (retval = hal_pin_u32_newf(HAL_OUT, &(data->SIGIN_STEPPERX_POSITION_U32_ABS), comp_id, "%s.StepperX.position-u32-abs", prefix) != 0) error_handler(retval);
+    *data->SIGIN_STEPPERX_POSITION_U32_ABS = 0;
+    if (retval = hal_pin_bit_newf  (HAL_IN, &(data->SIGOUT_STEPPERX_ENABLE), comp_id, "%s.StepperX.enable", prefix) != 0) error_handler(retval);
+    *data->SIGOUT_STEPPERX_ENABLE = 0;
+    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPERY_VELOCITY_SCALE), comp_id, "%s.StepperY.velocity-scale", prefix) != 0) error_handler(retval);
+    *data->SIGOUT_STEPPERY_VELOCITY_SCALE = 1.0;
+    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPERY_VELOCITY_OFFSET), comp_id, "%s.StepperY.velocity-offset", prefix) != 0) error_handler(retval);
+    *data->SIGOUT_STEPPERY_VELOCITY_OFFSET = 0.0;
+    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPERY_VELOCITY), comp_id, "%s.StepperY.velocity", prefix) != 0) error_handler(retval);
+    *data->SIGOUT_STEPPERY_VELOCITY = 0;
+    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGIN_STEPPERY_POSITION_SCALE), comp_id, "%s.StepperY.position-scale", prefix) != 0) error_handler(retval);
+    *data->SIGIN_STEPPERY_POSITION_SCALE = 1.0;
+    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGIN_STEPPERY_POSITION_OFFSET), comp_id, "%s.StepperY.position-offset", prefix) != 0) error_handler(retval);
+    *data->SIGIN_STEPPERY_POSITION_OFFSET = 0.0;
+    if (retval = hal_pin_float_newf(HAL_OUT, &(data->SIGIN_STEPPERY_POSITION), comp_id, "%s.StepperY.position", prefix) != 0) error_handler(retval);
+    *data->SIGIN_STEPPERY_POSITION = 0;
+    if (retval = hal_pin_float_newf(HAL_OUT, &(data->SIGIN_STEPPERY_POSITION_ABS), comp_id, "%s.StepperY.position-abs", prefix) != 0) error_handler(retval);
+    *data->SIGIN_STEPPERY_POSITION_ABS = 0;
+    if (retval = hal_pin_s32_newf(HAL_OUT, &(data->SIGIN_STEPPERY_POSITION_S32), comp_id, "%s.StepperY.position-s32", prefix) != 0) error_handler(retval);
+    *data->SIGIN_STEPPERY_POSITION_S32 = 0;
+    if (retval = hal_pin_u32_newf(HAL_OUT, &(data->SIGIN_STEPPERY_POSITION_U32_ABS), comp_id, "%s.StepperY.position-u32-abs", prefix) != 0) error_handler(retval);
+    *data->SIGIN_STEPPERY_POSITION_U32_ABS = 0;
+    if (retval = hal_pin_bit_newf  (HAL_IN, &(data->SIGOUT_STEPPERY_ENABLE), comp_id, "%s.StepperY.enable", prefix) != 0) error_handler(retval);
+    *data->SIGOUT_STEPPERY_ENABLE = 0;
+    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPERZ_VELOCITY_SCALE), comp_id, "%s.StepperZ.velocity-scale", prefix) != 0) error_handler(retval);
+    *data->SIGOUT_STEPPERZ_VELOCITY_SCALE = 1.0;
+    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPERZ_VELOCITY_OFFSET), comp_id, "%s.StepperZ.velocity-offset", prefix) != 0) error_handler(retval);
+    *data->SIGOUT_STEPPERZ_VELOCITY_OFFSET = 0.0;
+    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPERZ_VELOCITY), comp_id, "%s.StepperZ.velocity", prefix) != 0) error_handler(retval);
+    *data->SIGOUT_STEPPERZ_VELOCITY = 0;
+    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGIN_STEPPERZ_POSITION_SCALE), comp_id, "%s.StepperZ.position-scale", prefix) != 0) error_handler(retval);
+    *data->SIGIN_STEPPERZ_POSITION_SCALE = 1.0;
+    if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGIN_STEPPERZ_POSITION_OFFSET), comp_id, "%s.StepperZ.position-offset", prefix) != 0) error_handler(retval);
+    *data->SIGIN_STEPPERZ_POSITION_OFFSET = 0.0;
+    if (retval = hal_pin_float_newf(HAL_OUT, &(data->SIGIN_STEPPERZ_POSITION), comp_id, "%s.StepperZ.position", prefix) != 0) error_handler(retval);
+    *data->SIGIN_STEPPERZ_POSITION = 0;
+    if (retval = hal_pin_float_newf(HAL_OUT, &(data->SIGIN_STEPPERZ_POSITION_ABS), comp_id, "%s.StepperZ.position-abs", prefix) != 0) error_handler(retval);
+    *data->SIGIN_STEPPERZ_POSITION_ABS = 0;
+    if (retval = hal_pin_s32_newf(HAL_OUT, &(data->SIGIN_STEPPERZ_POSITION_S32), comp_id, "%s.StepperZ.position-s32", prefix) != 0) error_handler(retval);
+    *data->SIGIN_STEPPERZ_POSITION_S32 = 0;
+    if (retval = hal_pin_u32_newf(HAL_OUT, &(data->SIGIN_STEPPERZ_POSITION_U32_ABS), comp_id, "%s.StepperZ.position-u32-abs", prefix) != 0) error_handler(retval);
+    *data->SIGIN_STEPPERZ_POSITION_U32_ABS = 0;
+    if (retval = hal_pin_bit_newf  (HAL_IN, &(data->SIGOUT_STEPPERZ_ENABLE), comp_id, "%s.StepperZ.enable", prefix) != 0) error_handler(retval);
+    *data->SIGOUT_STEPPERZ_ENABLE = 0;
     if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPER4_VELOCITY_SCALE), comp_id, "%s.Stepper4.velocity-scale", prefix) != 0) error_handler(retval);
     *data->SIGOUT_STEPPER4_VELOCITY_SCALE = 1.0;
     if (retval = hal_pin_float_newf(HAL_IN, &(data->SIGOUT_STEPPER4_VELOCITY_OFFSET), comp_id, "%s.Stepper4.velocity-offset", prefix) != 0) error_handler(retval);
@@ -4678,9 +4678,9 @@ void convert_varout1_bitout2_bit(data_t *data){
 }
 
 void convert_varout32_stepdir3_velocity(data_t *data){
-    float value = *data->SIGOUT_STEPPER1_VELOCITY;
-    value = value * *data->SIGOUT_STEPPER1_VELOCITY_SCALE;
-    value = value + *data->SIGOUT_STEPPER1_VELOCITY_OFFSET;
+    float value = *data->SIGOUT_STEPPERX_VELOCITY;
+    value = value * *data->SIGOUT_STEPPERX_VELOCITY_SCALE;
+    value = value + *data->SIGOUT_STEPPERX_VELOCITY_OFFSET;
     if (value != 0) {
                 value = OSC_CLOCK / value / 2;
             }
@@ -4688,15 +4688,15 @@ void convert_varout32_stepdir3_velocity(data_t *data){
 }
 
 void convert_varout1_stepdir3_enable(data_t *data){
-    bool value = *data->SIGOUT_STEPPER1_ENABLE;
+    bool value = *data->SIGOUT_STEPPERX_ENABLE;
     
     data->VAROUT1_STEPDIR3_ENABLE = value;
 }
 
 void convert_varout32_stepdir4_velocity(data_t *data){
-    float value = *data->SIGOUT_STEPPER2_VELOCITY;
-    value = value * *data->SIGOUT_STEPPER2_VELOCITY_SCALE;
-    value = value + *data->SIGOUT_STEPPER2_VELOCITY_OFFSET;
+    float value = *data->SIGOUT_STEPPERY_VELOCITY;
+    value = value * *data->SIGOUT_STEPPERY_VELOCITY_SCALE;
+    value = value + *data->SIGOUT_STEPPERY_VELOCITY_OFFSET;
     if (value != 0) {
                 value = OSC_CLOCK / value / 2;
             }
@@ -4704,15 +4704,15 @@ void convert_varout32_stepdir4_velocity(data_t *data){
 }
 
 void convert_varout1_stepdir4_enable(data_t *data){
-    bool value = *data->SIGOUT_STEPPER2_ENABLE;
+    bool value = *data->SIGOUT_STEPPERY_ENABLE;
     
     data->VAROUT1_STEPDIR4_ENABLE = value;
 }
 
 void convert_varout32_stepdir5_velocity(data_t *data){
-    float value = *data->SIGOUT_STEPPER3_VELOCITY;
-    value = value * *data->SIGOUT_STEPPER3_VELOCITY_SCALE;
-    value = value + *data->SIGOUT_STEPPER3_VELOCITY_OFFSET;
+    float value = *data->SIGOUT_STEPPERZ_VELOCITY;
+    value = value * *data->SIGOUT_STEPPERZ_VELOCITY_SCALE;
+    value = value + *data->SIGOUT_STEPPERZ_VELOCITY_OFFSET;
     if (value != 0) {
                 value = OSC_CLOCK / value / 2;
             }
@@ -4720,7 +4720,7 @@ void convert_varout32_stepdir5_velocity(data_t *data){
 }
 
 void convert_varout1_stepdir5_enable(data_t *data){
-    bool value = *data->SIGOUT_STEPPER3_ENABLE;
+    bool value = *data->SIGOUT_STEPPERZ_ENABLE;
     
     data->VAROUT1_STEPDIR5_ENABLE = value;
 }
@@ -4793,53 +4793,53 @@ void convert_varout1_bitout11_bit(data_t *data){
 
 
 // input: rxBuffer -> VAROUT -> calc -> SIGOUT
-void convert_sigin_stepper1_position(data_t *data) {
+void convert_sigin_stepperx_position(data_t *data) {
     float value = data->VARIN32_STEPDIR3_POSITION;
-    float offset = *data->SIGIN_STEPPER1_POSITION_OFFSET;
-    float scale = *data->SIGIN_STEPPER1_POSITION_SCALE;
-    float last_value = *data->SIGIN_STEPPER1_POSITION;
+    float offset = *data->SIGIN_STEPPERX_POSITION_OFFSET;
+    float scale = *data->SIGIN_STEPPERX_POSITION_SCALE;
+    float last_value = *data->SIGIN_STEPPERX_POSITION;
     static float last_raw_value = 0.0;
     float raw_value = value;
     value = value + offset;
     value = value / scale;
-    *data->SIGIN_STEPPER1_POSITION_ABS = abs(value);
-    *data->SIGIN_STEPPER1_POSITION_S32 = value;
-    *data->SIGIN_STEPPER1_POSITION_U32_ABS = abs(value);
-    *data->SIGIN_STEPPER1_POSITION = value;
+    *data->SIGIN_STEPPERX_POSITION_ABS = abs(value);
+    *data->SIGIN_STEPPERX_POSITION_S32 = value;
+    *data->SIGIN_STEPPERX_POSITION_U32_ABS = abs(value);
+    *data->SIGIN_STEPPERX_POSITION = value;
 
     last_raw_value = raw_value;
 }
 
-void convert_sigin_stepper2_position(data_t *data) {
+void convert_sigin_steppery_position(data_t *data) {
     float value = data->VARIN32_STEPDIR4_POSITION;
-    float offset = *data->SIGIN_STEPPER2_POSITION_OFFSET;
-    float scale = *data->SIGIN_STEPPER2_POSITION_SCALE;
-    float last_value = *data->SIGIN_STEPPER2_POSITION;
+    float offset = *data->SIGIN_STEPPERY_POSITION_OFFSET;
+    float scale = *data->SIGIN_STEPPERY_POSITION_SCALE;
+    float last_value = *data->SIGIN_STEPPERY_POSITION;
     static float last_raw_value = 0.0;
     float raw_value = value;
     value = value + offset;
     value = value / scale;
-    *data->SIGIN_STEPPER2_POSITION_ABS = abs(value);
-    *data->SIGIN_STEPPER2_POSITION_S32 = value;
-    *data->SIGIN_STEPPER2_POSITION_U32_ABS = abs(value);
-    *data->SIGIN_STEPPER2_POSITION = value;
+    *data->SIGIN_STEPPERY_POSITION_ABS = abs(value);
+    *data->SIGIN_STEPPERY_POSITION_S32 = value;
+    *data->SIGIN_STEPPERY_POSITION_U32_ABS = abs(value);
+    *data->SIGIN_STEPPERY_POSITION = value;
 
     last_raw_value = raw_value;
 }
 
-void convert_sigin_stepper3_position(data_t *data) {
+void convert_sigin_stepperz_position(data_t *data) {
     float value = data->VARIN32_STEPDIR5_POSITION;
-    float offset = *data->SIGIN_STEPPER3_POSITION_OFFSET;
-    float scale = *data->SIGIN_STEPPER3_POSITION_SCALE;
-    float last_value = *data->SIGIN_STEPPER3_POSITION;
+    float offset = *data->SIGIN_STEPPERZ_POSITION_OFFSET;
+    float scale = *data->SIGIN_STEPPERZ_POSITION_SCALE;
+    float last_value = *data->SIGIN_STEPPERZ_POSITION;
     static float last_raw_value = 0.0;
     float raw_value = value;
     value = value + offset;
     value = value / scale;
-    *data->SIGIN_STEPPER3_POSITION_ABS = abs(value);
-    *data->SIGIN_STEPPER3_POSITION_S32 = value;
-    *data->SIGIN_STEPPER3_POSITION_U32_ABS = abs(value);
-    *data->SIGIN_STEPPER3_POSITION = value;
+    *data->SIGIN_STEPPERZ_POSITION_ABS = abs(value);
+    *data->SIGIN_STEPPERZ_POSITION_S32 = value;
+    *data->SIGIN_STEPPERZ_POSITION_U32_ABS = abs(value);
+    *data->SIGIN_STEPPERZ_POSITION = value;
 
     last_raw_value = raw_value;
 }
@@ -4968,9 +4968,9 @@ void convert_outputs(void) {
 
 void convert_inputs(void) {
     // input: rxBuffer -> VAROUT -> calc -> SIGOUT
-    convert_sigin_stepper1_position(data);
-    convert_sigin_stepper2_position(data);
-    convert_sigin_stepper3_position(data);
+    convert_sigin_stepperx_position(data);
+    convert_sigin_steppery_position(data);
+    convert_sigin_stepperz_position(data);
     convert_sigin_stepper4_position(data);
     convert_sigin_stepper5_position(data);
     convert_sigin_stepper6_position(data);

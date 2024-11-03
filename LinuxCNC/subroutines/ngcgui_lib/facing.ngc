@@ -1,56 +1,53 @@
-(info: facing -- face in x/y only. X and Y distance will be related to 0/0 -- Ctrl-U pour éditer/)
-(inline: <facing>)
+(info: facing -- face in x/y only. X and Y distance will be related to 0/0 -- Ctrl-U pour éditer)
 o<facing> sub
-(AXIS,stop)
-  #<facing-length>       = #1 (=11 X distance) ; Example of parameter with a comment
-  #<facing-width>        = #2 (=6 Y distance)  ; Example of parameter without comment
-  #<facing-stepover>     = #3 (=0.05 stepover distance) ; Example without preset
-  #<facing-x-feedrate>   = #4 (=20 X feedrate)
-  #<facing-y-feedrate>   = #5 (=20 Y feedrate)
+  #<facing-length>       = #1 (=11.0 X distance) ;Example de paramètre avec un commentaire
+  #<facing-width> = #2 (=6.0 Y distance)         ;Example de paramètre sans commentaire
+  #<facing-stepover> = #3 (=0.005 stepover distance)     ;Example de paramètre sans preset
+  #<facing-x-feedrate> = #4 (=20 x feedrate)
+  #<facing-y-feedrate> = #5 (=20 y feedrate)
+  g0x0y0
 
-  #100 = #<facing-length>       ; Workpiece length
-  #101 = #<facing-width>        ; Workpiece width
-  #102 = #<facing-stepover>     ; Step-over amount
-  #110 = #<facing-x-feedrate>   ; X-axis feed rate
-  #111 = #<facing-y-feedrate>   ; Y-axis feed rate
+(debug, feature:   #<_feature:>)
+(debug, remaining: #<_remaining_features:>)
 
-  #100 = #<facing-length>       ; Workpiece length
-  #101 = #<facing-width>        ; Workpiece width
-  #102 = #<facing-stepover>     ; Step-over amount
-  #110 = #<facing-x-feedrate>   ; X-axis feed rate
-  #111 = #<facing-y-feedrate>   ; Y-axis feed rate
 
-  #105 = [#101 MOD #102]        ; Calculate remainder of width / step-over
+; HAL-based parameters with 'facing-' prefix
+#100 = #<facing-length>      ; Workpiece length
+#101 = #<facing-width>       ; Workpiece width
+#102 = #<facing-stepover>    ; Step-over amount
+#110 = #<facing-x-feedrate>  ; X-axis feed rate
+#111 = #<facing-y-feedrate>  ; Y-axis feed rate
 
-  #104 = [FUP[#101 / #102]]       ; Calculate total passes, rounded up
+#105 = [#101 % #102]               ; Calculate remainder of width / step-over
 
-  G0 X0                        ; Move to X0 first
-  G0 Y0                         ; Then move to Y0
+; Calculate total number of passes (rounded down) and handle remainder
+#104 = FIX[#101 / #102]
+IF [#105 GT 0] THEN #104 = [#104 + 1]  ; Add one pass if there's a remainder
 
-  G90                           ; Switch to absolute positioning
+F#110                              ; Set initial feed rate to X-axis feed rate
+
+G0 X0 Y0                           ; Move to start position
+
 ; Loop for facing passes
-  #200 = 0                      ; Initialize Y position tracker
-  #120 = 0 ; continue looping until it's 0
+G91                                ; Switch to relative positioning
+M98 P1 L[#104]                     ; Call subprogram 1, repeat for total passes
+G90                                ; Switch back to absolute positioning
 
-o101 while [ #120 LT 1 ]
-  G1 X#100 F#110 ; Move forward along X to workpiece length
-  G1 X0 F#110                 ; Move back along X to start
+M30                                ; Program end
 
-  ; #<currentY> = #5022                         ; Get the current Y position in work coordinates
+; Subprogram for bidirectional step-over passes
+O1
+G1 X#100 F#110                     ; Move forward along X (workpiece length) with X-axis feed rate
+F#111                              ; Set feed rate to Y-axis feed rate
+Y[#102]                            ; Step over by specified step-over
 
-  o102 IF [[$5022 + #102] GT #101]
-      #200 = #101                 ; Set Y to final width if next step exceeds
-  o102 ELSE
-      #200 = [#5022 + #102] ; Increment Y by step-over
-  o102 ENDIF
-
-  o103 IF [#200 GE #101] ;GOTO loop_end ; Exit loop if final Y position is reached
-      #120 = 2
-  o103 ELSE
-      G1 Y#200 F#111
-  o103 ENDIF
-o101 endwhile
-
-G90                           ; Confirm absolute positioning
+; Check if it's the last pass and adjust Y to stop at exact width
+IF [#500 EQ #104] THEN Y[#105]
+F#110                              ; Set feed rate back to X-axis feed rate
+G1 X-#100                          ; Move back along X (workpiece length)
+F#111                              ; Set feed rate to Y-axis feed rate
+Y[#102]                            ; Step over by specified step-over (or remainder)
+IF [#500 EQ #104] THEN Y[#105]
+G99
 
 o<facing> endsub
