@@ -50,31 +50,85 @@ net tool-prepared => iocontrol.0.tool-prepared
 # riov-riotime-value
 net riov-riotime-value <= rio.readwrite.time
 
+# pyvcp-halui-mdi-command-00
+net pyvcp-halui-mdi-command-00 => halui.mdi-command-00
+
+# pyvcp-halui-mdi-command-01
+net pyvcp-halui-mdi-command-01 => halui.mdi-command-01
+
+# pyvcp-halui-mdi-command-02
+net pyvcp-halui-mdi-command-02 => halui.mdi-command-02
+
+# pyvcp-halui-mdi-command-03
+net pyvcp-halui-mdi-command-03 => halui.mdi-command-03
+
+# pyvcp-halui-mdi-command-04
+net pyvcp-halui-mdi-command-04 => halui.mdi-command-04
+
+# pyvcp-halui-mdi-command-05
+net pyvcp-halui-mdi-command-05 => halui.mdi-command-05
+
+# pyvcp-enable-bit
+net pyvcp-enable-bit => rio.enable.bit
+
+# pyvcp-Output1-bit
+net pyvcp-Output1-bit => rio.Output1.bit
+
+# pyvcp-Output2-bit
+net pyvcp-Output2-bit => rio.Output2.bit
+
+# pyvcp-LED-bit
+net pyvcp-LED-bit => rio.LED.bit
+
+# pyvcp-Input1-bit
+net pyvcp-Input1-bit <= rio.Input1.bit
+
+# pyvcp-Input2-bit
+net pyvcp-Input2-bit <= rio.Input2.bit
+
+# pyvcp-Input3-bit
+net pyvcp-Input3-bit <= rio.Input3.bit
+
+# pyvcp-Input4-bit
+net pyvcp-Input4-bit <= rio.Input4.bit
+
+# pyvcp-Input5-bit
+net pyvcp-Input5-bit <= rio.Input5.bit
+
+# pyvcp-Input6-bit
+net pyvcp-Input6-bit <= rio.Input6.bit
+
+# pyvcp-Input7-bit
+net pyvcp-Input7-bit <= rio.Input7.bit
+
+# pyvcp-Input8-bit
+net pyvcp-Input8-bit <= rio.Input8.bit
+
 # setp
 
 # Axis: X
 
 # joint.0: relative positioning using pid.0
-#setp pid.0.Pgain     [JOINT_0]P
-##setp pid.0.Igain     [JOINT_0]I
-#setp pid.0.Dgain     [JOINT_0]D
-#setp pid.0.bias      [JOINT_0]BIAS
-#setp pid.0.FF0       [JOINT_0]FF0
-#setp pid.0.FF1       [JOINT_0]FF1
-#setp pid.0.FF2       [JOINT_0]FF2
-#setp pid.0.deadband  [JOINT_0]DEADBAND
-#setp pid.0.maxoutput [JOINT_0]MAXOUTPUT
-setp rio.StepperX.velocity-scale [JOINT_0]SCALE_OUT
-setp rio.StepperX.position-scale [JOINT_0]SCALE_IN
+setp pid.0.Pgain     [JOINT_0]P
+setp pid.0.Igain     [JOINT_0]I
+setp pid.0.Dgain     [JOINT_0]D
+setp pid.0.bias      [JOINT_0]BIAS
+setp pid.0.FF0       [JOINT_0]FF0
+setp pid.0.FF1       [JOINT_0]FF1
+setp pid.0.FF2       [JOINT_0]FF2
+setp pid.0.deadband  [JOINT_0]DEADBAND
+setp pid.0.maxoutput [JOINT_0]MAXOUTPUT
+setp rio.Stepper1.velocity-scale [JOINT_0]SCALE_OUT
+setp rio.Stepper1.position-scale [JOINT_0]SCALE_IN
 net j0vel-cmd <= pid.0.output
-net j0vel-cmd => rio.StepperX.velocity
+net j0vel-cmd => rio.Stepper1.velocity
 net j0pos-cmd <= joint.0.motor-pos-cmd
 net j0pos-cmd => pid.0.command
-net j0pos-fb  <= rio.StepperX.position
+net j0pos-fb  <= rio.Stepper1.position
 net j0pos-fb  => joint.0.motor-pos-fb
 net j0pos-fb  => pid.0.feedback
 net j0enable  <= joint.0.amp-enable-out
-net j0enable  => rio.StepperX.enable
+net j0enable  => rio.Stepper1.enable
 net j0enable  => pid.0.enable
 
 # Axis: Y
@@ -89,17 +143,17 @@ setp pid.1.FF1       [JOINT_1]FF1
 setp pid.1.FF2       [JOINT_1]FF2
 setp pid.1.deadband  [JOINT_1]DEADBAND
 setp pid.1.maxoutput [JOINT_1]MAXOUTPUT
-setp rio.StepperY.velocity-scale [JOINT_1]SCALE_OUT
-setp rio.StepperY.position-scale [JOINT_1]SCALE_IN
+setp rio.Stepper2.velocity-scale [JOINT_1]SCALE_OUT
+setp rio.Stepper2.position-scale [JOINT_1]SCALE_IN
 net j1vel-cmd <= pid.1.output
-net j1vel-cmd => rio.StepperY.velocity
+net j1vel-cmd => rio.Stepper2.velocity
 net j1pos-cmd <= joint.1.motor-pos-cmd
 net j1pos-cmd => pid.1.command
-net j1pos-fb  <= rio.StepperY.position
+net j1pos-fb  <= rio.Stepper2.position
 net j1pos-fb  => joint.1.motor-pos-fb
 net j1pos-fb  => pid.1.feedback
 net j1enable  <= joint.1.amp-enable-out
-net j1enable  => rio.StepperY.enable
+net j1enable  => rio.Stepper2.enable
 net j1enable  => pid.1.enable
 
 # Axis: Z
@@ -114,17 +168,17 @@ setp pid.2.FF1       [JOINT_2]FF1
 setp pid.2.FF2       [JOINT_2]FF2
 setp pid.2.deadband  [JOINT_2]DEADBAND
 setp pid.2.maxoutput [JOINT_2]MAXOUTPUT
-setp rio.StepperZ.velocity-scale [JOINT_2]SCALE_OUT
-setp rio.StepperZ.position-scale [JOINT_2]SCALE_IN
+setp rio.Stepper3.velocity-scale [JOINT_2]SCALE_OUT
+setp rio.Stepper3.position-scale [JOINT_2]SCALE_IN
 net j2vel-cmd <= pid.2.output
-net j2vel-cmd => rio.StepperZ.velocity
+net j2vel-cmd => rio.Stepper3.velocity
 net j2pos-cmd <= joint.2.motor-pos-cmd
 net j2pos-cmd => pid.2.command
-net j2pos-fb  <= rio.StepperZ.position
+net j2pos-fb  <= rio.Stepper3.position
 net j2pos-fb  => joint.2.motor-pos-fb
 net j2pos-fb  => pid.2.feedback
 net j2enable  <= joint.2.amp-enable-out
-net j2enable  => rio.StepperZ.enable
+net j2enable  => rio.Stepper3.enable
 net j2enable  => pid.2.enable
 
 # Axis: A

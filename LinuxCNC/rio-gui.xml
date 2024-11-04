@@ -82,8 +82,8 @@
     <led>
       <halpin>"Input1.bit"</halpin>
       <size>16</size>
-      <on_color>"green"</on_color>
-      <off_color>"black"</off_color>
+      <on_color>"yellow"</on_color>
+      <off_color>"red"</off_color>
     </led>
   </hbox>
   <hbox>
@@ -97,8 +97,8 @@
     <led>
       <halpin>"Input2.bit"</halpin>
       <size>16</size>
-      <on_color>"green"</on_color>
-      <off_color>"black"</off_color>
+      <on_color>"yellow"</on_color>
+      <off_color>"red"</off_color>
     </led>
   </hbox>
   <hbox>
@@ -112,8 +112,8 @@
     <led>
       <halpin>"Input3.bit"</halpin>
       <size>16</size>
-      <on_color>"green"</on_color>
-      <off_color>"black"</off_color>
+      <on_color>"yellow"</on_color>
+      <off_color>"red"</off_color>
     </led>
   </hbox>
   <hbox>
@@ -127,8 +127,8 @@
     <led>
       <halpin>"Input4.bit"</halpin>
       <size>16</size>
-      <on_color>"green"</on_color>
-      <off_color>"black"</off_color>
+      <on_color>"yellow"</on_color>
+      <off_color>"red"</off_color>
     </led>
   </hbox>
   <hbox>
@@ -142,8 +142,8 @@
     <led>
       <halpin>"Input5.bit"</halpin>
       <size>16</size>
-      <on_color>"green"</on_color>
-      <off_color>"black"</off_color>
+      <on_color>"yellow"</on_color>
+      <off_color>"red"</off_color>
     </led>
   </hbox>
   <hbox>
@@ -157,8 +157,8 @@
     <led>
       <halpin>"Input6.bit"</halpin>
       <size>16</size>
-      <on_color>"green"</on_color>
-      <off_color>"black"</off_color>
+      <on_color>"yellow"</on_color>
+      <off_color>"red"</off_color>
     </led>
   </hbox>
   <hbox>
@@ -172,8 +172,8 @@
     <led>
       <halpin>"Input7.bit"</halpin>
       <size>16</size>
-      <on_color>"green"</on_color>
-      <off_color>"black"</off_color>
+      <on_color>"yellow"</on_color>
+      <off_color>"red"</off_color>
     </led>
   </hbox>
   <hbox>
@@ -187,8 +187,8 @@
     <led>
       <halpin>"Input8.bit"</halpin>
       <size>16</size>
-      <on_color>"green"</on_color>
-      <off_color>"black"</off_color>
+      <on_color>"yellow"</on_color>
+      <off_color>"red"</off_color>
     </led>
   </hbox>
     </vbox>
