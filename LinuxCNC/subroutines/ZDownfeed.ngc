@@ -1,0 +1,12 @@
+O<ZDownfeed> sub
+#7 = [HAL_PIN_Z_MIN]
+#8 = [HAL_PIN_Z_DOWNFEED]
+
+#11 = [Z - #8]
+IF [#11 < #7]
+   G1 Z[#7]
+ELSE
+   G1 Z[#11]
+ENDIF
+M99
+O<ZDownfeed> endsub

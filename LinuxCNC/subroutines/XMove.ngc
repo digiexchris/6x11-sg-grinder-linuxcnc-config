@@ -1,0 +1,9 @@
+O<XMove> sub
+#1 = [HAL_PIN_X_MIN]
+#2 = [HAL_PIN_X_MAX]
+#3 = [HAL_PIN_X_SPEED]
+
+G1 X[#1] F[#3]
+G1 X[#2] F[#3]
+M99
+O<XMove> endsub

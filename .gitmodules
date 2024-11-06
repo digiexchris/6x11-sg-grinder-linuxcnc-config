@@ -5,3 +5,6 @@
 [submodule "SurfaceGrinder-linuxcnc-ui"]
 	path = SurfaceGrinder-linuxcnc-ui
 	url = git@github.com:digiexchris/SurfaceGrinder-linuxcnc-ui.git
+[submodule "flexgui"]
+	path = flexgui
+	url = https://github.com/jethornton/flexgui.git

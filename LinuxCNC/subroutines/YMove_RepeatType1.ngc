@@ -1,0 +1,17 @@
+O<YMove_RepeatType1> sub
+#4 = [HAL_PIN_Y_MIN]
+#5 = [HAL_PIN_Y_MAX]
+#6 = [HAL_PIN_Y_INFEED]
+
+IF [Y <= #4]
+   #9 = [Y + #6]
+   IF [#9 > #5]
+      G1 Y[#5]
+   ELSE
+      G1 Y[#9]
+   ENDIF
+ELSE IF [Y >= #5]
+   G1 Y[#4]
+ENDIF
+M99
+O<YMove_RepeatType1> endsub
