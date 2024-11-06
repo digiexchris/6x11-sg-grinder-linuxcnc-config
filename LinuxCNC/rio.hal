@@ -16,7 +16,7 @@ addf motion-command-handler servo-thread
 addf motion-controller servo-thread
 addf rio.readwrite servo-thread
 
-loadusr -W hal_manualtoolchange
+#loadusr -W hal_manualtoolchange
 
 
 # user-enable-out
@@ -32,41 +32,41 @@ net iocontrol-0-emc-enable-in <= rio.sys-status
 net iocontrol-0-emc-enable-in => iocontrol.0.emc-enable-in
 
 # tool-prep-number
-net tool-prep-number <= iocontrol.0.tool-prep-number
-net tool-prep-number => hal_manualtoolchange.number
+#net tool-prep-number <= iocontrol.0.tool-prep-number
+#net tool-prep-number => hal_manualtoolchange.number
 
 # tool-change
-net tool-change <= iocontrol.0.tool-change
-net tool-change => hal_manualtoolchange.change
+#net tool-change <= iocontrol.0.tool-change
+#net tool-change => hal_manualtoolchange.change
 
 # tool-changed
-net tool-changed <= hal_manualtoolchange.changed
-net tool-changed => iocontrol.0.tool-changed
+#net tool-changed <= hal_manualtoolchange.changed
+#net tool-changed => iocontrol.0.tool-changed
 
 # tool-prepared
-net tool-prepared <= iocontrol.0.tool-prepare
-net tool-prepared => iocontrol.0.tool-prepared
+#net tool-prepared <= iocontrol.0.tool-prepare
+#net tool-prepared => iocontrol.0.tool-prepared
 
 # riov-riotime-value
 net riov-riotime-value <= rio.readwrite.time
 
 # pyvcp-halui-mdi-command-00
-net pyvcp-halui-mdi-command-00 => halui.mdi-command-00
+#net pyvcp-halui-mdi-command-00 => halui.mdi-command-00
 
 # pyvcp-halui-mdi-command-01
-net pyvcp-halui-mdi-command-01 => halui.mdi-command-01
+#net pyvcp-halui-mdi-command-01 => halui.mdi-command-01
 
 # pyvcp-halui-mdi-command-02
-net pyvcp-halui-mdi-command-02 => halui.mdi-command-02
+#net pyvcp-halui-mdi-command-02 => halui.mdi-command-02
 
 # pyvcp-halui-mdi-command-03
-net pyvcp-halui-mdi-command-03 => halui.mdi-command-03
+#net pyvcp-halui-mdi-command-03 => halui.mdi-command-03
 
 # pyvcp-halui-mdi-command-04
-net pyvcp-halui-mdi-command-04 => halui.mdi-command-04
+#net pyvcp-halui-mdi-command-04 => halui.mdi-command-04
 
 # pyvcp-halui-mdi-command-05
-net pyvcp-halui-mdi-command-05 => halui.mdi-command-05
+#net pyvcp-halui-mdi-command-05 => halui.mdi-command-05
 
 # pyvcp-enable-bit
 net pyvcp-enable-bit => rio.enable.bit
