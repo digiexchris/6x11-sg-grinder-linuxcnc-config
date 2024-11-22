@@ -38,9 +38,6 @@
                     "pin": "45",
                     "modifier": [
                         {
-                            "type": "invert"
-                        },
-                        {
                             "type": "onerror"
                         }
                     ]
@@ -100,50 +97,6 @@
                 "ferror": 10.0,
                 "max_velocity": 80.0
             }
-        },
-        {
-            "name": "Stepper4",
-            "type": "stepdir",
-            "pins": {
-                "step": {
-                    "pin": "4"
-                },
-                "dir": {
-                    "pin": "3"
-                }
-            },
-            "is_joint": true,
-            "joint": {
-                "scale": 320.0,
-                "ferror": 10.0,
-                "max_velocity": 80.0
-            }
-        },
-        {
-            "name": "Stepper5",
-            "type": "stepdir",
-            "pins": {
-                "step": {
-                    "pin": "2"
-                },
-                "dir": {
-                    "pin": "48"
-                }
-            },
-            "is_joint": true
-        },
-        {
-            "name": "Stepper6",
-            "type": "stepdir",
-            "pins": {
-                "step": {
-                    "pin": "47"
-                },
-                "dir": {
-                    "pin": "46"
-                }
-            },
-            "is_joint": true
         },
         {
             "type": "bitout",
@@ -326,10 +279,98 @@
     "linuxcnc": {
         "ini": {
             "DISPLAY": {
-                "MAX_FEED_OVERRIDE": 15.0,
+                "DISPLAY":"flexgui",
+                "GUI":"grinder_touch.ui",
+                "QSS":"touch.qss",
+                "MAX_FEED_OVERRIDE": 1.2,
                 "MAX_ANGULAR_VELOCITY": 4.98,
-                "MAX_LINEAR_VELOCITY": 75.0,
-                "DEFAULT_LINEAR_VELOCITY": 60.0
+                "MAX_LINEAR_VELOCITY": 12.50,
+                "DEFAULT_LINEAR_VELOCITY": 1,
+                "MIN_SPINDLE_OVERRIDE":0.5,
+                "MAX_SPINDLE_OVERRIDE":1.2,
+                "MIN_LINEAR_VELOCITY":0,
+                "INTRO_GRAPHIC":"",
+                "INTRO_TIME":0.1,
+                "PROGRAM_PREFIX":"~/linuxcnc/nc_files",
+                "INCREMENTS":".1 in, .01 in, .001 in, .0001 in, 1 mm, .1 mm, .01 mm, .005 mm",
+                "OPEN_FILE":""
+            },
+            "FLEX": {
+                "IMPORT":"grinder"
+            },
+            "FILTER": {
+                "py": "python3"
+            },
+            "RS274NGC": {
+                "PARAMETER_FILE":"linuxcnc.var",
+                "SUBROUTINE_PATH":"subroutines",
+                "USER_M_PATH":"m_codes"
+            },
+            "HAL": {
+                "HALFILE": "grinder.hal"
+            },
+            "TRAJ": {
+                "DEFAULT_LINEAR_VELOCITY":1.25,
+                "MAX_LINEAR_VELOCITY":16.50,
+                "POSITION_FILE":"positions.txt",
+                "NO_FORCE_HOMING":1
+            },
+            "AXIS_X": {
+                "MAX_VELOCITY":12.5,
+                "MAX_ACCELERATION":30.0,
+                "MIN_LIMIT":-0.01,
+                "MAX_LIMIT":12.5
+            },
+            "JOINT_0": {
+                "TYPE":"LINEAR",
+                "HOME":0.0,
+                "MIN_LIMIT":-0.01,
+                "MAX_LIMIT":12.5,
+                "MAX_VELOCITY":12.5,
+                "MAX_ACCELERATION":50.0,
+                "STEPGEN_MAXACCEL":67.5,
+                "SCALE":300.0,
+                "FERROR":0.1,
+                "MIN_FERROR":0.005,
+                "HOME_OFFSET":0.0,
+            },
+            "AXIS_Y": {
+                "MAX_VELOCITY":0.14385221078134464,
+                "MAX_ACCELERATION":10.0,
+                "MIN_LIMIT":-10.0,
+                "MAX_LIMIT":10.0
+            },
+            "JOINT_1": {
+                "TYPE":"LINEAR",
+                "HOME":0.0,
+                "MIN_LIMIT":-10.0,
+                "MAX_LIMIT":10.0,
+                "MAX_VELOCITY":0.14385221078134464,
+                "MAX_ACCELERATION":10.0,
+                "STEPGEN_MAXACCEL":12.5,
+                "SCALE":101600.0,
+                "FERROR":0.05,
+                "MIN_FERROR":0.01,
+                "HOME_OFFSET":0.0
+            },
+            "AXIS_Z": {
+                "MAX_VELOCITY":0.7192610539067232,
+                "MAX_ACCELERATION":10.0,
+                "MIN_LIMIT":-0.01,
+                "MAX_LIMIT":6.5
+            },
+            "JOINT_2": {
+                "TYPE":"LINEAR",
+                "HOME":0.0,
+                "MIN_LIMIT":-0.01,
+                "MAX_LIMIT":6.5,
+                "MAX_VELOCITY":0.7192610539067232,
+                "MAX_ACCELERATION":10.0,
+                "STEPGEN_MAXACCEL":12.5,
+                "SCALE":20320.0,
+                "FERROR":0.05,
+                "MIN_FERROR":0.01,
+                "HOME_OFFSET":0.0
             }
         },
         "machinetype": "mill"
