@@ -7,7 +7,7 @@ CLK_SPEED := 29.812
 FAMILY    := ice40
 TYPE      := up5k
 PACKAGE   := sg48
-VERILOGS  := globals.v pll.v blink.v spi.v stepdir.v debouncer.v toggle.v pwmmod.v rio.v
+VERILOGS  := globals.v pll.v blink.v spi.v stepdir.v pwmout.v pwmin.v debouncer.v toggle.v pwmmod.v rio.v
 
 all: $(PROJECT).bin
 

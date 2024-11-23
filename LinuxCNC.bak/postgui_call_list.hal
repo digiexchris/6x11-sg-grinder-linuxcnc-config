@@ -1,0 +1,12 @@
+source custom_postgui.hal
+# source pendant.hal
+# Load HALUI
+#loadrt halui
+
+# Set initial values for predefined HALUI parameters
+#setp halui.parameter.00.value 4.0  # Set initial value for length
+#setp halui.parameter.01.value 2.0  # Set initial value for width
+#setp halui.parameter.02.value 0.010  # Set initial value for step-over
+#setp halui.parameter.03.value 20.0  # Set initial value for X feed rate
+#setp halui.parameter.04.value 10.0  # Set initial value for Y feed rate
+#

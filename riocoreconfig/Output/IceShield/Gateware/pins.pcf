@@ -25,49 +25,37 @@ set_io PINOUT_STEPDIR4_DIR 10
 set_io PINOUT_STEPDIR5_STEP 9
 set_io PINOUT_STEPDIR5_DIR 6
 
-### stepdir6 ###
-set_io PINOUT_STEPDIR6_STEP 4
-set_io PINOUT_STEPDIR6_DIR 3
+### bitout6 ###
+set_io PINOUT_BITOUT6_BIT 43
 
-### stepdir7 ###
-set_io PINOUT_STEPDIR7_STEP 2
-set_io PINOUT_STEPDIR7_DIR 48
+### bitout7 ###
+set_io PINOUT_BITOUT7_BIT 19
 
-### stepdir8 ###
-set_io PINOUT_STEPDIR8_STEP 47
-set_io PINOUT_STEPDIR8_DIR 46
+### bitin8 ###
+set_io -pullup yes PININ_BITIN8_BIT 40
 
-### bitout9 ###
-set_io PINOUT_BITOUT9_BIT 44
+### bitin9 ###
+set_io -pullup yes PININ_BITIN9_BIT 39
 
-### bitout10 ###
-set_io PINOUT_BITOUT10_BIT 43
+### bitin10 ###
+set_io -pullup yes PININ_BITIN10_BIT 38
 
-### bitout11 ###
-set_io PINOUT_BITOUT11_BIT 19
+### bitin11 ###
+set_io -pullup yes PININ_BITIN11_BIT 37
 
 ### bitin12 ###
-set_io -pullup yes PININ_BITIN12_BIT 41
+set_io -pullup yes PININ_BITIN12_BIT 36
 
 ### bitin13 ###
-set_io -pullup yes PININ_BITIN13_BIT 40
+set_io -pullup yes PININ_BITIN13_BIT 42
 
 ### bitin14 ###
-set_io -pullup yes PININ_BITIN14_BIT 39
+set_io -pullup yes PININ_BITIN14_BIT 34
 
-### bitin15 ###
-set_io -pullup yes PININ_BITIN15_BIT 38
+### signal15 ###
 
-### bitin16 ###
-set_io -pullup yes PININ_BITIN16_BIT 37
+### pwmout16 ###
+set_io PINOUT_PWMOUT16_PWM 44
 
-### bitin17 ###
-set_io -pullup yes PININ_BITIN17_BIT 36
-
-### bitin18 ###
-set_io -pullup yes PININ_BITIN18_BIT 42
-
-### bitin19 ###
-set_io -pullup yes PININ_BITIN19_BIT 34
-
-### signal20 ###
+### pwmin17 ###
+set_io PININ_PWMIN17_PWM 41

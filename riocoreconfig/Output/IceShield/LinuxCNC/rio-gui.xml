@@ -29,27 +29,6 @@
     <text>"Zero-Z"</text>
     <font>("Helvetica", 12)</font>
   </button>
-  <button>
-    <relief>RAISED</relief>
-    <bd>3</bd>
-    <halpin>"halui.mdi-command-03"</halpin>
-    <text>"Zero-A"</text>
-    <font>("Helvetica", 12)</font>
-  </button>
-  <button>
-    <relief>RAISED</relief>
-    <bd>3</bd>
-    <halpin>"halui.mdi-command-04"</halpin>
-    <text>"Zero-C"</text>
-    <font>("Helvetica", 12)</font>
-  </button>
-  <button>
-    <relief>RAISED</relief>
-    <bd>3</bd>
-    <halpin>"halui.mdi-command-05"</halpin>
-    <text>"Zero-B"</text>
-    <font>("Helvetica", 12)</font>
-  </button>
     </vbox>
   </labelframe>
     </vbox>
@@ -71,21 +50,6 @@
   </hbox>
     </vbox>
     <vbox>
-  <hbox>
-    <relief>RAISED</relief>
-    <bd>2</bd>
-    <label>
-      <text>"Input1.bit"</text>
-      <font>("Helvetica",9)</font>
-      <width>13</width>
-    </label>
-    <led>
-      <halpin>"Input1.bit"</halpin>
-      <size>16</size>
-      <on_color>"yellow"</on_color>
-      <off_color>"red"</off_color>
-    </led>
-  </hbox>
   <hbox>
     <relief>RAISED</relief>
     <bd>2</bd>
@@ -191,6 +155,40 @@
       <off_color>"red"</off_color>
     </led>
   </hbox>
+  <hbox>
+    <relief>RAISED</relief>
+    <bd>2</bd>
+    <label>
+      <text>"Spindle0RPS.width"</text>
+      <font>("Helvetica",9)</font>
+      <width>13</width>
+    </label>
+    <number>
+        <halpin>"Spindle0RPS.width"</halpin>
+        <font>("Helvetica",14)</font>
+        <format>"0.4f"</format>
+      <justify>LEFT</justify>
+    </number>
+    <label>
+        <font>("Helvetica",14)</font>
+      <text>"ms"</text>
+    </label>
+  </hbox>
+  <hbox>
+    <relief>RAISED</relief>
+    <bd>2</bd>
+    <label>
+      <text>"Spindle0RPS.valid"</text>
+      <font>("Helvetica",9)</font>
+      <width>13</width>
+    </label>
+    <led>
+      <halpin>"Spindle0RPS.valid"</halpin>
+      <size>16</size>
+      <on_color>"yellow"</on_color>
+      <off_color>"red"</off_color>
+    </led>
+  </hbox>
     </vbox>
     <vbox>
   <hbox>
@@ -203,18 +201,6 @@
     </label>
     <checkbutton>
       <halpin>"enable.bit"</halpin>
-    </checkbutton>
-  </hbox>
-  <hbox>
-    <relief>RAISED</relief>
-    <bd>2</bd>
-    <label>
-      <text>"Output1.bit"</text>
-      <font>("Helvetica",9)</font>
-      <width>13</width>
-    </label>
-    <checkbutton>
-      <halpin>"Output1.bit"</halpin>
     </checkbutton>
   </hbox>
   <hbox>
@@ -239,6 +225,37 @@
     </label>
     <checkbutton>
       <halpin>"LED.bit"</halpin>
+    </checkbutton>
+  </hbox>
+  <hbox>
+    <relief>RAISED</relief>
+    <bd>2</bd>
+    <label>
+      <text>"Spindle0.dty"</text>
+      <font>("Helvetica",9)</font>
+      <width>13</width>
+    </label>
+    <number>
+        <halpin>"Spindle0.dty"</halpin>
+        <font>("Helvetica",14)</font>
+        <format>"07.2f"</format>
+      <justify>LEFT</justify>
+    </number>
+    <label>
+        <font>("Helvetica",14)</font>
+      <text>"%"</text>
+    </label>
+  </hbox>
+  <hbox>
+    <relief>RAISED</relief>
+    <bd>2</bd>
+    <label>
+      <text>"Spindle0.enable"</text>
+      <font>("Helvetica",9)</font>
+      <width>13</width>
+    </label>
+    <checkbutton>
+      <halpin>"Spindle0.enable"</halpin>
     </checkbutton>
   </hbox>
     </vbox>

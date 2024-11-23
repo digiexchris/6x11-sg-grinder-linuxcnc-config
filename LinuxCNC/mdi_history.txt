@@ -1,0 +1,1 @@
+G0 Z[#<_hal[grinder.z_min]>]

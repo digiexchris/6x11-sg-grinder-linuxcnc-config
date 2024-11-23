@@ -45,7 +45,7 @@
             }
         },
         {
-            "name": "Stepper1",
+            "name": "StepperX",
             "type": "stepdir",
             "pins": {
                 "step": {
@@ -58,12 +58,23 @@
             "is_joint": true,
             "joint": {
                 "scale": 320.0,
-                "ferror": 10.0,
-                "max_velocity": 80.0
-            }
+                "ferror": 0.1,
+                "max_velocity": 12.5,
+                "min_ferror": 0.005,
+                "min_limit": -0.01,
+                "max_limit": 12.5,
+                "max_acceleration": 60.5,
+                "stepgen_maxaccel": 67.0,
+                "home_offset": 0.0,
+                "home_search_vel": -0.1,
+                "home_latch_vel": 0.09,
+                "home_final_vel": 0.08,
+                "pid_deadband": 0.001
+            },
+            "axis": "X"
         },
         {
-            "name": "Stepper2",
+            "name": "StepperY",
             "type": "stepdir",
             "pins": {
                 "step": {
@@ -75,13 +86,22 @@
             },
             "is_joint": true,
             "joint": {
-                "scale": 320.0,
-                "ferror": 10.0,
-                "max_velocity": 80.0
-            }
+                "scale": 101600.0,
+                "ferror": 0.05,
+                "max_velocity": 0.15,
+                "min_ferror": 0.01,
+                "min_limit": -12.0,
+                "max_limit": 12.0,
+                "max_acceleration": 10.0,
+                "stepgen_maxaccel": 20.0,
+                "home_search_vel": 0.1,
+                "home_latch_vel": 0.09,
+                "home_final_vel": 0.08
+            },
+            "axis": "Y"
         },
         {
-            "name": "Stepper3",
+            "name": "StepperZ",
             "type": "stepdir",
             "pins": {
                 "step": {
@@ -93,24 +113,20 @@
             },
             "is_joint": true,
             "joint": {
-                "scale": 320.0,
-                "ferror": 10.0,
-                "max_velocity": 80.0
-            }
-        },
-        {
-            "type": "bitout",
-            "name": "Output1",
-            "pins": {
-                "bit": {
-                    "pin": "44",
-                    "modifier": [
-                        {
-                            "type": "invert"
-                        }
-                    ]
-                }
-            }
+                "scale": 20320.0,
+                "ferror": 0.05,
+                "max_velocity": 0.79,
+                "min_ferror": 0.006,
+                "min_limit": -0.01,
+                "max_limit": 6.5,
+                "max_acceleration": 10.0,
+                "stepgen_maxaccel": 20.0,
+                "home_offset": 0.0,
+                "home_search_vel": -0.1,
+                "home_latch_vel": 0.09,
+                "home_final_vel": 0.08
+            },
+            "axis": "Z"
         },
         {
             "type": "bitout",
@@ -137,21 +153,6 @@
                             "type": "invert"
                         }
                     ]
-                }
-            }
-        },
-        {
-            "type": "bitin",
-            "name": "Input1",
-            "pins": {
-                "bit": {
-                    "pin": "41",
-                    "modifier": [
-                        {
-                            "type": "invert"
-                        }
-                    ],
-                    "pull": "up"
                 }
             }
         },
@@ -274,103 +275,73 @@
             },
             "dir": "output",
             "name": "riotime"
+        },
+        {
+            "type": "pwmout",
+            "pins": {
+                "pwm": {
+                    "pin": "44"
+                }
+            },
+            "signals": {
+                "dty": {
+                    "net": "spindle.0.speed-cmd-rps",
+                    "scale": 50.0
+                }
+            },
+            "frequency": 40,
+            "name": "Spindle0"
+        },
+        {
+            "type": "pwmin",
+            "pins": {
+                "pwm": {
+                    "pin": "41"
+                }
+            },
+            "signals": {
+                "width": {
+                    "net": "spindle.0.revs"
+                }
+            },
+            "name": "Spindle0RPS"
         }
     ],
     "linuxcnc": {
         "ini": {
             "DISPLAY": {
-                "DISPLAY":"flexgui",
-                "GUI":"grinder_touch.ui",
-                "QSS":"touch.qss",
+                "DISPLAY": "flexgui",
+                "GUI": "grinder_touch.ui",
+                "QSS": "touch.qss",
                 "MAX_FEED_OVERRIDE": 1.2,
                 "MAX_ANGULAR_VELOCITY": 4.98,
-                "MAX_LINEAR_VELOCITY": 12.50,
+                "MAX_LINEAR_VELOCITY": 12.5,
                 "DEFAULT_LINEAR_VELOCITY": 1,
-                "MIN_SPINDLE_OVERRIDE":0.5,
-                "MAX_SPINDLE_OVERRIDE":1.2,
-                "MIN_LINEAR_VELOCITY":0,
-                "INTRO_GRAPHIC":"",
-                "INTRO_TIME":0.1,
-                "PROGRAM_PREFIX":"~/linuxcnc/nc_files",
-                "INCREMENTS":".1 in, .01 in, .001 in, .0001 in, 1 mm, .1 mm, .01 mm, .005 mm",
-                "OPEN_FILE":""
+                "MIN_SPINDLE_OVERRIDE": 0.5,
+                "MAX_SPINDLE_OVERRIDE": 1.2,
+                "MIN_LINEAR_VELOCITY": 0,
+                "INTRO_GRAPHIC": "",
+                "INTRO_TIME": 0.1,
+                "PROGRAM_PREFIX": "~/linuxcnc/nc_files",
+                "INCREMENTS": ".1 in, .01 in, .001 in, .0001 in, 1 mm, .1 mm, .01 mm, .005 mm",
+                "OPEN_FILE": ""
             },
             "FLEX": {
-                "IMPORT":"grinder"
+                "IMPORT": "grinder"
             },
             "FILTER": {
                 "py": "python3"
             },
             "RS274NGC": {
-                "PARAMETER_FILE":"linuxcnc.var",
-                "SUBROUTINE_PATH":"subroutines",
-                "USER_M_PATH":"m_codes"
-            },
-            "HAL": {
-                "HALFILE": "grinder.hal"
+                "PARAMETER_FILE": "linuxcnc.var",
+                "SUBROUTINE_PATH": "subroutines",
+                "USER_M_PATH": "m_codes"
             },
             "TRAJ": {
-                "DEFAULT_LINEAR_VELOCITY":1.25,
-                "MAX_LINEAR_VELOCITY":16.50,
-                "POSITION_FILE":"positions.txt",
-                "NO_FORCE_HOMING":1
-            },
-            "AXIS_X": {
-                "MAX_VELOCITY":12.5,
-                "MAX_ACCELERATION":30.0,
-                "MIN_LIMIT":-0.01,
-                "MAX_LIMIT":12.5
-            },
-            "JOINT_0": {
-                "TYPE":"LINEAR",
-                "HOME":0.0,
-                "MIN_LIMIT":-0.01,
-                "MAX_LIMIT":12.5,
-                "MAX_VELOCITY":12.5,
-                "MAX_ACCELERATION":50.0,
-                "STEPGEN_MAXACCEL":67.5,
-                "SCALE":300.0,
-                "FERROR":0.1,
-                "MIN_FERROR":0.005,
-                "HOME_OFFSET":0.0,
-            },
-            "AXIS_Y": {
-                "MAX_VELOCITY":0.14385221078134464,
-                "MAX_ACCELERATION":10.0,
-                "MIN_LIMIT":-10.0,
-                "MAX_LIMIT":10.0
-            },
-            "JOINT_1": {
-                "TYPE":"LINEAR",
-                "HOME":0.0,
-                "MIN_LIMIT":-10.0,
-                "MAX_LIMIT":10.0,
-                "MAX_VELOCITY":0.14385221078134464,
-                "MAX_ACCELERATION":10.0,
-                "STEPGEN_MAXACCEL":12.5,
-                "SCALE":101600.0,
-                "FERROR":0.05,
-                "MIN_FERROR":0.01,
-                "HOME_OFFSET":0.0
-            },
-            "AXIS_Z": {
-                "MAX_VELOCITY":0.7192610539067232,
-                "MAX_ACCELERATION":10.0,
-                "MIN_LIMIT":-0.01,
-                "MAX_LIMIT":6.5
-            },
-            "JOINT_2": {
-                "TYPE":"LINEAR",
-                "HOME":0.0,
-                "MIN_LIMIT":-0.01,
-                "MAX_LIMIT":6.5,
-                "MAX_VELOCITY":0.7192610539067232,
-                "MAX_ACCELERATION":10.0,
-                "STEPGEN_MAXACCEL":12.5,
-                "SCALE":20320.0,
-                "FERROR":0.05,
-                "MIN_FERROR":0.01,
-                "HOME_OFFSET":0.0
+                "DEFAULT_LINEAR_VELOCITY": 1.25,
+                "MAX_LINEAR_VELOCITY": 16.5,
+                "POSITION_FILE": "positions.txt",
+                "NO_FORCE_HOMING": 1
             }
         },
         "machinetype": "mill"

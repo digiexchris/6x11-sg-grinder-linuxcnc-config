@@ -11,35 +11,29 @@ Info: constrained 'PINOUT_STEPDIR4_STEP' to bel 'X17/Y0/io0'
 Info: constrained 'PINOUT_STEPDIR4_DIR' to bel 'X16/Y0/io0'
 Info: constrained 'PINOUT_STEPDIR5_STEP' to bel 'X15/Y0/io0'
 Info: constrained 'PINOUT_STEPDIR5_DIR' to bel 'X13/Y0/io1'
-Info: constrained 'PINOUT_STEPDIR6_STEP' to bel 'X9/Y0/io0'
-Info: constrained 'PINOUT_STEPDIR6_DIR' to bel 'X9/Y0/io1'
-Info: constrained 'PINOUT_STEPDIR7_STEP' to bel 'X8/Y0/io0'
-Info: constrained 'PINOUT_STEPDIR7_DIR' to bel 'X7/Y0/io0'
-Info: constrained 'PINOUT_STEPDIR8_STEP' to bel 'X6/Y0/io0'
-Info: constrained 'PINOUT_STEPDIR8_DIR' to bel 'X5/Y0/io0'
-Info: constrained 'PINOUT_BITOUT9_BIT' to bel 'X6/Y0/io1'
-Info: constrained 'PINOUT_BITOUT10_BIT' to bel 'X9/Y31/io0'
-Info: constrained 'PINOUT_BITOUT11_BIT' to bel 'X21/Y0/io1'
-Info: constrained 'PININ_BITIN12_BIT' to bel 'X6/Y31/io0'
-Info: constrained 'PININ_BITIN13_BIT' to bel 'X5/Y31/io0'
-Info: constrained 'PININ_BITIN14_BIT' to bel 'X4/Y31/io0'
-Info: constrained 'PININ_BITIN15_BIT' to bel 'X8/Y31/io1'
-Info: constrained 'PININ_BITIN16_BIT' to bel 'X13/Y31/io0'
-Info: constrained 'PININ_BITIN17_BIT' to bel 'X9/Y31/io1'
-Info: constrained 'PININ_BITIN18_BIT' to bel 'X8/Y31/io0'
-Info: constrained 'PININ_BITIN19_BIT' to bel 'X13/Y31/io1'
+Info: constrained 'PINOUT_BITOUT6_BIT' to bel 'X9/Y31/io0'
+Info: constrained 'PINOUT_BITOUT7_BIT' to bel 'X21/Y0/io1'
+Info: constrained 'PININ_BITIN8_BIT' to bel 'X5/Y31/io0'
+Info: constrained 'PININ_BITIN9_BIT' to bel 'X4/Y31/io0'
+Info: constrained 'PININ_BITIN10_BIT' to bel 'X8/Y31/io1'
+Info: constrained 'PININ_BITIN11_BIT' to bel 'X13/Y31/io0'
+Info: constrained 'PININ_BITIN12_BIT' to bel 'X9/Y31/io1'
+Info: constrained 'PININ_BITIN13_BIT' to bel 'X8/Y31/io0'
+Info: constrained 'PININ_BITIN14_BIT' to bel 'X13/Y31/io1'
+Info: constrained 'PINOUT_PWMOUT16_PWM' to bel 'X6/Y0/io1'
+Info: constrained 'PININ_PWMIN17_PWM' to bel 'X6/Y31/io0'
 
 Info: Packing constants..
 Info: Packing IOs..
 Info: Packing LUT-FFs..
-Info:     1358 LCs used as LUT4 only
-Info:      853 LCs used as LUT4 and DFF
+Info:      859 LCs used as LUT4 only
+Info:      552 LCs used as LUT4 and DFF
 Info: Packing non-LUT FFs..
-Info:      479 LCs used as DFF only
+Info:      408 LCs used as DFF only
 Info: Packing carries..
-Info:      231 LCs used as CARRY only
+Info:      161 LCs used as CARRY only
 Info: Packing indirect carry+LUT pairs...
-Info:      220 LUTs merged into carry LCs
+Info:      155 LUTs merged into carry LCs
 Info: Packing RAMs..
 Info: Placing PLLs..
 Info:   constrained PLL 'mypll.uut' to X12/Y31/pll_3
@@ -49,22 +43,22 @@ Info:   PLL 'mypll.uut' has LOCK output, need to pass all outputs via LUT
 Info:   LUT strategy for LOCK: move all users to new LUT
 Info:   constrained 'mypll.uut_PLL$nextpnr_LOCK_lut_through' to X1/Y30/lc0
 Info: Promoting globals..
-Info: promoting sysclk (fanout 1332)
+Info: promoting sysclk (fanout 960)
+Info: promoting pwmin17.SIGr_SB_LUT4_I2_O [reset] (fanout 32)
+Info: promoting pwmin17.width_SB_DFFESR_Q_18_D_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O [reset] (fanout 32)
 Info: promoting blink0.rled_SB_DFFE_Q_E [reset] (fanout 25)
 Info: promoting INTERFACE_SYNCr_SB_LUT4_I2_O [reset] (fanout 23)
-Info: promoting spi1.byte_data_sent_SB_DFFESS_Q_D_SB_LUT4_O_I3_SB_LUT4_I3_O[3] [reset] (fanout 19)
-Info: promoting spi1.SSELr[1] [reset] (fanout 16)
-Info: promoting spi1.SCKr_SB_LUT4_I1_2_O [cen] (fanout 240)
-Info: promoting spi1.SCKr_SB_LUT4_I1_1_O [cen] (fanout 232)
-Info: promoting spi1.sync_SB_DFFSR_Q_D_SB_LUT4_I2_O [cen] (fanout 202)
+Info: promoting spi1.SCKr_SB_LUT4_I0_O [cen] (fanout 168)
+Info: promoting spi1.SCKr_SB_LUT4_I1_1_O [cen] (fanout 168)
+Info: promoting spi1.sync_SB_DFFSR_Q_D_SB_LUT4_I2_O [cen] (fanout 135)
 Info: Constraining chains...
-Info:       46 LCs used to legalise carry chains.
-Info: Checksum: 0xecc4dc56
+Info:       31 LCs used to legalise carry chains.
+Info: Checksum: 0x218e0fe1
 
 Info: Device utilisation:
-Info: 	         ICESTORM_LC:    2750/   5280    52%
+Info: 	         ICESTORM_LC:    1859/   5280    35%
 Info: 	        ICESTORM_RAM:       0/     30     0%
-Info: 	               SB_IO:      30/     96    31%
+Info: 	               SB_IO:      24/     96    25%
 Info: 	               SB_GB:       8/      8   100%
 Info: 	        ICESTORM_PLL:       1/      1   100%
 Info: 	         SB_WARMBOOT:       0/      1     0%
@@ -78,611 +72,598 @@ Info: 	         SB_LEDDA_IP:       0/      1     0%
 Info: 	         SB_RGBA_DRV:       0/      1     0%
 Info: 	      ICESTORM_SPRAM:       0/      4     0%
 
-Info: Placed 32 cells based on constraints.
-Info: Creating initial analytic placement for 1713 cells, random placement wirelen = 59319.
-Info:     at initial placer iter 0, wirelen = 2718
-Info:     at initial placer iter 1, wirelen = 1726
-Info:     at initial placer iter 2, wirelen = 2384
-Info:     at initial placer iter 3, wirelen = 1801
-Info: Running main analytical placer, max placement attempts per cell = 972315.
-Info:     at iteration #1, type ALL: wirelen solved = 1978, spread = 17333, legal = 21474; time = 0.26s
-Info:     at iteration #2, type ALL: wirelen solved = 1636, spread = 16044, legal = 18901; time = 0.27s
-Info:     at iteration #3, type ALL: wirelen solved = 1687, spread = 13215, legal = 15377; time = 0.23s
-Info:     at iteration #4, type ALL: wirelen solved = 2020, spread = 12466, legal = 13908; time = 0.20s
-Info:     at iteration #5, type ALL: wirelen solved = 2122, spread = 13882, legal = 15993; time = 0.26s
-Info:     at iteration #6, type ALL: wirelen solved = 2287, spread = 12071, legal = 13130; time = 0.19s
-Info:     at iteration #7, type ALL: wirelen solved = 2418, spread = 11273, legal = 11942; time = 0.16s
-Info:     at iteration #8, type ALL: wirelen solved = 2541, spread = 12245, legal = 14893; time = 0.21s
-Info:     at iteration #9, type ALL: wirelen solved = 2415, spread = 11596, legal = 13359; time = 0.22s
-Info:     at iteration #10, type ALL: wirelen solved = 2540, spread = 11434, legal = 13223; time = 0.16s
-Info:     at iteration #11, type ALL: wirelen solved = 2860, spread = 11264, legal = 13952; time = 0.16s
-Info:     at iteration #12, type ALL: wirelen solved = 2677, spread = 11913, legal = 13839; time = 0.16s
-Info: HeAP Placer Time: 3.86s
-Info:   of which solving equations: 2.19s
-Info:   of which spreading cells: 0.22s
-Info:   of which strict legalisation: 0.60s
+Info: Placed 26 cells based on constraints.
+Info: Creating initial analytic placement for 1185 cells, random placement wirelen = 38623.
+Info:     at initial placer iter 0, wirelen = 1312
+Info:     at initial placer iter 1, wirelen = 1160
+Info:     at initial placer iter 2, wirelen = 1133
+Info:     at initial placer iter 3, wirelen = 1115
+Info: Running main analytical placer, max placement attempts per cell = 447458.
+Info:     at iteration #1, type ALL: wirelen solved = 1012, spread = 8248, legal = 11497; time = 0.71s
+Info:     at iteration #2, type ALL: wirelen solved = 971, spread = 7867, legal = 9820; time = 0.58s
+Info:     at iteration #3, type ALL: wirelen solved = 1046, spread = 7015, legal = 8106; time = 0.57s
+Info:     at iteration #4, type ALL: wirelen solved = 1180, spread = 6308, legal = 8120; time = 0.58s
+Info:     at iteration #5, type ALL: wirelen solved = 1237, spread = 8326, legal = 8997; time = 0.56s
+Info:     at iteration #6, type ALL: wirelen solved = 1480, spread = 6082, legal = 7246; time = 7.87s
+Info:     at iteration #7, type ALL: wirelen solved = 1694, spread = 6790, legal = 9304; time = 2.89s
+Info:     at iteration #8, type ALL: wirelen solved = 1552, spread = 8220, legal = 9357; time = 0.57s
+Info:     at iteration #9, type ALL: wirelen solved = 1708, spread = 7603, legal = 8577; time = 0.47s
+Info:     at iteration #10, type ALL: wirelen solved = 1727, spread = 7951, legal = 9186; time = 0.44s
+Info:     at iteration #11, type ALL: wirelen solved = 1996, spread = 7885, legal = 9552; time = 0.58s
+Info: HeAP Placer Time: 18.77s
+Info:   of which solving equations: 5.82s
+Info:   of which spreading cells: 0.49s
+Info:   of which strict legalisation: 11.16s
 
 Info: Running simulated annealing placer for refinement.
-Info:   at iteration #1: temp = 0.000000, timing cost = 1120, wirelen = 11942
-Info:   at iteration #5: temp = 0.000000, timing cost = 1329, wirelen = 8610
-Info:   at iteration #10: temp = 0.000000, timing cost = 1223, wirelen = 7681
-Info:   at iteration #15: temp = 0.000000, timing cost = 1196, wirelen = 7263
-Info:   at iteration #20: temp = 0.000000, timing cost = 1144, wirelen = 7042
-Info:   at iteration #25: temp = 0.000000, timing cost = 1148, wirelen = 6791
-Info:   at iteration #30: temp = 0.000000, timing cost = 1120, wirelen = 6661
-Info:   at iteration #31: temp = 0.000000, timing cost = 1117, wirelen = 6655 
-Info: SA placement time 11.57s
+Info:   at iteration #1: temp = 0.000000, timing cost = 492, wirelen = 7246
+Info:   at iteration #5: temp = 0.000000, timing cost = 1103, wirelen = 5518
+Info:   at iteration #10: temp = 0.000000, timing cost = 1109, wirelen = 4879
+Info:   at iteration #15: temp = 0.000000, timing cost = 1067, wirelen = 4657
+Info:   at iteration #20: temp = 0.000000, timing cost = 989, wirelen = 4528
+Info:   at iteration #25: temp = 0.000000, timing cost = 928, wirelen = 4371
+Info:   at iteration #27: temp = 0.000000, timing cost = 958, wirelen = 4331 
+Info: SA placement time 15.18s
 
-Info: Max frequency for clock 'sysclk_$glb_clk': 35.34 MHz (PASS at 29.81 MHz)
+Info: Max frequency for clock 'sysclk_$glb_clk': 38.28 MHz (PASS at 29.81 MHz)
 
-Info: Max delay <async>                 -> posedge sysclk_$glb_clk: 4.67 ns
-Info: Max delay posedge sysclk_$glb_clk -> <async>                : 25.99 ns
+Info: Max delay <async>                 -> posedge sysclk_$glb_clk: 6.62 ns
+Info: Max delay posedge sysclk_$glb_clk -> <async>                : 25.23 ns
 
 Info: Slack histogram:
-Info:  legend: * represents 12 endpoint(s)
-Info:          + represents [1,12) endpoint(s)
-Info: [  5245,   6462) |***+
-Info: [  6462,   7679) |**********+
-Info: [  7679,   8896) |****************+
-Info: [  8896,  10113) |************************+
-Info: [ 10113,  11330) |************+
-Info: [ 11330,  12547) |***********+
-Info: [ 12547,  13764) |************+
-Info: [ 13764,  14981) |***************+
-Info: [ 14981,  16198) |*************************+
-Info: [ 16198,  17415) |**********************+
-Info: [ 17415,  18632) |*****************+
-Info: [ 18632,  19849) |**********+
-Info: [ 19849,  21066) |**************+
-Info: [ 21066,  22283) |*******************+
-Info: [ 22283,  23500) |******************+
-Info: [ 23500,  24717) |**********+
-Info: [ 24717,  25934) |*****+
-Info: [ 25934,  27151) |***+
-Info: [ 27151,  28368) |*******************************+
-Info: [ 28368,  29585) |************************************************************ 
-Info: Checksum: 0x41e6de5e
+Info:  legend: * represents 9 endpoint(s)
+Info:          + represents [1,9) endpoint(s)
+Info: [  7419,   8527) |****+
+Info: [  8527,   9635) |********************+
+Info: [  9635,  10743) |********************+
+Info: [ 10743,  11851) |***+
+Info: [ 11851,  12959) |**************+
+Info: [ 12959,  14067) |**************+
+Info: [ 14067,  15175) |**************+
+Info: [ 15175,  16283) |**********+
+Info: [ 16283,  17391) |*****************+
+Info: [ 17391,  18499) |**************+
+Info: [ 18499,  19607) |*********************+
+Info: [ 19607,  20715) |**************+
+Info: [ 20715,  21823) |*******+
+Info: [ 21823,  22931) |****************+
+Info: [ 22931,  24039) |********************+
+Info: [ 24039,  25147) |**********+
+Info: [ 25147,  26255) |*************+
+Info: [ 26255,  27363) |****+
+Info: [ 27363,  28471) |********************************+
+Info: [ 28471,  29579) |************************************************************ 
+Info: Checksum: 0x9f0077ed
 
 Info: Routing..
 Info: Setting up routing queue.
-Info: Routing 8322 arcs.
+Info: Routing 5431 arcs.
 Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
 Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
-Info:       1000 |       16        983 |   16   983 |      7370|       1.66       1.66|
-Info:       2000 |      129       1852 |  113   869 |      6566|       0.56       2.22|
-Info:       3000 |      243       2426 |  114   574 |      5716|       0.42       2.64|
-Info:       4000 |      661       2988 |  418   562 |      5178|       0.41       3.05|
-Info:       5000 |     1042       3592 |  381   604 |      4618|       0.43       3.48|
-Info:       6000 |     1443       3991 |  401   399 |      4102|       0.34       3.81|
-Info:       7000 |     1705       4464 |  262   473 |      3415|       0.25       4.06|
-Info:       8000 |     1942       5221 |  237   757 |      2706|       0.32       4.38|
-Info:       9000 |     2077       6046 |  135   825 |      1906|       0.21       4.60|
-Info:      10000 |     2221       6889 |  144   843 |      1104|       0.42       5.02|
-Info:      11000 |     2333       7777 |  112   888 |       263|       1.16       6.18|
-Info:      11355 |     2410       8056 |   77   279 |         0|       0.66       6.84|
+Info:       1000 |       49        930 |   49   930 |      4535|       4.52       4.52|
+Info:       2000 |      211       1595 |  162   665 |      3709|       1.43       5.95|
+Info:       3000 |      520       2132 |  309   537 |      3042|       0.83       6.78|
+Info:       4000 |      813       2679 |  293   547 |      2380|       1.10       7.88|
+Info:       5000 |      982       3450 |  169   771 |      1580|       0.68       8.55|
+Info:       6000 |     1195       4224 |  213   774 |       912|       0.91       9.46|
+Info:       7000 |     1313       5106 |  118   882 |        52|       2.96      12.42|
+Info:       7051 |     1313       5158 |    0    52 |         0|       0.35      12.77|
 Info: Routing complete.
-Info: Router1 time 6.84s
-Info: Checksum: 0x281bd92d
+Info: Router1 time 12.77s
+Info: Checksum: 0x782a900a
 
 Info: Critical path report for clock 'sysclk_$glb_clk' (posedge -> posedge):
 Info: curr total
-Info:  1.4  1.4  Source stepdir5.jointCounter_SB_DFF_Q_31_D_SB_LUT4_O_LC.O
-Info:  1.8  3.2    Net stepdir5.jointCounter[0] (16,18) -> (15,18)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_LUT4_O_LC.I3
-Info:                Defined in:
-Info:                  stepdir.v:13.16-13.28
-Info:  0.9  4.0  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_LUT4_O_LC.O
-Info:  1.8  5.8    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2[2] (15,18) -> (14,18)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_LC.I2
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
-Info:  0.6  6.4  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_LC.COUT
-Info:  0.0  6.4    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO (14,18) -> (14,18)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  6.7  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0  6.7    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO (14,18) -> (14,18)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  7.0  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0  7.0    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,18) -> (14,18)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  7.2  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0  7.2    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,18) -> (14,18)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  7.5  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0  7.5    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,18) -> (14,18)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  7.8  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0  7.8    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,18) -> (14,18)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  8.1  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0  8.1    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,18) -> (14,18)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  8.3  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.6  8.9    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,18) -> (14,19)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  9.2  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0  9.2    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,19) -> (14,19)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  9.5  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0  9.5    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,19) -> (14,19)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  9.7  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0  9.7    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,19) -> (14,19)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 10.0  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0 10.0    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,19) -> (14,19)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 10.3  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0 10.3    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,19) -> (14,19)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 10.6  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0 10.6    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,19) -> (14,19)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 10.8  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0 10.8    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,19) -> (14,19)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 11.1  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.6 11.7    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,19) -> (14,20)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 12.0  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0 12.0    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,20) -> (14,20)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 12.2  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0 12.2    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,20) -> (14,20)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 12.5  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0 12.5    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,20) -> (14,20)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 12.8  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0 12.8    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,20) -> (14,20)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 13.1  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0 13.1    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,20) -> (14,20)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 13.3  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0 13.3    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,20) -> (14,20)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 13.6  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0 13.6    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,20) -> (14,20)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 13.9  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.6 14.5    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,20) -> (14,21)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 14.7  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0 14.7    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,21) -> (14,21)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 15.0  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0 15.0    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,21) -> (14,21)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 15.3  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0 15.3    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,21) -> (14,21)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 15.6  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0 15.6    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,21) -> (14,21)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 15.8  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0 15.8    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,21) -> (14,21)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 16.1  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0 16.1    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,21) -> (14,21)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 16.4  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  0.0 16.4    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO (14,21) -> (14,21)
-Info:                Sink VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
-Info:                Defined in:
-Info:                  stepdir.v:26.17-26.44
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 16.7  Source VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O_SB_LUT4_O_1_I1_SB_LUT4_O_I2_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
-Info:  1.2 17.9    Net $nextpnr_ICESTORM_LC_39$I3 (14,21) -> (14,22)
-Info:                Sink $nextpnr_ICESTORM_LC_39.I3
-Info:  0.9 18.8  Source $nextpnr_ICESTORM_LC_39.O
-Info:  5.1 23.8    Net VAROUT1_STEPDIR5_ENABLE_SB_LUT4_I1_O[3] (14,22) -> (13,6)
-Info:                Sink stepdir5.step_SB_LUT4_I0_LC.I3
-Info:                Defined in:
-Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
-Info:  0.9 24.7  Source stepdir5.step_SB_LUT4_I0_LC.O
-Info:  3.5 28.3    Net stepdir5.step_SB_LUT4_I0_O (13,6) -> (13,4)
-Info:                Sink stepdir5.positionMem_SB_DFFE_Q_10_D_SB_LUT4_O_LC.CEN
-Info:  0.1 28.4  Setup stepdir5.positionMem_SB_DFFE_Q_10_D_SB_LUT4_O_LC.CEN
-Info: 13.3 ns logic, 15.0 ns routing
-
-Info: Critical path report for cross-domain path '<async>' -> 'posedge sysclk_$glb_clk':
-Info: curr total
-Info:  0.0  0.0  Source PININ_SPI1_SEL$sb_io.D_IN_0
-Info:  3.2  3.2    Net PININ_SPI1_SEL$SB_IO_IN (16,31) -> (20,29)
-Info:                Sink spi1.SSELr_SB_DFF_Q_2_DFFLC.I0
-Info:                Defined in:
-Info:                  spi.v:7.16-7.19
-Info:  1.2  4.4  Setup spi1.SSELr_SB_DFF_Q_2_DFFLC.I0
-Info: 1.2 ns logic, 3.2 ns routing
-
-Info: Critical path report for cross-domain path 'posedge sysclk_$glb_clk' -> '<async>':
-Info: curr total
-Info:  1.4  1.4  Source spi1.byte_data_received_SB_DFFE_Q_167_DFFLC.O
-Info:  1.8  3.2    Net VAROUT32_STEPDIR8_VELOCITY[0] (2,19) -> (2,19)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_O_LC.I3
+Info:  1.4  1.4  Source spi1.byte_data_received_SB_DFFE_Q_7_DFFLC.O
+Info:  1.8  3.2    Net VAROUT32_STEPDIR3_VELOCITY[0] (8,3) -> (8,3)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_O_LC.I3
 Info:                Defined in:
 Info:                  stepdir.v:6.29-6.37
-Info:  0.9  4.0  Source stepdir8.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_O_LC.O
-Info:  1.8  5.8    Net stepdir8.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_CARRY_CO_CI (2,19) -> (2,20)
-Info:                Sink $nextpnr_ICESTORM_LC_3.I1
+Info:  0.9  4.0  Source stepdir3.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_O_LC.O
+Info:  1.8  5.8    Net stepdir3.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_CARRY_CO_CI (8,3) -> (9,3)
+Info:                Sink $nextpnr_ICESTORM_LC_21.I1
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:8.8-8.10
-Info:  0.7  6.5  Source $nextpnr_ICESTORM_LC_3.COUT
-Info:  0.0  6.5    Net $nextpnr_ICESTORM_LC_3$O (2,20) -> (2,20)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.CIN
-Info:  0.3  6.7  Source stepdir8.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.COUT
-Info:  0.0  6.7    Net stepdir8.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,20) -> (2,20)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.7  6.5  Source $nextpnr_ICESTORM_LC_21.COUT
+Info:  0.0  6.5    Net $nextpnr_ICESTORM_LC_21$O (9,3) -> (9,3)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.CIN
+Info:  0.3  6.7  Source stepdir3.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.COUT
+Info:  0.0  6.7    Net stepdir3.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,3) -> (9,3)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  7.0  Source stepdir8.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0  7.0    Net stepdir8.velocityAbs_SB_DFF_Q_28_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,20) -> (2,20)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_28_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3  7.0  Source stepdir3.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0  7.0    Net stepdir3.velocityAbs_SB_DFF_Q_28_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,3) -> (9,3)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_28_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  7.3  Source stepdir8.velocityAbs_SB_DFF_Q_28_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0  7.3    Net stepdir8.velocityAbs_SB_DFF_Q_27_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,20) -> (2,20)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_27_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3  7.3  Source stepdir3.velocityAbs_SB_DFF_Q_28_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0  7.3    Net stepdir3.velocityAbs_SB_DFF_Q_27_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,3) -> (9,3)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_27_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  7.6  Source stepdir8.velocityAbs_SB_DFF_Q_27_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0  7.6    Net stepdir8.velocityAbs_SB_DFF_Q_26_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,20) -> (2,20)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_26_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3  7.6  Source stepdir3.velocityAbs_SB_DFF_Q_27_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0  7.6    Net stepdir3.velocityAbs_SB_DFF_Q_26_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,3) -> (9,3)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_26_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  7.9  Source stepdir8.velocityAbs_SB_DFF_Q_26_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0  7.9    Net stepdir8.velocityAbs_SB_DFF_Q_25_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,20) -> (2,20)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_25_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3  7.9  Source stepdir3.velocityAbs_SB_DFF_Q_26_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0  7.9    Net stepdir3.velocityAbs_SB_DFF_Q_25_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,3) -> (9,3)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_25_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  8.1  Source stepdir8.velocityAbs_SB_DFF_Q_25_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0  8.1    Net stepdir8.velocityAbs_SB_DFF_Q_24_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,20) -> (2,20)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_24_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3  8.1  Source stepdir3.velocityAbs_SB_DFF_Q_25_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0  8.1    Net stepdir3.velocityAbs_SB_DFF_Q_24_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,3) -> (9,3)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_24_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  8.4  Source stepdir8.velocityAbs_SB_DFF_Q_24_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.6  9.0    Net stepdir8.velocityAbs_SB_DFF_Q_23_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,20) -> (2,21)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_23_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3  8.4  Source stepdir3.velocityAbs_SB_DFF_Q_24_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.6  9.0    Net stepdir3.velocityAbs_SB_DFF_Q_23_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,3) -> (9,4)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_23_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  9.2  Source stepdir8.velocityAbs_SB_DFF_Q_23_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0  9.2    Net stepdir8.velocityAbs_SB_DFF_Q_22_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,21) -> (2,21)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_22_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3  9.2  Source stepdir3.velocityAbs_SB_DFF_Q_23_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0  9.2    Net stepdir3.velocityAbs_SB_DFF_Q_22_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,4) -> (9,4)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_22_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  9.5  Source stepdir8.velocityAbs_SB_DFF_Q_22_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0  9.5    Net stepdir8.velocityAbs_SB_DFF_Q_21_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,21) -> (2,21)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_21_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3  9.5  Source stepdir3.velocityAbs_SB_DFF_Q_22_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0  9.5    Net stepdir3.velocityAbs_SB_DFF_Q_21_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,4) -> (9,4)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_21_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3  9.8  Source stepdir8.velocityAbs_SB_DFF_Q_21_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0  9.8    Net stepdir8.velocityAbs_SB_DFF_Q_20_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,21) -> (2,21)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_20_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3  9.8  Source stepdir3.velocityAbs_SB_DFF_Q_21_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0  9.8    Net stepdir3.velocityAbs_SB_DFF_Q_20_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,4) -> (9,4)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_20_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 10.1  Source stepdir8.velocityAbs_SB_DFF_Q_20_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0 10.1    Net stepdir8.velocityAbs_SB_DFF_Q_19_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,21) -> (2,21)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_19_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 10.1  Source stepdir3.velocityAbs_SB_DFF_Q_20_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 10.1    Net stepdir3.velocityAbs_SB_DFF_Q_19_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,4) -> (9,4)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_19_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 10.4  Source stepdir8.velocityAbs_SB_DFF_Q_19_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0 10.4    Net stepdir8.velocityAbs_SB_DFF_Q_18_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,21) -> (2,21)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_18_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 10.4  Source stepdir3.velocityAbs_SB_DFF_Q_19_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 10.4    Net stepdir3.velocityAbs_SB_DFF_Q_18_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,4) -> (9,4)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_18_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 10.6  Source stepdir8.velocityAbs_SB_DFF_Q_18_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0 10.6    Net stepdir8.velocityAbs_SB_DFF_Q_17_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,21) -> (2,21)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_17_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 10.6  Source stepdir3.velocityAbs_SB_DFF_Q_18_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 10.6    Net stepdir3.velocityAbs_SB_DFF_Q_17_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,4) -> (9,4)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_17_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 10.9  Source stepdir8.velocityAbs_SB_DFF_Q_17_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0 10.9    Net stepdir8.velocityAbs_SB_DFF_Q_16_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,21) -> (2,21)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_16_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 10.9  Source stepdir3.velocityAbs_SB_DFF_Q_17_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 10.9    Net stepdir3.velocityAbs_SB_DFF_Q_16_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,4) -> (9,4)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_16_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 11.2  Source stepdir8.velocityAbs_SB_DFF_Q_16_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.6 11.7    Net stepdir8.velocityAbs_SB_DFF_Q_15_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,21) -> (2,22)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_15_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 11.2  Source stepdir3.velocityAbs_SB_DFF_Q_16_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.6 11.7    Net stepdir3.velocityAbs_SB_DFF_Q_15_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,4) -> (9,5)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_15_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 12.0  Source stepdir8.velocityAbs_SB_DFF_Q_15_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0 12.0    Net stepdir8.velocityAbs_SB_DFF_Q_14_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,22) -> (2,22)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_14_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 12.0  Source stepdir3.velocityAbs_SB_DFF_Q_15_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 12.0    Net stepdir3.velocityAbs_SB_DFF_Q_14_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,5) -> (9,5)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_14_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 12.3  Source stepdir8.velocityAbs_SB_DFF_Q_14_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0 12.3    Net stepdir8.velocityAbs_SB_DFF_Q_13_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,22) -> (2,22)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_13_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 12.3  Source stepdir3.velocityAbs_SB_DFF_Q_14_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 12.3    Net stepdir3.velocityAbs_SB_DFF_Q_13_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,5) -> (9,5)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_13_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 12.6  Source stepdir8.velocityAbs_SB_DFF_Q_13_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0 12.6    Net stepdir8.velocityAbs_SB_DFF_Q_12_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,22) -> (2,22)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_12_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 12.6  Source stepdir3.velocityAbs_SB_DFF_Q_13_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 12.6    Net stepdir3.velocityAbs_SB_DFF_Q_12_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,5) -> (9,5)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_12_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 12.9  Source stepdir8.velocityAbs_SB_DFF_Q_12_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0 12.9    Net stepdir8.velocityAbs_SB_DFF_Q_11_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,22) -> (2,22)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_11_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 12.9  Source stepdir3.velocityAbs_SB_DFF_Q_12_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 12.9    Net stepdir3.velocityAbs_SB_DFF_Q_11_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,5) -> (9,5)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_11_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 13.1  Source stepdir8.velocityAbs_SB_DFF_Q_11_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0 13.1    Net stepdir8.velocityAbs_SB_DFF_Q_10_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,22) -> (2,22)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_10_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 13.1  Source stepdir3.velocityAbs_SB_DFF_Q_11_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 13.1    Net stepdir3.velocityAbs_SB_DFF_Q_10_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,5) -> (9,5)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_10_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 13.4  Source stepdir8.velocityAbs_SB_DFF_Q_10_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0 13.4    Net stepdir8.velocityAbs_SB_DFF_Q_9_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,22) -> (2,22)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_9_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 13.4  Source stepdir3.velocityAbs_SB_DFF_Q_10_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 13.4    Net stepdir3.velocityAbs_SB_DFF_Q_9_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,5) -> (9,5)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_9_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 13.7  Source stepdir8.velocityAbs_SB_DFF_Q_9_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0 13.7    Net stepdir8.velocityAbs_SB_DFF_Q_8_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,22) -> (2,22)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_8_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 13.7  Source stepdir3.velocityAbs_SB_DFF_Q_9_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 13.7    Net stepdir3.velocityAbs_SB_DFF_Q_8_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,5) -> (9,5)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_8_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 14.0  Source stepdir8.velocityAbs_SB_DFF_Q_8_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.6 14.5    Net stepdir8.velocityAbs_SB_DFF_Q_7_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,22) -> (2,23)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_7_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 14.0  Source stepdir3.velocityAbs_SB_DFF_Q_8_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.6 14.5    Net stepdir3.velocityAbs_SB_DFF_Q_7_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,5) -> (9,6)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_7_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 14.8  Source stepdir8.velocityAbs_SB_DFF_Q_7_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0 14.8    Net stepdir8.velocityAbs_SB_DFF_Q_6_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,23) -> (2,23)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_6_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 14.8  Source stepdir3.velocityAbs_SB_DFF_Q_7_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 14.8    Net stepdir3.velocityAbs_SB_DFF_Q_6_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,6) -> (9,6)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_6_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 15.1  Source stepdir8.velocityAbs_SB_DFF_Q_6_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0 15.1    Net stepdir8.velocityAbs_SB_DFF_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,23) -> (2,23)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 15.1  Source stepdir3.velocityAbs_SB_DFF_Q_6_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 15.1    Net stepdir3.velocityAbs_SB_DFF_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,6) -> (9,6)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 15.4  Source stepdir8.velocityAbs_SB_DFF_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0 15.4    Net stepdir8.velocityAbs_SB_DFF_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,23) -> (2,23)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 15.4  Source stepdir3.velocityAbs_SB_DFF_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 15.4    Net stepdir3.velocityAbs_SB_DFF_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,6) -> (9,6)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 15.6  Source stepdir8.velocityAbs_SB_DFF_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0 15.6    Net stepdir8.velocityAbs_SB_DFF_Q_3_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,23) -> (2,23)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_3_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 15.6  Source stepdir3.velocityAbs_SB_DFF_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 15.6    Net stepdir3.velocityAbs_SB_DFF_Q_3_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,6) -> (9,6)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_3_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 15.9  Source stepdir8.velocityAbs_SB_DFF_Q_3_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0 15.9    Net stepdir8.velocityAbs_SB_DFF_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (2,23) -> (2,23)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 15.9  Source stepdir3.velocityAbs_SB_DFF_Q_3_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 15.9    Net stepdir3.velocityAbs_SB_DFF_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (9,6) -> (9,6)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.3 16.2  Source stepdir8.velocityAbs_SB_DFF_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.0 16.2    Net PINOUT_STEPDIR8_DIR_SB_LUT4_O_I3_SB_CARRY_CO_CI (2,23) -> (2,23)
-Info:                Sink stepdir8.velocityAbs_SB_DFF_Q_1_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:  0.3 16.2  Source stepdir3.velocityAbs_SB_DFF_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 16.2    Net PINOUT_STEPDIR3_DIR_SB_LUT4_O_I3_SB_CARRY_CO_CI (9,6) -> (9,6)
+Info:                Sink stepdir3.velocityAbs_SB_DFF_Q_1_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
-Info:  0.3 16.5  Source stepdir8.velocityAbs_SB_DFF_Q_1_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
-Info:  0.7 17.1    Net $nextpnr_ICESTORM_LC_4$I3 (2,23) -> (2,23)
-Info:                Sink $nextpnr_ICESTORM_LC_4.I3
-Info:  0.9 18.0  Source $nextpnr_ICESTORM_LC_4.O
-Info:  2.4 20.4    Net PINOUT_STEPDIR8_DIR_SB_LUT4_O_I3 (2,23) -> (3,25)
-Info:                Sink PINOUT_STEPDIR8_DIR_SB_LUT4_O_LC.I3
+Info:  0.3 16.5  Source stepdir3.velocityAbs_SB_DFF_Q_1_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.7 17.1    Net $nextpnr_ICESTORM_LC_22$I3 (9,6) -> (9,6)
+Info:                Sink $nextpnr_ICESTORM_LC_22.I3
+Info:  0.9 18.0  Source $nextpnr_ICESTORM_LC_22.O
+Info:  3.0 21.0    Net PINOUT_STEPDIR3_DIR_SB_LUT4_O_I3 (9,6) -> (11,9)
+Info:                Sink PINOUT_STEPDIR3_DIR_SB_LUT4_O_LC.I3
 Info:                Defined in:
 Info:                  stepdir.v:12.19-12.31
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
-Info:  0.9 21.3  Source PINOUT_STEPDIR8_DIR_SB_LUT4_O_LC.O
-Info:  6.9 28.2    Net PINOUT_STEPDIR8_DIR$SB_IO_OUT (3,25) -> (5,0)
-Info:                Sink PINOUT_STEPDIR8_DIR$sb_io.D_OUT_0
+Info:  0.9 21.8  Source PINOUT_STEPDIR3_DIR_SB_LUT4_O_LC.O
+Info:  4.2 26.1    Net PINOUT_STEPDIR3_DIR$SB_IO_OUT (11,9) -> (13,19)
+Info:                Sink stepdir3.positionMem_SB_DFFE_Q_D_SB_LUT4_O_LC.I2
 Info:                Defined in:
 Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
-Info: 13.0 ns logic, 15.2 ns routing
+Info:  1.2 27.2  Setup stepdir3.positionMem_SB_DFFE_Q_D_SB_LUT4_O_LC.I2
+Info: 14.2 ns logic, 13.1 ns routing
 
-Info: Max frequency for clock 'sysclk_$glb_clk': 35.27 MHz (PASS at 29.81 MHz)
+Info: Critical path report for cross-domain path '<async>' -> 'posedge sysclk_$glb_clk':
+Info: curr total
+Info:  0.0  0.0  Source PININ_SPI1_SCLK$sb_io.D_IN_0
+Info:  5.4  5.4    Net PININ_SPI1_SCLK$SB_IO_IN (24,0) -> (17,16)
+Info:                Sink spi1.SCKr_SB_DFF_Q_2_DFFLC.I0
+Info:                Defined in:
+Info:                  spi.v:6.16-6.20
+Info:  1.2  6.7  Setup spi1.SCKr_SB_DFF_Q_2_DFFLC.I0
+Info: 1.2 ns logic, 5.4 ns routing
 
-Info: Max delay <async>                 -> posedge sysclk_$glb_clk: 4.38 ns
-Info: Max delay posedge sysclk_$glb_clk -> <async>                : 28.23 ns
+Info: Critical path report for cross-domain path 'posedge sysclk_$glb_clk' -> '<async>':
+Info: curr total
+Info:  1.4  1.4  Source spi1.byte_data_received_SB_DFFE_Q_71_DFFLC.O
+Info:  1.8  3.2    Net VAROUT32_STEPDIR5_VELOCITY[0] (5,15) -> (5,15)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  stepdir.v:6.29-6.37
+Info:  0.9  4.0  Source stepdir5.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_LUT4_O_LC.O
+Info:  1.8  5.8    Net stepdir5.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_CARRY_CO_CI (5,15) -> (4,15)
+Info:                Sink $nextpnr_ICESTORM_LC_2.I1
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:8.8-8.10
+Info:  0.7  6.5  Source $nextpnr_ICESTORM_LC_2.COUT
+Info:  0.0  6.5    Net $nextpnr_ICESTORM_LC_2$O (4,15) -> (4,15)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.CIN
+Info:  0.3  6.7  Source stepdir5.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.COUT
+Info:  0.0  6.7    Net stepdir5.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,15) -> (4,15)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  7.0  Source stepdir5.velocityAbs_SB_DFF_Q_29_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0  7.0    Net stepdir5.velocityAbs_SB_DFF_Q_28_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,15) -> (4,15)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_28_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  7.3  Source stepdir5.velocityAbs_SB_DFF_Q_28_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0  7.3    Net stepdir5.velocityAbs_SB_DFF_Q_27_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,15) -> (4,15)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_27_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  7.6  Source stepdir5.velocityAbs_SB_DFF_Q_27_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0  7.6    Net stepdir5.velocityAbs_SB_DFF_Q_26_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,15) -> (4,15)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_26_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  7.9  Source stepdir5.velocityAbs_SB_DFF_Q_26_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0  7.9    Net stepdir5.velocityAbs_SB_DFF_Q_25_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,15) -> (4,15)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_25_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  8.1  Source stepdir5.velocityAbs_SB_DFF_Q_25_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0  8.1    Net stepdir5.velocityAbs_SB_DFF_Q_24_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,15) -> (4,15)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_24_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  8.4  Source stepdir5.velocityAbs_SB_DFF_Q_24_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.6  9.0    Net stepdir5.velocityAbs_SB_DFF_Q_23_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,15) -> (4,16)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_23_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  9.2  Source stepdir5.velocityAbs_SB_DFF_Q_23_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0  9.2    Net stepdir5.velocityAbs_SB_DFF_Q_22_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,16) -> (4,16)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_22_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  9.5  Source stepdir5.velocityAbs_SB_DFF_Q_22_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0  9.5    Net stepdir5.velocityAbs_SB_DFF_Q_21_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,16) -> (4,16)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_21_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  9.8  Source stepdir5.velocityAbs_SB_DFF_Q_21_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0  9.8    Net stepdir5.velocityAbs_SB_DFF_Q_20_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,16) -> (4,16)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_20_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 10.1  Source stepdir5.velocityAbs_SB_DFF_Q_20_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 10.1    Net stepdir5.velocityAbs_SB_DFF_Q_19_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,16) -> (4,16)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_19_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 10.4  Source stepdir5.velocityAbs_SB_DFF_Q_19_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 10.4    Net stepdir5.velocityAbs_SB_DFF_Q_18_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,16) -> (4,16)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_18_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 10.6  Source stepdir5.velocityAbs_SB_DFF_Q_18_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 10.6    Net stepdir5.velocityAbs_SB_DFF_Q_17_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,16) -> (4,16)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_17_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 10.9  Source stepdir5.velocityAbs_SB_DFF_Q_17_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 10.9    Net stepdir5.velocityAbs_SB_DFF_Q_16_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,16) -> (4,16)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_16_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 11.2  Source stepdir5.velocityAbs_SB_DFF_Q_16_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.6 11.7    Net stepdir5.velocityAbs_SB_DFF_Q_15_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,16) -> (4,17)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_15_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 12.0  Source stepdir5.velocityAbs_SB_DFF_Q_15_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 12.0    Net stepdir5.velocityAbs_SB_DFF_Q_14_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,17) -> (4,17)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_14_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 12.3  Source stepdir5.velocityAbs_SB_DFF_Q_14_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 12.3    Net stepdir5.velocityAbs_SB_DFF_Q_13_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,17) -> (4,17)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_13_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 12.6  Source stepdir5.velocityAbs_SB_DFF_Q_13_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 12.6    Net stepdir5.velocityAbs_SB_DFF_Q_12_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,17) -> (4,17)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_12_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 12.9  Source stepdir5.velocityAbs_SB_DFF_Q_12_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 12.9    Net stepdir5.velocityAbs_SB_DFF_Q_11_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,17) -> (4,17)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_11_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 13.1  Source stepdir5.velocityAbs_SB_DFF_Q_11_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 13.1    Net stepdir5.velocityAbs_SB_DFF_Q_10_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,17) -> (4,17)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_10_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 13.4  Source stepdir5.velocityAbs_SB_DFF_Q_10_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 13.4    Net stepdir5.velocityAbs_SB_DFF_Q_9_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,17) -> (4,17)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_9_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 13.7  Source stepdir5.velocityAbs_SB_DFF_Q_9_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 13.7    Net stepdir5.velocityAbs_SB_DFF_Q_8_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,17) -> (4,17)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_8_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 14.0  Source stepdir5.velocityAbs_SB_DFF_Q_8_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.6 14.5    Net stepdir5.velocityAbs_SB_DFF_Q_7_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,17) -> (4,18)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_7_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 14.8  Source stepdir5.velocityAbs_SB_DFF_Q_7_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 14.8    Net stepdir5.velocityAbs_SB_DFF_Q_6_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,18) -> (4,18)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_6_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 15.1  Source stepdir5.velocityAbs_SB_DFF_Q_6_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 15.1    Net stepdir5.velocityAbs_SB_DFF_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,18) -> (4,18)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 15.4  Source stepdir5.velocityAbs_SB_DFF_Q_5_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 15.4    Net stepdir5.velocityAbs_SB_DFF_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,18) -> (4,18)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 15.6  Source stepdir5.velocityAbs_SB_DFF_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 15.6    Net stepdir5.velocityAbs_SB_DFF_Q_3_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,18) -> (4,18)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_3_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 15.9  Source stepdir5.velocityAbs_SB_DFF_Q_3_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 15.9    Net stepdir5.velocityAbs_SB_DFF_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I2[3] (4,18) -> (4,18)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 16.2  Source stepdir5.velocityAbs_SB_DFF_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.0 16.2    Net PINOUT_STEPDIR5_DIR_SB_LUT4_O_I3_SB_CARRY_CO_CI (4,18) -> (4,18)
+Info:                Sink stepdir5.velocityAbs_SB_DFF_Q_1_D_SB_LUT4_O_I2_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.3 16.5  Source stepdir5.velocityAbs_SB_DFF_Q_1_D_SB_LUT4_O_I2_SB_LUT4_O_LC.COUT
+Info:  0.7 17.1    Net $nextpnr_ICESTORM_LC_3$I3 (4,18) -> (4,18)
+Info:                Sink $nextpnr_ICESTORM_LC_3.I3
+Info:  0.9 18.0  Source $nextpnr_ICESTORM_LC_3.O
+Info:  1.8 19.8    Net PINOUT_STEPDIR5_DIR_SB_LUT4_O_I3 (4,18) -> (3,19)
+Info:                Sink PINOUT_STEPDIR5_DIR_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  stepdir.v:12.19-12.31
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.9 20.6  Source PINOUT_STEPDIR5_DIR_SB_LUT4_O_LC.O
+Info:  6.7 27.4    Net PINOUT_STEPDIR5_DIR$SB_IO_OUT (3,19) -> (13,0)
+Info:                Sink PINOUT_STEPDIR5_DIR$sb_io.D_OUT_0
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info: 13.0 ns logic, 14.3 ns routing
+
+Info: Max frequency for clock 'sysclk_$glb_clk': 36.72 MHz (PASS at 29.81 MHz)
+
+Info: Max delay <async>                 -> posedge sysclk_$glb_clk: 6.67 ns
+Info: Max delay posedge sysclk_$glb_clk -> <async>                : 27.38 ns
 
 Info: Slack histogram:
-Info:  legend: * represents 15 endpoint(s)
-Info:          + represents [1,15) endpoint(s)
-Info: [  5192,   6411) |*********+
-Info: [  6411,   7630) |****+
-Info: [  7630,   8849) |**************+
-Info: [  8849,  10068) |*********+
-Info: [ 10068,  11287) |**********+
-Info: [ 11287,  12506) |***********************+
-Info: [ 12506,  13725) |*****+
-Info: [ 13725,  14944) |********+
-Info: [ 14944,  16163) |**************+
-Info: [ 16163,  17382) |*********+
-Info: [ 17382,  18601) |*******+
-Info: [ 18601,  19820) |******+
-Info: [ 19820,  21039) |*************************+
-Info: [ 21039,  22258) |*****************************+
-Info: [ 22258,  23477) |**************+
-Info: [ 23477,  24696) |**********+
-Info: [ 24696,  25915) |***+
-Info: [ 25915,  27134) |***+
-Info: [ 27134,  28353) |************+
-Info: [ 28353,  29572) |************************************************************ 
+Info:  legend: * represents 11 endpoint(s)
+Info:          + represents [1,11) endpoint(s)
+Info: [  6309,   7472) |***********+
+Info: [  7472,   8635) |*********+
+Info: [  8635,   9798) |****+
+Info: [  9798,  10961) |***+
+Info: [ 10961,  12124) |*******+
+Info: [ 12124,  13287) |*******************+
+Info: [ 13287,  14450) |*****+
+Info: [ 14450,  15613) |*****+
+Info: [ 15613,  16776) |****+
+Info: [ 16776,  17939) |******+
+Info: [ 17939,  19102) |***********+
+Info: [ 19102,  20265) |**************************+
+Info: [ 20265,  21428) |**********+
+Info: [ 21428,  22591) |************+
+Info: [ 22591,  23754) |*******************************+
+Info: [ 23754,  24917) |**************+
+Info: [ 24917,  26080) |********+
+Info: [ 26080,  27243) |**+
+Info: [ 27243,  28406) |*************+
+Info: [ 28406,  29569) |************************************************************ 
 
 Info: Program finished normally.
