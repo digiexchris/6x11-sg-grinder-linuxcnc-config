@@ -98,10 +98,37 @@ net pdnt.macro-1                          whb.button.macro-1                    
 net pdnt.macro-2                          whb.button.macro-2                    halui.mdi-command-02             # use MDI command from main.ini or used for Hardcoded lube on/off
 net pdnt.reserved.for.spindle+            whb.button.macro-3                                                     # Hardcoded for spindle+ whb.halui.spindle.increase
 net pdnt.reserved.for.spindle-            whb.button.macro-4                                                     # Hardcoded for spindle- whb.halui.spindle.decrease
-net pdnt.macro-5                          whb.button.macro-5                    halui.mdi-command-05             # use MDI command from main.ini
-net pdnt.macro-6                          whb.button.macro-6                    halui.mdi-command-06             # use MDI command from main.ini
-net pdnt.macro-7                          whb.button.macro-7                    halui.mdi-command-07             # use MDI command from main.ini
-net pdnt.reserved.for.spindle.dir         whb.button.macro-8                                                     # Hardcoded for spindle direction inside pendant
+
+
+
+##### net pdnt.macro-5                          whb.button.macro-5                    halui.mdi-command-05             # use MDI command from main.ini
+##### net pdnt.macro-6                          whb.button.macro-6                    halui.mdi-command-06             # use MDI command from main.ini
+##### net pdnt.macro-7                          whb.button.macro-7                    halui.mdi-command-07             # use MDI command from main.ini
+##### net pdnt.reserved.for.spindle.dir         whb.button.macro-8                                                     # Hardcoded for spindle direction inside pendant
+
+# Load the toggle component with 4 instances
+loadrt toggle count=4
+
+# Add the toggle instances to the thread
+addf toggle.0 servo-thread
+addf toggle.1 servo-thread
+addf toggle.2 servo-thread
+addf toggle.3 servo-thread
+
+# Connect the WHB buttons to toggle inputs
+net toggle-run_stop whb.button.macro-5 => toggle.0.in
+net toggle-enable_x whb.button.macro-6 => toggle.1.in
+net toggle-enable_z whb.button.macro-7 => toggle.2.in
+net toggle-enable_y whb.button.macro-8 => toggle.3.in
+
+# Connect toggle outputs to grinder pins
+net grinder-run_stop toggle.0.out => grinder.run_stop
+net grinder-enable_x toggle.1.out => grinder.enable_x
+net grinder-enable_z toggle.2.out => grinder.enable_z
+net grinder-enable_y toggle.3.out => grinder.enable_y
+
+
+
 net pdnt.macro-9                          whb.button.macro-9                    halui.mdi-command-09             # use MDI command from main.ini
 net pdnt.reserved.for.ABS-REL             whb.button.macro-10                                                    # Hardcoded for swap Dro  Relative/Absolue
 net pdnt.macro-14                         whb.button.macro-14                   halui.mdi-command-14             # use MDI command from main.ini
