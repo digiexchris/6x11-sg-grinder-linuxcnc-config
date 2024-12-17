@@ -1,7 +1,9 @@
 ./spiflash.sh rio.bin
 bitfile: rio.bin ...
   reload drivers / set FPGA into reset mode
-./spiflash.sh: line 54: /sys/class/gpio/gpio25/direction: Permission denied
+./spiflash.sh: line 52: echo: write error: Invalid argument
+./spiflash.sh: line 54: /sys/class/gpio/gpio25/direction: No such file or directory
+./spiflash.sh: line 60: flashrom: command not found
 ./spiflash.sh: line 61: test: : integer expression expected
   fill bitfile with zeros to reach flashsize: 
    ERROR: dd can not read/write: dd if=/dev/zero of=/tmp/_flash.bin  bs= count=1

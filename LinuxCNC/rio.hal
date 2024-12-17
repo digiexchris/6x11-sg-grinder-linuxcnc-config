@@ -59,49 +59,49 @@ net spindle-0-revs <= rio.Spindle0RPS.width
 net spindle-0-revs => spindle.0.revs
 
 # pyvcp-halui-mdi-command-00
-net pyvcp-halui-mdi-command-00 => halui.mdi-command-00
+#net pyvcp-halui-mdi-command-00 => halui.mdi-command-00
 
 # pyvcp-halui-mdi-command-01
-net pyvcp-halui-mdi-command-01 => halui.mdi-command-01
+#net pyvcp-halui-mdi-command-01 => halui.mdi-command-01
 
 # pyvcp-halui-mdi-command-02
-net pyvcp-halui-mdi-command-02 => halui.mdi-command-02
+#net pyvcp-halui-mdi-command-02 => halui.mdi-command-02
 
 # pyvcp-enable-bit
-net pyvcp-enable-bit => rio.enable.bit
+#net pyvcp-enable-bit => rio.enable.bit
 
 # pyvcp-Output2-bit
-net pyvcp-Output2-bit => rio.Output2.bit
+#net pyvcp-Output2-bit => rio.Output2.bit
 
 # pyvcp-LED-bit
-net pyvcp-LED-bit => rio.LED.bit
+#net pyvcp-LED-bit => rio.LED.bit
 
 # pyvcp-Input2-bit
-net pyvcp-Input2-bit <= rio.Input2.bit
+#net pyvcp-Input2-bit <= rio.Input2.bit
 
 # pyvcp-Input3-bit
-net pyvcp-Input3-bit <= rio.Input3.bit
+#net pyvcp-Input3-bit <= rio.Input3.bit
 
 # pyvcp-Input4-bit
-net pyvcp-Input4-bit <= rio.Input4.bit
+#net pyvcp-Input4-bit <= rio.Input4.bit
 
 # pyvcp-Input5-bit
-net pyvcp-Input5-bit <= rio.Input5.bit
+#net pyvcp-Input5-bit <= rio.Input5.bit
 
 # pyvcp-Input6-bit
-net pyvcp-Input6-bit <= rio.Input6.bit
+#net pyvcp-Input6-bit <= rio.Input6.bit
 
 # pyvcp-Input7-bit
-net pyvcp-Input7-bit <= rio.Input7.bit
+#net pyvcp-Input7-bit <= rio.Input7.bit
 
 # pyvcp-Input8-bit
-net pyvcp-Input8-bit <= rio.Input8.bit
+#net pyvcp-Input8-bit <= rio.Input8.bit
 
 # pyvcp-Spindle0-enable
-net pyvcp-Spindle0-enable => rio.Spindle0.enable
+#net pyvcp-Spindle0-enable => rio.Spindle0.enable
 
 # pyvcp-Spindle0RPS-valid
-net pyvcp-Spindle0RPS-valid <= rio.Spindle0RPS.valid
+#net pyvcp-Spindle0RPS-valid <= rio.Spindle0RPS.valid
 
 # setp
 setp rio.Spindle0.dty-scale 50.0

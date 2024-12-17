@@ -38,5 +38,4 @@ tinyprog: $(PROJECT).bin
 
 load: $(PROJECT).bin
 	./spiflash.sh rio.bin
-	cp -v hash_new.txt hash_flashed.txt
 

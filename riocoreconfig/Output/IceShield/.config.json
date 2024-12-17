@@ -3,6 +3,7 @@
     "description": "RIO-IceShield on Raspberry PI4",
     "boardcfg": "IceShield",
     "protocol": "SPI",
+    "rpi5": true,
     "plugins": [
         {
             "type": "blink",
@@ -94,7 +95,7 @@
                 "max_limit": 12.0,
                 "max_acceleration": 10.0,
                 "stepgen_maxaccel": 20.0,
-                "home_search_vel": -0.1,
+                "home_search_vel": 0.1,
                 "home_latch_vel": 0.09,
                 "home_final_vel": 0.08
             },
@@ -158,7 +159,7 @@
         },
         {
             "type": "bitin",
-            "name": "Input2",
+            "name": "HOME_X",
             "pins": {
                 "bit": {
                     "pin": "40",
@@ -173,7 +174,7 @@
         },
         {
             "type": "bitin",
-            "name": "Input3",
+            "name": "HOME_Y",
             "pins": {
                 "bit": {
                     "pin": "39",
@@ -188,7 +189,7 @@
         },
         {
             "type": "bitin",
-            "name": "Input4",
+            "name": "HOME_Z",
             "pins": {
                 "bit": {
                     "pin": "38",
@@ -342,65 +343,9 @@
                 "MAX_LINEAR_VELOCITY": 16.5,
                 "POSITION_FILE": "positions.txt",
                 "NO_FORCE_HOMING": 1
-            },
-            "AXIS_X": {
-                "MAX_VELOCITY": 12.5,
-                "MAX_ACCELERATION": 30.0,
-                "MIN_LIMIT": -0.01,
-                "MAX_LIMIT": 12.5
-            },
-            "JOINT_0": {
-                "TYPE": "LINEAR",
-                "HOME": 0.0,
-                "MIN_LIMIT": -0.01,
-                "MAX_LIMIT": 12.5,
-                "MAX_VELOCITY": 12.5,
-                "MAX_ACCELERATION": 50.0,
-                "STEPGEN_MAXACCEL": 67.5,
-                "SCALE": 300.0,
-                "FERROR": 0.1,
-                "MIN_FERROR": 0.005,
-                "HOME_OFFSET": 0.0
-            },
-            "AXIS_Y": {
-                "MAX_VELOCITY": 0.14385221078134464,
-                "MAX_ACCELERATION": 10.0,
-                "MIN_LIMIT": -10.0,
-                "MAX_LIMIT": 10.0
-            },
-            "JOINT_1": {
-                "TYPE": "LINEAR",
-                "HOME": 0.0,
-                "MIN_LIMIT": -10.0,
-                "MAX_LIMIT": 10.0,
-                "MAX_VELOCITY": 0.14385221078134464,
-                "MAX_ACCELERATION": 10.0,
-                "STEPGEN_MAXACCEL": 12.5,
-                "SCALE": 101600.0,
-                "FERROR": 0.05,
-                "MIN_FERROR": 0.01,
-                "HOME_OFFSET": 0.0
-            },
-            "AXIS_Z": {
-                "MAX_VELOCITY": 0.7192610539067232,
-                "MAX_ACCELERATION": 10.0,
-                "MIN_LIMIT": -0.01,
-                "MAX_LIMIT": 6.5
-            },
-            "JOINT_2": {
-                "TYPE": "LINEAR",
-                "HOME": 0.0,
-                "MIN_LIMIT": -0.01,
-                "MAX_LIMIT": 6.5,
-                "MAX_VELOCITY": 0.7192610539067232,
-                "MAX_ACCELERATION": 10.0,
-                "STEPGEN_MAXACCEL": 12.5,
-                "SCALE": 20320.0,
-                "FERROR": 0.05,
-                "MIN_FERROR": 0.01,
-                "HOME_OFFSET": 0.0
             }
         },
-        "machinetype": "mill"
+        "machinetype": "mill",
+        "pyvcp_mode": "NONE"
     }
 }

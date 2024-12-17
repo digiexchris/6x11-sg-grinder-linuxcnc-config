@@ -204,7 +204,10 @@ module rio (
     wire PINOUT_STEPDIR3_STEP_RAW;
     wire PINOUT_STEPDIR3_DIR_RAW;
     wire UNUSED_PIN_STEPDIR3_EN;
-    stepdir stepdir3 (
+    stepdir #(
+        .PULSE_LEN(0),
+        .DIR_DELAY(20)
+    ) stepdir3 (
         .clk(sysclk),
         .step(PINOUT_STEPDIR3_STEP_RAW),
         .dir(PINOUT_STEPDIR3_DIR_RAW),
@@ -220,7 +223,10 @@ module rio (
     wire PINOUT_STEPDIR4_STEP_RAW;
     wire PINOUT_STEPDIR4_DIR_RAW;
     wire UNUSED_PIN_STEPDIR4_EN;
-    stepdir stepdir4 (
+    stepdir #(
+        .PULSE_LEN(0),
+        .DIR_DELAY(20)
+    ) stepdir4 (
         .clk(sysclk),
         .step(PINOUT_STEPDIR4_STEP_RAW),
         .dir(PINOUT_STEPDIR4_DIR_RAW),
@@ -236,7 +242,10 @@ module rio (
     wire PINOUT_STEPDIR5_STEP_RAW;
     wire PINOUT_STEPDIR5_DIR_RAW;
     wire UNUSED_PIN_STEPDIR5_EN;
-    stepdir stepdir5 (
+    stepdir #(
+        .PULSE_LEN(0),
+        .DIR_DELAY(20)
+    ) stepdir5 (
         .clk(sysclk),
         .step(PINOUT_STEPDIR5_STEP_RAW),
         .dir(PINOUT_STEPDIR5_DIR_RAW),
@@ -260,17 +269,17 @@ module rio (
     wire PINOUT_BITOUT7_BIT_RAW;
     assign PINOUT_BITOUT7_BIT_RAW = VAROUT1_BITOUT7_BIT;
 
-    // Name: Input2 (bitin)
+    // Name: HOME_X (bitin)
     wire PININ_BITIN8_BIT_INVERTED;
     assign PININ_BITIN8_BIT_INVERTED = ~PININ_BITIN8_BIT;
     assign VARIN1_BITIN8_BIT = PININ_BITIN8_BIT_INVERTED;
 
-    // Name: Input3 (bitin)
+    // Name: HOME_Y (bitin)
     wire PININ_BITIN9_BIT_INVERTED;
     assign PININ_BITIN9_BIT_INVERTED = ~PININ_BITIN9_BIT;
     assign VARIN1_BITIN9_BIT = PININ_BITIN9_BIT_INVERTED;
 
-    // Name: Input4 (bitin)
+    // Name: HOME_Z (bitin)
     wire PININ_BITIN10_BIT_INVERTED;
     assign PININ_BITIN10_BIT_INVERTED = ~PININ_BITIN10_BIT;
     assign VARIN1_BITIN10_BIT = PININ_BITIN10_BIT_INVERTED;

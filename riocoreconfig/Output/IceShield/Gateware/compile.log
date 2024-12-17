@@ -3,7 +3,7 @@ yosys -q -l yosys.log -p 'synth_ice40 -dsp -top rio -json rio.json' globals.v pl
 nextpnr-ice40 -q -l nextpnr.log --timing-allow-fail --pre-pack prepack.py --up5k --package sg48 --json rio.json --freq 29.812 --pcf pins.pcf --asc rio.asc
 
 Info: Device utilisation:
-Info: 	         ICESTORM_LC:    1859/   5280    35%
+Info: 	         ICESTORM_LC:    2166/   5280    41%
 Info: 	        ICESTORM_RAM:       0/     30     0%
 Info: 	               SB_IO:      24/     96    25%
 Info: 	               SB_GB:       8/      8   100%
