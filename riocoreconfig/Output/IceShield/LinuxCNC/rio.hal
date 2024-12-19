@@ -59,7 +59,7 @@ net spindle-0-revs <= rio.Spindle0RPS.width
 net spindle-0-revs => spindle.0.revs
 
 # setp
-setp rio.Spindle0.dty-scale 50.0
+setp rio.Spindle0.dty-scale 1.0
 
 # Axis: X
 
