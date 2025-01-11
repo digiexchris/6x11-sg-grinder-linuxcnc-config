@@ -122,7 +122,7 @@ net toggle-enable_z whb.button.macro-7 => toggle.2.in
 net toggle-enable_y whb.button.macro-8 => toggle.3.in
 
 # Connect toggle outputs to grinder pins
-net grinder-run_stop toggle.0.out => grinder.is_running
+#net grinder-run_stop toggle.0.out => grinder.is_running
 #net grinder-enable_x toggle.1.out => grinder.enable_x
 #net grinder-enable_z toggle.2.out => grinder.enable_z
 #net grinder-enable_y toggle.3.out => grinder.enable_y

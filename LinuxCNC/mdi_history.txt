@@ -66,3 +66,9 @@ G0 X[#<_hal[grinder.x_min]>]
 G0 X[#<_hal[grinder.x_max]>]
 G0 Z[#<_hal[grinder.z_min]>]
 G0 X0 Y0 Z0
+G0 X0 Y0 Z0
+G0 Y[#<_hal[grinder.z_min]>]
+G0 Y[#<_hal[grinder.y_max]>]
+G0 Y[#<_hal[grinder.z_min]>]
+G0 Y[#<_hal[grinder.y_max]>]
+G0 X[#<_hal[grinder.x_min]>]
